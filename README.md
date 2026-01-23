@@ -10,24 +10,28 @@
 
 ## 🎯 About Me
 
-Data Engineer with **3+ years of professional experience** building scalable data pipelines and cloud infrastructure at **Capgemini**. Currently pursuing MS in Data Science at Michigan Technological University (3.83 GPA). My journey from embedded systems to full-stack development and now data engineering has given me a unique perspective on building end-to-end intelligent systems.
+Data Engineer with **3+ years of professional experience** building scalable solutions and cloud infrastructure at **Capgemini**. Currently pursuing MS in Data Science at Michigan Technological University (3.83 GPA). My journey from embedded systems to full-stack development and now data engineering has given me a unique perspective on building end-to-end intelligent systems.
 
-**Specialization:** Cloud-native data architectures • ETL/ELT pipelines • Machine learning deployment • Real-time analytics
+**Specialization:** Cloud-native web native developer and architect • ETL/ELT pipelines • Machine learning deployment • Real-time analytics
 
 ---
 
 ## 💼 Professional Experience
 
-### **Data Engineer (Analyst) | Capgemini** | Sep 2021 – Jul 2024
+### **Backend Developer (Analyst) | Capgemini** | Sep 2021 – Jul 2024
 *Bengaluru, India*
 
 🚀 **Impact:** Processed 500GB+ daily data, reduced processing time by 60%, achieved 99.9% uptime
 
 **Key Achievements:**
-- Architected automated data pipelines using **AWS Glue, Lambda, S3** for real-time business intelligence
+- Architected and implemented serverless disaster recovery solution using **AWS Lambda, S3, CloudFormation, and Azure Functions** freducing recovery time objective (RTO) from 4 hours to 30 minutes and achieving 35% cost
+savings
 - Built serverless ETL workflows across **AWS & Azure** with automated data quality validation
-- Led migration of **20+ legacy systems** to cloud-native architectures, improving query performance by 30%
-- Established **CI/CD pipelines** using Docker, Jenkins, GitLab - reduced deployment from weeks to hours
+- Led cross-functional team of 10 developers in migrating 20+ legacy monolithic applications
+(including Java-based e-commerce platforms, .NET financial services apps, and Node.js
+customer portals) to cloud-native microservices architecture
+- Deployed 20+ containerized applications using Docker with automated CI/CD pipelines via
+Jenkins and GitLab - reduced deployment cycles from 2-3 days to 4-6 hours 
 - Implemented multi-cloud disaster recovery with **30-minute RTO** and 35% cost reduction
 
 ---
@@ -107,7 +111,7 @@ Classification algorithms for quality assessment
 #### 🌐 [Orion 1.0](https://github.com/namanmahendra01/Orion1.0)
 Social media platform with competitive gaming elements
 - **Tech Stack:** HTML, CSS, JavaScript, Backend APIs
-- **Features:** User authentication, real-time interactions, leaderboards
+- **Features:** Android app platform to organize nd participate in intercollege competions 
 
 #### 🚨 [Disaster Reporter](https://github.com/Prateeek73/DisasterReporter)
 Emergency management and response coordination system
@@ -207,14 +211,14 @@ Temperature and pressure sensor interface
 - Cloud Solutions Architect
 - Full-Stack ML Developer
 
-**Location:** Currently in Houghton, Michigan | Open to relocation & remote opportunities  
-**Availability:** Graduating April 2026 | Available for internships/co-ops
+**Location:** Currently in Houghton, Michigan | Open to relocation or remote opportunities  
+**Availability:** Graduating April 2026 | Available for jobs/internships/co-ops
 
 ---
 
 ## 📫 Let's Connect
 
-I'm always interested in discussing data engineering, machine learning, or potential collaborations!
+I'm always interested in discussing data engineering, machine learning, cloud soulutions or potential collaborations!
 
 📧 **Email:** pra73ek.singh@gmail.com  
 📱 **Phone:** (224) 363-8696  
