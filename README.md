@@ -12,7 +12,7 @@
 
 Data Engineer with **3+ years of professional experience** building scalable solutions and cloud infrastructure at **Capgemini**. Currently pursuing MS in Data Science at Michigan Technological University (3.83 GPA). My journey from embedded systems to full-stack development and now data engineering has given me a unique perspective on building end-to-end intelligent systems.
 
-**Specialization:** Cloud-native web native developer and architect • ETL/ELT pipelines • Machine learning deployment • Real-time analytics
+**Specialization:** Full stack cloud-native native developer • ETL/ELT pipelines • Machine learning deployment • Real-time analytics
 
 ---
 
