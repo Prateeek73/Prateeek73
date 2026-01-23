@@ -21,17 +21,12 @@ Data Engineer with **3+ years of professional experience** building scalable sol
 ### **Backend Developer (Analyst) | Capgemini** | Sep 2021 – Jul 2024
 *Bengaluru, India*
 
-🚀 **Impact:** Processed 500GB+ daily data, reduced processing time by 60%, achieved 99.9% uptime
+🚀 **Impact:** Deployed 20+ containerized applicationsProcessed 500GB+ daily data, reduced processing time by 60%, achieved 99.9% uptime
 
 **Key Achievements:**
-- Architected and implemented serverless disaster recovery solution using **AWS Lambda, S3, CloudFormation, and Azure Functions** freducing recovery time objective (RTO) from 4 hours to 30 minutes and achieving 35% cost
-savings
+- Architected and implemented serverless disaster recovery solution using **AWS Lambda, S3, CloudFormation, and Azure Functions** reducing recovery time objective (RTO) from 4 hours to 30 minutes and achieving 35% cost savings
 - Built serverless ETL workflows across **AWS & Azure** with automated data quality validation
-- Led cross-functional team of 10 developers in migrating 20+ legacy monolithic applications
-(including Java-based e-commerce platforms, .NET financial services apps, and Node.js
-customer portals) to cloud-native microservices architecture
-- Deployed 20+ containerized applications using Docker with automated CI/CD pipelines via
-Jenkins and GitLab - reduced deployment cycles from 2-3 days to 4-6 hours 
+- Led cross-functional team of 10 developers in migrating 20+ legacy monolithic applications (including Java-based e-commerce platforms, .NET financial services apps, and Node.js customer portals) to cloud-native microservices architecture
 - Implemented multi-cloud disaster recovery with **30-minute RTO** and 35% cost reduction
 
 ---
