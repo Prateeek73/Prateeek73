@@ -12,7 +12,7 @@
 
 Data Engineer with **3+ years of professional experience** building scalable solutions and cloud infrastructure at **Capgemini**. Currently pursuing MS in Data Science at Michigan Technological University (3.83 GPA). My journey from embedded systems to full-stack development and now data engineering has given me a unique perspective on building end-to-end intelligent systems.
 
-**Specialization:** Full stack cloud-native native developer • ETL/ELT pipelines • Machine learning deployment • Real-time analytics
+**Specialization:** Full-stack cloud-native development • ETL/ELT pipelines • Machine learning deployment • Real-time analytics
 
 ---
 
@@ -21,13 +21,12 @@ Data Engineer with **3+ years of professional experience** building scalable sol
 ### **Backend Developer (Analyst) | Capgemini** | Sep 2021 – Jul 2024
 *Bengaluru, India*
 
-🚀 **Impact:** Deployed 20+ containerized applicationsProcessed 500GB+ daily data, reduced processing time by 60%, achieved 99.9% uptime
+🚀 **Impact:** Deployed 20+ containerized applications • Processed 500GB+ daily data • 60% faster processing • 99.9% uptime
 
-**Key Achievements:**
-- Architected and implemented serverless disaster recovery solution using **AWS Lambda, S3, CloudFormation, and Azure Functions** reducing recovery time objective (RTO) from 4 hours to 30 minutes and achieving 35% cost savings
+- Architected serverless disaster recovery solution using **AWS Lambda, S3, CloudFormation, and Azure Functions** reducing RTO from 4 hours to 30 minutes with 35% cost savings
 - Built serverless ETL workflows across **AWS & Azure** with automated data quality validation
-- Led cross-functional team of 10 developers in migrating 20+ legacy monolithic applications (including Java-based e-commerce platforms, .NET financial services apps, and Node.js customer portals) to cloud-native microservices architecture
-- Implemented multi-cloud disaster recovery with **30-minute RTO** and 35% cost reduction
+- Led cross-functional team of 10 developers migrating 20+ legacy applications (Java e-commerce, .NET financial services, Node.js portals) to cloud-native microservices
+- Established CI/CD pipelines using **Docker, Jenkins, GitLab** reducing deployment cycles from weeks to hours
 
 ---
 
@@ -37,7 +36,7 @@ Data Engineer with **3+ years of professional experience** building scalable sol
 GPA: 3.83/4.0 | Houghton, Michigan
 
 **Bachelor of Technology in Information Technology** | *Abdul Kalam Technical University* | Aug 2018 - Aug 2022  
-GPA: 8.22/10 | Lucknow, India
+GPA: 8.22/10 | Delhi, India
 
 ---
 
@@ -55,82 +54,72 @@ GPA: 8.22/10 | Lucknow, India
 ### **Data Engineering & Cloud Solutions**
 
 #### ⚡ [Real-Time Energy Demand Forecasting Pipeline](https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis)
-Built automated time-series forecasting system processing **16+ years of hourly PJM grid data (140K+ records)**
-- **Tech Stack:** Python, Pandas, Statsmodels, SARIMA, AWS
-- **Results:** 77.8% R² accuracy, 4.45% MAPE for short-term forecasts
-- **Innovation:** Automated retraining framework with data quality monitoring
+Automated time-series forecasting system processing 16+ years of hourly PJM grid data (140K+ records) with 77.8% R² accuracy and 4.45% MAPE.  
+**Tech:** Python, Pandas, Statsmodels, SARIMA, AWS
 
 #### 🤖 Scalable NLP Pipeline with RAG Architecture
-Production-ready retrieval-augmented generation system processing **500K+ text chunks**
-- **Tech Stack:** AWS S3, Lambda, Transcribe, FAISS, Vector DB
-- **Architecture:** Serverless ETL with auto-scaling inference pipeline
-- **Achievement:** Sub-second retrieval, 4.2/5 expert rating through A/B testing
+Production-ready retrieval-augmented generation system processing 500K+ text chunks with sub-second retrieval and 4.2/5 expert rating.  
+**Tech:** AWS S3, Lambda, Transcribe, FAISS, Vector DB
 
 #### 🔬 [Automated Biomedical Image Processing Pipeline](https://github.com/Prateeek73/Investigating-Fibroblast-Migration-Using-Deep-Learning)
-End-to-end deep learning pipeline processing **2,000+ microscopy images**
-- **Tech Stack:** PyTorch, U-Net, CNN, OpenCV, TensorFlow
-- **ML Pipeline:** Automated preprocessing, augmentation, hyperparameter tuning
-- **Performance:** 90%+ Dice coefficient in segmentation accuracy
+End-to-end deep learning pipeline processing 2,000+ microscopy images achieving 90%+ Dice coefficient in segmentation accuracy.  
+**Tech:** PyTorch, U-Net, CNN, OpenCV, TensorFlow
 
 ---
 
 ### **Advanced Analytics & Machine Learning**
 
 #### 🧬 [Glucose Bayesian Analysis](https://github.com/Prateeek73/Glucose-Bayesian-Analysis)
-Bayesian statistical modeling for medical data analysis
-- **Tech Stack:** R, Bayesian Inference, Statistical Modeling
-- **Application:** Probabilistic prediction for healthcare decision-making
+Bayesian statistical modeling for medical data with probabilistic prediction for healthcare decision-making.  
+**Tech:** R, Bayesian Inference, Statistical Modeling
 
 #### 🌡️ [Surface Temperature Analysis](https://github.com/Prateeek73/Surface-Temperature-Analysis)
-Climate data analysis with interactive visualizations
-- **Tech Stack:** Python, Pandas, Matplotlib, HTML/CSS
-- **Focus:** Trend identification and climate change pattern analysis
+Climate data analysis with interactive visualizations for trend identification and pattern analysis.  
+**Tech:** Python, Pandas, Matplotlib, HTML/CSS
 
 #### 🌫️ [Air Quality Analysis](https://github.com/Prateeek73/Air_quality_analysis)
-Multi-variable environmental pollution analysis
-- **Tech Stack:** Python, Jupyter, Statistical Analysis
-- **Insights:** Correlation studies for air quality factors
+Multi-variable environmental pollution analysis with correlation studies for air quality factors.  
+**Tech:** Python, Jupyter, Statistical Analysis
 
 #### 🏠 [Housing Price Prediction](https://github.com/Prateeek73/Housing-Price-Predection)
-ML regression model with feature engineering
-- **Tech Stack:** Scikit-learn, Feature Engineering, EDA
+ML regression model with feature engineering and exploratory data analysis.  
+**Tech:** Scikit-learn, Feature Engineering, EDA
 
 #### 🍷 [Wine Quality Analysis](https://github.com/Prateeek73/WineQualityAnalysis)
-Classification algorithms for quality assessment
-- **Tech Stack:** Python, Classification Models, Data Visualization
+Classification algorithms for quality assessment with chemical property correlation analysis.  
+**Tech:** Python, Classification Models, Data Visualization
 
 ---
 
 ### **Full-Stack Development**
 
 #### 🌐 [Orion 1.0](https://github.com/namanmahendra01/Orion1.0)
-Social media platform with competitive gaming elements
-- **Tech Stack:** HTML, CSS, JavaScript, Backend APIs
-- **Features:** Android app platform to organize nd participate in intercollege competions 
+Android platform for organizing and participating in intercollege competitions with real-time leaderboards.  
+**Tech:** HTML, CSS, JavaScript, Java, Backend APIs
 
 #### 🚨 [Disaster Reporter](https://github.com/Prateeek73/DisasterReporter)
-Emergency management and response coordination system
-- **Tech Stack:** Java, Android, Database Management
+Emergency management and response coordination system with real-time incident reporting.  
+**Tech:** Java, Android, Database Management
 
 #### 🔐 [Login Signup System](https://github.com/Prateeek73/LoginSignupPage)
-Secure authentication with database integration
-- **Tech Stack:** Java, MySQL, Encryption
+Secure authentication system with encrypted database integration.  
+**Tech:** Java, MySQL, Encryption
 
 ---
 
 ### **Embedded Systems & IoT**
 
 #### 💾 [STM32 Custom Bootloader](https://github.com/Prateeek73/STM32-Custom-Bootloader)
-Firmware update system for microcontrollers
-- **Tech Stack:** C, STM32, Embedded C
+Firmware update system for microcontrollers with over-the-air update capabilities.  
+**Tech:** C, STM32, Embedded C
 
 #### 📡 [MPU6050-STM32F4](https://github.com/Prateeek73/MPU6050-STM32F4)
-Motion tracking with IMU sensors
-- **Tech Stack:** C++, STM32, Sensor Integration
+Motion tracking system with IMU sensor integration for real-time orientation data.  
+**Tech:** C++, STM32, I2C, Sensor Integration
 
 #### 🌡️ [BMP280-STM32F4xx](https://github.com/Prateeek73/BMP280-STM32F4xx)
-Temperature and pressure sensor interface
-- **Tech Stack:** C, I2C Protocol, STM32
+Temperature and pressure sensor interface with environmental monitoring capabilities.  
+**Tech:** C, I2C Protocol, STM32
 
 ---
 
@@ -189,12 +178,12 @@ Temperature and pressure sensor interface
 
 ## 🎯 What I Bring
 
-✅ **Production Experience** - 3+ years building enterprise-scale data infrastructure at Capgemini  
-✅ **Cloud Expertise** - AWS & Azure certified with hands-on multi-cloud architecture experience  
+✅ **Production Experience** - 3+ years building enterprise-scale infrastructure at Capgemini  
+✅ **Cloud Expertise** - AWS & Azure certified with hands-on multi-cloud architecture  
 ✅ **End-to-End Ownership** - From data pipeline design to ML model deployment  
 ✅ **DevOps Mindset** - CI/CD automation, containerization, infrastructure-as-code  
-✅ **Proven Impact** - Reduced processing time by 60%, achieved 99.9% uptime, cut costs by 35%  
-✅ **Versatile Background** - Unique blend of hardware, software, and data engineering expertise
+✅ **Proven Impact** - 60% faster processing, 99.9% uptime, 35% cost reduction  
+✅ **Versatile Background** - Hardware, software, and data engineering expertise
 
 ---
 
@@ -213,7 +202,7 @@ Temperature and pressure sensor interface
 
 ## 📫 Let's Connect
 
-I'm always interested in discussing data engineering, machine learning, cloud soulutions or potential collaborations!
+I'm always interested in discussing data engineering, machine learning, cloud solutions, or potential collaborations!
 
 📧 **Email:** pra73ek.singh@gmail.com  
 📱 **Phone:** (224) 363-8696  
