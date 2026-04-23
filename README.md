@@ -67,6 +67,22 @@ End-to-end deep learning pipeline processing 2,000+ microscopy images achieving 
 
 ---
 
+---
+
+### **Natural Language Processing & LLM Research**
+
+#### 🎭 [Mormon-NLT: Neural Shakespeare Style Transfer](https://github.com/Prateeek73/Mormon-NLT)
+State-of-the-art neural style transfer system achieving 100× parameter efficiency through LoRA fine-tuning of Qwen2.5 LLMs on 40,000+ Modern↔Shakespearean English pairs with 0.84 BERTScore F1.  
+**Tech:** PyTorch, Hugging Face Transformers, LoRA/PEFT, Large Language Models, Model Evaluation (BLEU/ChrF/BERTScore)
+
+**Key Achievements:**
+- ✅ LoRA adapters (26M params) matched full fine-tuning (1.54B params) at 0.84 F1 - 100× fewer parameters
+- ✅ Unidirectional training yielded +20% BERTScore improvement over bidirectional baseline
+- ✅ Optimized training on NVIDIA RTX 5070 (8.5GB VRAM) with CUDA 12.8 and Flash Attention 2
+- ✅ Rigorous experimental design across 3 experiments comparing LoRA vs FFT approaches
+
+---
+
 ### **Advanced Analytics & Machine Learning**
 
 #### 🧬 [Glucose Bayesian Analysis](https://github.com/Prateeek73/Glucose-Bayesian-Analysis)
