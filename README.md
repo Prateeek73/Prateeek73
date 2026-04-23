@@ -141,9 +141,11 @@ Temperature and pressure sensor interface with environmental monitoring capabili
 
 ## 💻 Technical Stack
 
+## 💻 Technical Stack
+
 ### **Data Engineering & ETL**
 ![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apache-spark&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=flat-square&logo=apache-kafka&logoColor=white)
 ![Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apache-airflow&logoColor=white)
 ![AWS Glue](https://img.shields.io/badge/AWS_Glue-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)
 
@@ -174,6 +176,8 @@ Temperature and pressure sensor interface with environmental monitoring capabili
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square&logoColor=black)
+![LoRA](https://img.shields.io/badge/LoRA/PEFT-FF6B6B?style=flat-square&logoColor=white)
 
 ### **Web Development**
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
@@ -189,9 +193,8 @@ Temperature and pressure sensor interface with environmental monitoring capabili
 ![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
-![GitLab CI/CD](https://img.shields.io/badge/GitLab_CI/CD-FCA121?style=flat-square&logo=gitlab&logoColor=white)
+![GitLab CI/CD](https://img.shields.io/badge/GitLab_CI/CD-FC6D26?style=flat-square&logo=gitlab&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-
 ---
 
 ## 🎯 What I Bring
@@ -226,7 +229,7 @@ I'm always interested in discussing data engineering, machine learning, cloud so
 📱 **Phone:** (224) 363-8696  
 💼 **LinkedIn:** [linkedin.com/in/prateek-singh-7392041a0](https://www.linkedin.com/in/prateek-singh-7392041a0/)  
 🐙 **GitHub:** [@Prateeek73](https://github.com/Prateeek73)  
-📍 **Location:** Houghton, Michigan (Open to Remote)
+📍 **Location:** Chicago, Illinois (Open to Relocate)
 
 ---
 
