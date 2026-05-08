@@ -1,240 +1,126 @@
-# 👋 Hello, I'm Prateek Singh
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=70A5FD&center=true&vCenter=true&width=940&lines=Hey%2C+I'm+Prateek+%F0%9F%91%8B;Data+Engineer+%7C+Building+Production+Systems;3%2B+Years+%40+Capgemini+%7C+AWS+Certified;Python+%7C+SQL+%7C+Docker+%7C+Cloud+Architecture" alt="Typing SVG" />
+</div>
 
-**Data Engineer | Machine Learning Engineer | Cloud Solutions Architect**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/prateek-singh-7392041a0/)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pra73ek.singh@gmail.com)
-[![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=leetcode&logoColor=FFA116)](https://leetcode.com/u/Prateek73/)
-
----
-
-## 🎯 About Me
-
-Data Engineer with **3+ years of professional experience** building scalable solutions and cloud infrastructure at **Capgemini**. Currently pursuing MS in Data Science at Michigan Technological University (3.83 GPA). My journey from embedded systems to full-stack development and now data engineering has given me a unique perspective on building end-to-end intelligent systems.
-
-**Specialization:** Full-stack cloud-native development • ETL/ELT pipelines • Machine learning deployment • Real-time analytics
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=Prateeek73&style=for-the-badge&color=blue" alt="Profile Views"/>
+</div>
 
 ---
 
-## 💼 Professional Experience
+## 👨‍💻 About Me
 
-### **Backend Developer (Analyst) | Capgemini** | Sep 2021 – Jul 2024
-*Bengaluru, India*
+I'm a data engineer who builds systems that actually work in production.
 
-🚀 **Impact:** Deployed 20+ containerized applications • Processed 500GB+ daily data • 60% faster processing • 99.9% uptime
+Currently finishing my MS in Data Science at Michigan Tech (April 2026) after spending 3 years at Capgemini building cloud infrastructure and ETL pipelines that processed 500GB+ daily data across AWS and Azure.
 
-- Architected serverless disaster recovery solution using **AWS Lambda, S3, CloudFormation, and Azure Functions** reducing RTO from 4 hours to 30 minutes with 35% cost savings
-- Built serverless ETL workflows across **AWS & Azure** with automated data quality validation
-- Led cross-functional team of 10 developers migrating 20+ legacy applications (Java e-commerce, .NET financial services, Node.js portals) to cloud-native microservices
-- Established CI/CD pipelines using **Docker, Jenkins, GitLab** reducing deployment cycles from weeks to hours
+**What I do:** Design and build data pipelines, deploy ML models to production, architect cloud-native systems that scale.
+
+**What I'm good at:** Python, SQL, AWS, Docker, Terraform. I can take a messy data problem and turn it into clean, automated infrastructure.
 
 ---
 
-## 🎓 Education
+## 🛠️ Core Stack
 
-**Master of Science in Data Science** | *Michigan Technological University* | Aug 2024 - Apr 2026  
-GPA: 3.83/4.0 | Houghton, Michigan
+<div align="center">
 
-**Bachelor of Technology in Information Technology** | *Abdul Kalam Technical University* | Aug 2018 - Aug 2022  
-GPA: 8.22/10 | Lucknow, India
+### Data & Cloud
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 
----
+### Data Engineering
+![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=for-the-badge&logo=apache-kafka&logoColor=white)
+![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
-## 🏆 Certifications
+### ML & AI
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge&logoColor=black)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-- **AWS Certified AI Practitioner** | January 2026
-- **AWS Certified SysOps Administrator – Associate** | January 2026
-- **Microsoft Azure Fundamentals (AZ-900)** | August 2023
-- **Machine Learning with Python** | IBM Developer Skills Network | June 2021
+</div>
 
 ---
 
 ## 🚀 Featured Projects
 
-### **Data Engineering & Cloud Solutions**
+<div align="center">
 
-#### ⚡ [Real-Time Energy Demand Forecasting Pipeline](https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis)
-Automated time-series forecasting system processing 16+ years of hourly PJM grid data (140K+ records) with 77.8% R² accuracy and 4.45% MAPE.  
-**Tech:** Python, Pandas, Statsmodels, SARIMA, AWS
+<a href="https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Prateeek73&repo=PJME_Energey_Consumption_Analysis&theme=tokyonight&hide_border=true" alt="Energy Forecasting" />
+</a>
+<a href="https://github.com/Prateeek73/Mormon-NLT">
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Prateeek73&repo=Mormon-NLT&theme=tokyonight&hide_border=true" alt="Mormon-NLT" />
+</a>
 
-#### 🤖 Scalable NLP Pipeline with RAG Architecture
-Production-ready retrieval-augmented generation system processing 500K+ text chunks with sub-second retrieval and 4.2/5 expert rating.  
-**Tech:** AWS S3, Lambda, Transcribe, FAISS, Vector DB
+</div>
 
-#### 🔬 [Automated Biomedical Image Processing Pipeline](https://github.com/Prateeek73/Investigating-Fibroblast-Migration-Using-Deep-Learning)
-End-to-end deep learning pipeline processing 2,000+ microscopy images achieving 90%+ Dice coefficient in segmentation accuracy.  
-**Tech:** PyTorch, U-Net, CNN, OpenCV, TensorFlow
+### [Real-Time Energy Demand Forecasting](https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis)
+Automated SARIMA-based forecasting system built on AWS. Takes messy historical grid data, cleans it, models it, deploys predictions.
 
----
-
----
-
-### **Natural Language Processing & LLM Research**
-
-#### 🎭 [Mormon-NLT: Neural Shakespeare Style Transfer](https://github.com/Prateeek73/Mormon-NLT)
-State-of-the-art neural style transfer system achieving 100× parameter efficiency through LoRA fine-tuning of Qwen2.5 LLMs on 40,000+ Modern↔Shakespearean English pairs with 0.84 BERTScore F1.  
-**Tech:** PyTorch, Hugging Face Transformers, LoRA/PEFT, Large Language Models, Model Evaluation (BLEU/ChrF/BERTScore)
-
-**Key Achievements:**
-- ✅ LoRA adapters (26M params) matched full fine-tuning (1.54B params) at 0.84 F1 - 100× fewer parameters
-- ✅ Unidirectional training yielded +20% BERTScore improvement over bidirectional baseline
-- ✅ Optimized training on NVIDIA RTX 5070 (8.5GB VRAM) with CUDA 12.8 and Flash Attention 2
-- ✅ Rigorous experimental design across 3 experiments comparing LoRA vs FFT approaches
+**Stack:** Python, Pandas, Statsmodels, AWS S3/Lambda  
+**Impact:** 77.8% R² accuracy, 4.45% MAPE on 140K+ records
 
 ---
 
-### **Advanced Analytics & Machine Learning**
+### [Mormon-NLT: Neural Style Transfer](https://github.com/Prateeek73/Mormon-NLT)
+Research project on parameter-efficient LLM fine-tuning. Achieved 100× parameter reduction using LoRA adapters.
 
-#### 🧬 [Glucose Bayesian Analysis](https://github.com/Prateeek73/Glucose-Bayesian-Analysis)
-Bayesian statistical modeling for medical data with probabilistic prediction for healthcare decision-making.  
-**Tech:** R, Bayesian Inference, Statistical Modeling
-
-#### 🌡️ [Surface Temperature Analysis](https://github.com/Prateeek73/Surface-Temperature-Analysis)
-Climate data analysis with interactive visualizations for trend identification and pattern analysis.  
-**Tech:** Python, Pandas, Matplotlib, HTML/CSS
-
-#### 🌫️ [Air Quality Analysis](https://github.com/Prateeek73/Air_quality_analysis)
-Multi-variable environmental pollution analysis with correlation studies for air quality factors.  
-**Tech:** Python, Jupyter, Statistical Analysis
-
-#### 🏠 [Housing Price Prediction](https://github.com/Prateeek73/Housing-Price-Predection)
-ML regression model with feature engineering and exploratory data analysis.  
-**Tech:** Scikit-learn, Feature Engineering, EDA
-
-#### 🍷 [Wine Quality Analysis](https://github.com/Prateeek73/WineQualityAnalysis)
-Classification algorithms for quality assessment with chemical property correlation analysis.  
-**Tech:** Python, Classification Models, Data Visualization
+**Stack:** PyTorch, Hugging Face, LoRA/PEFT  
+**Impact:** 0.84 BERTScore F1, matching full fine-tuning performance
 
 ---
 
-### **Full-Stack Development**
+## 📊 GitHub Stats
 
-#### 🌐 [Orion 1.0](https://github.com/namanmahendra01/Orion1.0)
-Android platform for organizing and participating in intercollege competitions with real-time leaderboards.  
-**Tech:** HTML, CSS, JavaScript, Java, Backend APIs
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Prateeek73&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" height="170"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Prateeek73&theme=tokyonight&hide_border=true" alt="GitHub Streak" height="170"/>
+</div>
 
-#### 🚨 [Disaster Reporter](https://github.com/Prateeek73/DisasterReporter)
-Emergency management and response coordination system with real-time incident reporting.  
-**Tech:** Java, Android, Database Management
-
-#### 🔐 [Login Signup System](https://github.com/Prateeek73/LoginSignupPage)
-Secure authentication system with encrypted database integration.  
-**Tech:** Java, MySQL, Encryption
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Prateeek73&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&hide=jupyter%20notebook,html,css" alt="Top Languages"/>
+</div>
 
 ---
 
-### **Embedded Systems & IoT**
+## 🏆 GitHub Trophies
 
-#### 💾 [STM32 Custom Bootloader](https://github.com/Prateeek73/STM32-Custom-Bootloader)
-Firmware update system for microcontrollers with over-the-air update capabilities.  
-**Tech:** C, STM32, Embedded C
-
-#### 📡 [MPU6050-STM32F4](https://github.com/Prateeek73/MPU6050-STM32F4)
-Motion tracking system with IMU sensor integration for real-time orientation data.  
-**Tech:** C++, STM32, I2C, Sensor Integration
-
-#### 🌡️ [BMP280-STM32F4xx](https://github.com/Prateeek73/BMP280-STM32F4xx)
-Temperature and pressure sensor interface with environmental monitoring capabilities.  
-**Tech:** C, I2C Protocol, STM32
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Prateeek73&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies"/>
+</div>
 
 ---
 
-## 💻 Technical Stack
+## 📈 Contribution Graph
 
-## 💻 Technical Stack
-
-### **Data Engineering & ETL**
-![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat-square&logo=apache-spark&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=flat-square&logo=apache-kafka&logoColor=white)
-![Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=flat-square&logo=apache-airflow&logoColor=white)
-![AWS Glue](https://img.shields.io/badge/AWS_Glue-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)
-
-### **Cloud & Infrastructure**
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white)
-![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-
-### **Databases**
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Redshift](https://img.shields.io/badge/Amazon_Redshift-8C4FFF?style=flat-square&logo=amazon-redshift&logoColor=white)
-
-### **Programming Languages**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white)
-![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
-![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=flat-square&logo=ruby&logoColor=white)
-
-### **ML & Data Science**
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat-square&logoColor=black)
-![LoRA](https://img.shields.io/badge/LoRA/PEFT-FF6B6B?style=flat-square&logoColor=white)
-
-### **Web Development**
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white)
-
-### **DevOps & CI/CD**
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
-![GitLab CI/CD](https://img.shields.io/badge/GitLab_CI/CD-FC6D26?style=flat-square&logo=gitlab&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
----
-
-## 🎯 What I Bring
-
-✅ **Production Experience** - 3+ years building enterprise-scale infrastructure at Capgemini  
-✅ **Cloud Expertise** - AWS & Azure certified with hands-on multi-cloud architecture  
-✅ **End-to-End Ownership** - From data pipeline design to ML model deployment  
-✅ **DevOps Mindset** - CI/CD automation, containerization, infrastructure-as-code  
-✅ **Proven Impact** - 60% faster processing, 99.9% uptime, 35% cost reduction  
-✅ **Versatile Background** - Hardware, software, and data engineering expertise
-
----
-
-## 🌟 Open to Opportunities
-
-**Actively seeking roles in:**
-- Data Engineer / Senior Data Engineer
-- ML Engineer / MLOps Engineer
-- Cloud Solutions Architect
-- Full-Stack ML Developer
-
-**Location:** Currently in Houghton, Michigan | Open to relocation or remote opportunities  
-**Availability:** Graduating April 2026 | Available for jobs/internships/co-ops
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Prateeek73&theme=tokyo-night&hide_border=true&area=true" alt="Contribution Graph"/>
+</div>
 
 ---
 
 ## 📫 Let's Connect
 
-I'm always interested in discussing data engineering, machine learning, cloud solutions, or potential collaborations!
+I'm looking for **remote data engineering roles** starting summer 2026. I want to work on systems where good infrastructure decisions matter - high-volume data, production ML, distributed systems.
 
-📧 **Email:** pra73ek.singh@gmail.com  
-📱 **Phone:** (224) 363-8696  
-💼 **LinkedIn:** [linkedin.com/in/prateek-singh-7392041a0](https://www.linkedin.com/in/prateek-singh-7392041a0/)  
-🐙 **GitHub:** [@Prateeek73](https://github.com/Prateeek73)  
-📍 **Location:** Chicago, Illinois (Open to Relocate)
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pra73ek.singh@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/prateek-singh-7392041a0/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/Prateek73/)
+
+**📍 Michigan** | **🗓️ Available April 2026** | **💼 Open to Remote**
+
+</div>
 
 ---
 
 <div align="center">
-
-### *"From bootloaders to big data pipelines - building scalable solutions at every layer"*
-
+  <i>From embedded bootloaders to petabyte-scale data pipelines - I build systems that work.</i>
 </div>
