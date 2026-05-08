@@ -49,18 +49,7 @@ Currently finishing my MS in Data Science at Michigan Tech (April 2026) after sp
 
 ## 🚀 Featured Projects
 
-<div align="center">
-
-<a href="https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Prateeek73&repo=PJME_Energey_Consumption_Analysis&theme=tokyonight&hide_border=true" alt="Energy Forecasting" />
-</a>
-<a href="https://github.com/Prateeek73/Mormon-NLT">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Prateeek73&repo=Mormon-NLT&theme=tokyonight&hide_border=true" alt="Mormon-NLT" />
-</a>
-
-</div>
-
-### [Real-Time Energy Demand Forecasting](https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis)
+### 📊 [Real-Time Energy Demand Forecasting](https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis)
 Automated SARIMA-based forecasting system built on AWS. Takes messy historical grid data, cleans it, models it, deploys predictions.
 
 **Stack:** Python, Pandas, Statsmodels, AWS S3/Lambda  
@@ -68,7 +57,7 @@ Automated SARIMA-based forecasting system built on AWS. Takes messy historical g
 
 ---
 
-### [Mormon-NLT: Neural Style Transfer](https://github.com/Prateeek73/Mormon-NLT)
+### 🎭 [Mormon-NLT: Neural Style Transfer](https://github.com/Prateeek73/Mormon-NLT)
 Research project on parameter-efficient LLM fine-tuning. Achieved 100× parameter reduction using LoRA adapters.
 
 **Stack:** PyTorch, Hugging Face, LoRA/PEFT  
@@ -76,31 +65,35 @@ Research project on parameter-efficient LLM fine-tuning. Achieved 100× paramete
 
 ---
 
-## 📊 GitHub Stats
+### 🧬 [Biomedical Image Processing Pipeline](https://github.com/Prateeek73/Investigating-Fibroblast-Migration-Using-Deep-Learning)
+End-to-end deep learning system for cell segmentation in microscopy images. U-Net architecture with automated evaluation pipeline.
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Prateeek73&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" height="170"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Prateeek73&theme=tokyonight&hide_border=true" alt="GitHub Streak" height="170"/>
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Prateeek73&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&hide=jupyter%20notebook,html,css" alt="Top Languages"/>
-</div>
+**Stack:** PyTorch, TensorFlow, OpenCV  
+**Impact:** 90%+ Dice coefficient on 2,000+ microscopy images
 
 ---
 
-## 🏆 GitHub Trophies
+### 💾 [STM32 Custom Bootloader](https://github.com/Prateeek73/STM32-Custom-Bootloader)
+Firmware update system for microcontrollers with over-the-air update capabilities. Low-level systems programming.
 
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Prateeek73&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies"/>
-</div>
+**Stack:** C, Embedded Systems, STM32  
+**Why it matters:** Shows I can work at any layer of the stack when needed
 
 ---
 
-## 📈 Contribution Graph
+---
+
+## 📊 GitHub Activity
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Prateeek73&theme=tokyo-night&hide_border=true&area=true" alt="Contribution Graph"/>
+  
+![GitHub Stats](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Prateeek73&theme=tokyonight)
+
+</div>
+
+<div align="center">
+  <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Prateeek73&theme=tokyonight" width="48%" />
+  <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Prateeek73&theme=tokyonight" width="48%" />
 </div>
 
 ---
