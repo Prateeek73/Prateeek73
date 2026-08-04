@@ -15,7 +15,12 @@
     <nav>
         <div class="nav-container">
             <h2 class="logo">PS</h2>
-            <ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -30,11 +35,11 @@
         <div class="hero-content">
             <p class="kicker">Backend &middot; Full Stack &middot; ML Engineering</p>
             <h1>Prateek Singh</h1>
-            <h2>Building production systems that scale.</h2>
-            <p class="hero-meta">Chicago, IL &middot; M.S. Data Science (3.85 GPA) &middot; 5+ Years Experience</p>
+            <h2>Shipping ML systems to real users.</h2>
+            <p class="hero-meta">Chicago, IL &middot; M.S. Data Science (3.85 GPA) &middot; 3 Years Industry + Research Systems</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#projects" class="btn btn-secondary">View My Work</a>
             </div>
         </div>
     </header>
@@ -43,9 +48,9 @@
     <section id="about" class="container">
         <span class="eyebrow">// 01_about</span>
         <h2 class="section-title">About Me</h2>
-        <p>I am a Full Stack Software Engineer with 5+ years of experience designing, building, and shipping end-to-end web applications across fintech, automotive, and scientific research domains.</p>
-        <p>I have a proven ability to own production systems at scale, building and operating microservices processing 1M+ requests/min at 99.99% uptime, with a strong foundation in Java/Spring Boot and Node.js/TypeScript stacks. My recent focus has been on productionizing ML systems, deploying models to real users via FastAPI, React, and HPC infrastructure.</p>
-        <p>I'm a daily user of AI-assisted development tools (GitHub Copilot, Claude) and am deeply interested in LLM-based code generation, automated program repair, and legacy code modernization.</p>
+        <p>I'm a Full Stack Software Engineer with 3 years of industry experience designing, building, and shipping production systems across fintech and scientific computing. I specialize in building scalable backends, ML systems, and full-stack applications.</p>
+        <p>At Capgemini, I shipped microservices processing 1M+ requests/min at 99.99% uptime, implementing asynchronous pipelines with Kafka/SQS and multi-layer caching that reduced load by 75%. At Michigan Tech, I'm shipping ML systems to real users—from compound-screening models (FastAPI + React) to GAN-based simulators on HPC infrastructure.</p>
+        <p>I'm drawn to systems work: building reliable infrastructure, deploying ML at scale, and using AI tools (Copilot, Claude) to move faster. Deeply interested in automated program repair, legacy code modernization, and building the tools that make engineering faster.</p>
     </section>
 
     <hr>
@@ -55,8 +60,8 @@
         <span class="eyebrow">// 02_experience</span>
         <h2 class="section-title">Professional Experience</h2>
         
-        <div class="timeline-item">
-            <h3>Graduate Research Engineer | Michigan Technological University</h3>
+        <div class="timeline-item" style="border-left: 4px solid var(--violet); background: linear-gradient(135deg, rgba(107, 47, 191, 0.03) 0%, transparent 100%);">
+            <h3>Graduate Research Engineer | Michigan Technological University <span style="font-size: 0.75rem; background: var(--violet); color: var(--bg-white); padding: 0.2rem 0.5rem; border-radius: 3px; margin-left: 0.5rem;">CURRENT</span></h3>
             <span class="date">05/2025 - 04/2026 | Michigan, USA</span>
             <ul>
                 <li><strong>FragBERTa (LLM Serving Platform):</strong> Owned end-to-end productionization of a fine-tuned 110M-parameter BERT model for compound screening, delivering batch inference of 1k+ compounds in under 90 seconds via FastAPI backend and React frontend on HPC infrastructure.</li>
@@ -243,7 +248,7 @@
 
         <div id="github-repos" class="github-section">
             <h3>Recent GitHub Repositories</h3>
-            <p style="color: var(--ink-soft); margin-top: 0.5rem;">Dynamically loading from GitHub API...</p>
+            <p style="color: var(--ink-soft); margin-top: 0.5rem; margin-bottom: 1.5rem;">Latest 4 repos — <a href="https://github.com/Prateeek73" target="_blank" style="color: var(--violet); font-weight: 600; text-decoration: none;">see all 35+ projects →</a></p>
             <ul id="repo-list" class="repo-list">
                 <!-- Repos will be injected here via JavaScript -->
             </ul>
@@ -258,35 +263,35 @@
         <h2 class="section-title">Technical Expertise</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>Languages</h3>
+                <h3><span style="color: var(--violet); margin-right: 0.5rem;">{}</span>Languages</h3>
                 <p>Java, TypeScript, JavaScript (ES6+), Python, Ruby, SQL, HTML/CSS</p>
             </div>
             <div class="skill-category">
-                <h3>Backend & APIs</h3>
+                <h3><span style="color: var(--violet); margin-right: 0.5rem;">→</span>Backend & APIs</h3>
                 <p>Spring Boot, Node.js, Express.js, FastAPI, Flask, REST APIs, GraphQL, WebSockets, Microservices, Event-Driven Architecture</p>
             </div>
             <div class="skill-category">
-                <h3>Frontend & UX</h3>
+                <h3><span style="color: var(--violet); margin-right: 0.5rem;">◇</span>Frontend & UX</h3>
                 <p>React, Angular, Vue.js, Bootstrap, Streamlit, Responsive Design, State Management</p>
             </div>
             <div class="skill-category">
-                <h3>Databases & Caching</h3>
+                <h3><span style="color: var(--violet); margin-right: 0.5rem;">◆</span>Databases & Caching</h3>
                 <p>PostgreSQL, MySQL, MongoDB, Redis, DynamoDB, Firebase, Query Optimization, ORM</p>
             </div>
             <div class="skill-category">
-                <h3>ML & Data</h3>
+                <h3><span style="color: var(--violet); margin-right: 0.5rem;">⟡</span>ML & Data</h3>
                 <p>PyTorch, TensorFlow, Transformers, LLMs, RAG, FastAPI, Batch Inference, HPC Deployment</p>
             </div>
             <div class="skill-category">
-                <h3>Cloud & DevOps</h3>
+                <h3><span style="color: var(--violet); margin-right: 0.5rem;">☁</span>Cloud & DevOps</h3>
                 <p>AWS (Lambda, EC2, ECS/EKS, S3, RDS), Azure, Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, CI/CD</p>
             </div>
             <div class="skill-category">
-                <h3>Messaging & Streaming</h3>
+                <h3><span style="color: var(--violet); margin-right: 0.5rem;">↔</span>Messaging & Streaming</h3>
                 <p>Apache Kafka, Amazon SQS, Async Pipelines, Parallel Workers, Real-Time Processing</p>
             </div>
             <div class="skill-category">
-                <h3>Observability & Monitoring</h3>
+                <h3><span style="color: var(--violet); margin-right: 0.5rem;">◉</span>Observability & Monitoring</h3>
                 <p>Prometheus, Grafana, Structured Logging, Incident Response, Production Debugging</p>
             </div>
         </div>
@@ -302,9 +307,8 @@
                 <p>I'm actively looking for opportunities in Full Stack, Backend, Data Engineering, and ML Systems engineering roles. Let's chat!</p>
                 
                 <div class="contact-grid">
-                    <div class="contact-item">
-                        <h4>Email</h4>
-                        <a href="mailto:pra73ek.singh@gmail.com" class="contact-link">pra73ek.singh@gmail.com</a>
+                    <div class="contact-item" style="grid-column: 1/-1; order: -1;">
+                        <a href="mailto:pra73ek.singh@gmail.com" class="contact-link" style="display: inline-block; background: var(--amber); color: var(--ink); padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 1.1rem; font-weight: 600; text-decoration: none; transition: transform 0.2s; border: 2px solid var(--ink); margin-bottom: 2rem;">Email Me: pra73ek.singh@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <h4>Phone</h4>
