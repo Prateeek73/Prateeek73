@@ -19,6 +19,117 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes underlineGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 48px;
+    }
+}
+
+@keyframes floatPulse {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes numberCount {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-delight {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-1deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        box-shadow: 8px 8px 0 var(--violet);
+    }
+    50% {
+        box-shadow: 8px 8px 0 var(--amber);
+    }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 body {
     background-color: var(--bg);
     background-image:
@@ -26,14 +137,18 @@ body {
     background-size: 22px 22px;
     color: var(--ink);
     line-height: 1.6;
-    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .mono {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'IBM Plex Mono', 'Courier New', monospace;
 }
 
 /* Navigation */
@@ -57,7 +172,7 @@ nav {
 }
 
 .logo {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     font-weight: 600;
     background: var(--violet);
     color: var(--bg-white);
@@ -76,7 +191,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: var(--ink);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     font-size: 0.85rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -176,27 +291,28 @@ nav a:hover {
         transparent 14px
     );
     color: var(--bg-white);
-    padding: 9rem 1rem 5rem;
+    padding: 12rem 1rem 7rem;
     text-align: center;
     border-bottom: 2px solid var(--ink);
     margin-top: 60px;
 }
 
 .hero-content h1 {
-    font-size: 3.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.01em;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .kicker {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-size: 0.8rem;
-    font-weight: 500;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    font-weight: 700;
     color: var(--amber);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .kicker::before {
@@ -204,18 +320,20 @@ nav a:hover {
 }
 
 .hero-meta {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.85rem;
-    opacity: 0.85;
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 0.95rem;
+    opacity: 0.9;
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
 }
 
 .hero-content h2 {
-    font-size: 1.4rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    opacity: 0.95;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    opacity: 1;
+    line-height: 1.3;
 }
 
 .hero-buttons {
@@ -228,20 +346,21 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     border: 2px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--ink);
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 600;
+    box-shadow: 6px 6px 0 var(--ink);
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-weight: 700;
     transition: transform 0.15s, box-shadow 0.15s;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
 }
 
 .btn:hover {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
 }
 
 .btn:focus {
@@ -268,22 +387,23 @@ nav a:hover {
     display: inline-block;
     background: var(--amber);
     color: var(--ink);
-    padding: 0.75rem 1.5rem;
+    padding: 1.1rem 2.2rem;
     border: 2px solid var(--ink);
     border-radius: 4px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: 700;
     text-decoration: none;
     transition: transform 0.15s, box-shadow 0.15s;
     cursor: pointer;
-    box-shadow: 4px 4px 0 var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
     margin-bottom: 2rem;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
+    letter-spacing: 0.05em;
 }
 
 .email-button:hover {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
 }
 
 .email-button:focus {
@@ -297,31 +417,35 @@ nav a:hover {
 
 /* Common Container */
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 1rem;
+    padding: 6.5rem 2rem;
     flex: 1;
 }
 
 .eyebrow {
     display: block;
     text-align: center;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 0.85rem;
     color: var(--violet);
-    opacity: 0.7;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    opacity: 0.75;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .section-title {
-    font-size: 1.9rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
     color: var(--ink);
     text-align: center;
     position: relative;
-    padding-bottom: 0.75rem;
+    padding-bottom: 1rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .section-title::after {
@@ -330,9 +454,11 @@ nav a:hover {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 48px;
-    height: 4px;
+    width: 60px;
+    height: 5px;
     background: var(--amber);
+    animation: underlineGrow 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    transform-origin: center;
 }
 
 .subtitle {
@@ -364,9 +490,9 @@ hr {
 /* Experience Timeline */
 .timeline-item {
     background: var(--bg-white);
-    padding: 1.5rem;
+    padding: 2rem;
     border: 2px solid var(--ink);
-    box-shadow: 5px 5px 0 var(--line);
+    box-shadow: 8px 8px 0 var(--line);
     margin-bottom: 1.75rem;
     transition: transform 0.15s, box-shadow 0.15s;
 }
@@ -387,7 +513,7 @@ hr {
 }
 
 .timeline-item .date {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     color: var(--violet);
     font-size: 0.85rem;
     display: block;
@@ -423,7 +549,7 @@ hr {
     border-radius: 3px;
     margin-left: 0.5rem;
     font-weight: 600;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
 }
 
 /* Link Focus States - Accessibility */
@@ -456,34 +582,36 @@ nav a:focus {
 }
 
 .group-title {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 1.3rem;
+    font-weight: 750;
     color: var(--violet);
     text-transform: uppercase;
-    letter-spacing: 0.03em;
-    border-bottom: 2px solid var(--ink);
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+    border-bottom: 3px solid var(--ink);
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .group-subtitle {
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-    margin-bottom: 1.25rem;
+    color: var(--ink);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    align-items: stretch;
 }
 
 .card {
     background: var(--bg-white);
-    padding: 1.5rem;
+    padding: 2rem;
     border: 2px solid var(--ink);
-    box-shadow: 5px 5px 0 var(--violet);
+    box-shadow: 8px 8px 0 var(--violet);
     display: flex;
     flex-direction: column;
     transition: transform 0.15s, box-shadow 0.15s;
@@ -500,8 +628,8 @@ nav a:focus {
 }
 
 .card h3 {
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 800;
+    font-size: 1.35rem;
     color: var(--ink);
 }
 
@@ -521,7 +649,7 @@ nav a:focus {
 .card .tag {
     background: var(--bg);
     color: var(--violet-deep);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     font-size: 0.7rem;
     font-weight: 500;
     padding: 0.25rem 0.5rem;
@@ -531,7 +659,7 @@ nav a:focus {
 
 .card-num {
     display: inline-block;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--amber);
@@ -541,7 +669,7 @@ nav a:focus {
 .card-link {
     margin-top: 1.25rem;
     color: var(--violet);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
@@ -561,10 +689,10 @@ nav a:focus {
 
 .skill-category {
     background: var(--bg-white);
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: left;
     border: 2px solid var(--ink);
-    box-shadow: 5px 5px 0 var(--line);
+    box-shadow: 8px 8px 0 var(--line);
     transition: transform 0.15s, box-shadow 0.15s;
 }
 
@@ -578,7 +706,7 @@ nav a:focus {
 }
 
 .skill-category h3 {
-    font-weight: 600;
+    font-weight: 750;
     color: var(--violet);
     margin-bottom: 0.75rem;
     font-size: 1rem;
@@ -615,11 +743,13 @@ nav a:focus {
     transition: transform 0.15s, box-shadow 0.15s;
     box-shadow: 4px 4px 0 var(--ink);
     text-decoration: none;
+    animation: floatPulse 3s ease-in-out infinite;
 }
 
 .floating-cta:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 var(--ink);
+    animation: none;
 }
 
 @media (max-width: 768px) {
@@ -690,9 +820,11 @@ footer {
 }
 
 footer h2 {
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 footer p {
@@ -709,7 +841,7 @@ footer p {
 }
 
 .contact-item h4 {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -736,7 +868,7 @@ footer p {
 
 .social-link {
     color: var(--amber);
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s;
@@ -760,7 +892,7 @@ footer p {
 }
 
 .copyright {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Space Mono', 'Courier New', monospace;
     color: #9C8BAF;
     font-size: 0.8rem;
 }
@@ -777,7 +909,7 @@ footer p {
     }
 
     .hero-content h2 {
-        font-size: 1.1rem;
+        font-size: 1.35rem;
     }
 
     .hero-buttons {
@@ -875,4 +1007,1279 @@ footer p {
     nav a {
         font-size: 0.7rem;
     }
+}
+
+/* Animated Counter Elements */
+[data-target] {
+    position: relative;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+[data-target]::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--amber), transparent);
+    opacity: 0;
+    animation: slideInRight 0.8s ease 0.6s forwards;
+}
+
+/* Delight Interactions */
+.card:active {
+    animation: bounce-delight 0.4s ease-out;
+}
+
+.card:active::after {
+    content: "✨";
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    font-size: 1.5rem;
+    animation: float-up 0.8s ease-out forwards;
+}
+
+@keyframes float-up {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+/* Playful hover for email button */
+.email-button:hover {
+    animation: none;
+    box-shadow: 6px 6px 0 var(--amber);
+}
+
+.email-button:active {
+    animation: bounce-delight 0.3s ease-out;
+}
+
+/* Floating button special hover */
+.floating-cta:hover {
+    animation: wiggle 0.3s ease-in-out;
+}
+
+/* Section title hover - slight glow effect */
+.section-title:hover::after {
+    background: linear-gradient(90deg, var(--amber), var(--violet));
+    box-shadow: 0 0 8px rgba(232, 150, 59, 0.5);
+}
+
+/* Skill category hover - subtle lift */
+.skill-category:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+/* Timeline item hover - playful lift */
+.timeline-item:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s ease;
+}
+
+/* Gradient Button Hover */
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--amber), #D4842D);
+    box-shadow: 4px 4px 0 var(--ink), 0 0 12px rgba(232, 150, 59, 0.4);
+}
+
+.email-button:hover {
+    background: linear-gradient(135deg, var(--amber), #D4842D);
+    box-shadow: 6px 6px 0 var(--ink), 0 0 16px rgba(232, 150, 59, 0.5);
+}
+
+/* Playful card transforms */
+.card:hover {
+    transform: translate(2px, 2px) scale(1.01);
+}
+
+/* Star sparkle animation */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Add sparkles on hover */
+.card::before {
+    content: "✨";
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: none;
+}
+
+.card:hover::before {
+    animation: sparkle 0.6s ease-out;
+}
+
+/* Floating button extra delight */
+.floating-cta::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(232, 150, 59, 0.3), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: none;
+    z-index: -1;
+}
+
+.floating-cta:hover::after {
+    animation: pulse-glow 0.6s ease-out;
+}
+
+@keyframes pulse-glow {
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 150%;
+        height: 150%;
+        opacity: 0;
+    }
+}
+
+/* Playful text selection */
+::selection {
+    background: var(--amber);
+    color: var(--ink);
+}
+
+/* Playful focus ring with animation */
+:focus-visible {
+    outline: 2px solid var(--violet);
+    outline-offset: 2px;
+    animation: focus-pulse 0.4s ease-out;
+}
+
+@keyframes focus-pulse {
+    0% {
+        outline-width: 2px;
+    }
+    100% {
+        outline-width: 4px;
+    }
+}
+
+/* Underline animation on links */
+a:not(.btn):not(.email-button):not(.floating-cta):hover {
+    text-decoration: underline;
+    text-decoration-color: var(--amber);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* Skill category delight */
+.skill-category {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+}
+
+.skill-category::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--amber), var(--violet));
+    animation: none;
+    transition: width 0.3s ease;
+}
+
+.skill-category:hover::before {
+    width: 100%;
+}
+
+.skill-category:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+
+/* Timeline item delight */
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--amber);
+    animation: none;
+    transition: width 0.3s ease;
+}
+
+.timeline-item:hover::after {
+    width: 30px;
+}
+
+/* Project group delight */
+.project-group {
+    position: relative;
+}
+
+.project-group::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--violet), var(--amber));
+    transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-group:hover::before {
+    width: 100%;
+}
+
+/* Success state for forms (if added later) */
+input:focus,
+textarea:focus {
+    border-color: var(--amber);
+    box-shadow: 0 0 0 3px rgba(232, 150, 59, 0.1);
+    transition: all 0.2s ease;
+}
+
+/* Playful scrollbar (webkit only) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--violet);
+    border-radius: 5px;
+    border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--amber);
+    box-shadow: inset 0 0 6px rgba(232, 150, 59, 0.3);
+}
+
+/* Delightful page transitions */
+@keyframes page-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: page-in 0.4s ease-out;
+}
+
+/* Value Proposition Section */
+.value-prop {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(107, 47, 191, 0.05), rgba(232, 150, 59, 0.05));
+    border-left: 4px solid var(--amber);
+    border-right: 4px solid var(--violet);
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-weight: 500;
+    color: var(--ink);
+    animation: fadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.value-prop strong {
+    color: var(--violet);
+    font-weight: 700;
+}
+
+/* Improved Card Layout */
+.project-group .grid {
+    grid-auto-rows: auto;
+}
+
+.card {
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card p {
+    flex-grow: 1;
+}
+
+.card .tags {
+    margin-top: auto;
+}
+
+/* Featured project (first project) - highlight it */
+.project-group:first-child .card:first-child {
+    grid-column: span 1;
+}
+
+@media (min-width: 1000px) {
+    /* On larger screens, make project cards more spacious */
+    .project-group .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* On tablet, switch to 2 columns */
+    .project-group .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    /* On mobile, single column */
+    .project-group .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Improved Footer Layout */
+footer {
+    background: var(--ink);
+    color: var(--bg-white);
+    padding: 5rem 1rem;
+    text-align: center;
+}
+
+footer .container {
+    padding: 0;
+    max-width: 1000px;
+}
+
+footer h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+footer p {
+    color: rgba(255, 253, 249, 0.85);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    margin: 3rem 0;
+    justify-items: center;
+}
+
+.contact-item {
+    flex: 1;
+}
+
+.contact-item h4 {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--amber);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.contact-item a {
+    color: var(--bg-white);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: var(--amber);
+}
+
+footer .email-button {
+    margin-top: 2rem;
+}
+
+/* Improved Skills Layout */
+#skills .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, rgba(107, 47, 191, 0.02), rgba(232, 150, 59, 0.02));
+    padding: 2.2rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    padding: 0.6rem 0;
+    color: var(--ink-soft);
+    border-bottom: 1px solid rgba(217, 199, 240, 0.3);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.skill-category li:last-child {
+    border-bottom: none;
+}
+
+.skill-category strong {
+    color: var(--ink);
+    font-weight: 700;
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    #skills .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Optimize Reading Line Length */
+.container > p,
+.container > h2 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Better about section readability */
+#about > p {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink);
+}
+
+/* Improve timeline readability */
+#experience {
+    max-width: 950px;
+}
+
+.timeline-item {
+    max-width: 100%;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .value-prop {
+        font-size: 1rem;
+        padding: 1.5rem;
+        margin: 0 auto 2.5rem;
+    }
+
+    .btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .email-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .card {
+        min-height: 360px;
+    }
+
+    .skill-category {
+        padding: 1.8rem;
+    }
+
+    footer h2 {
+        font-size: 2rem;
+    }
+
+    .contact-grid {
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 3rem 1rem;
+    }
+
+    #hero {
+        padding: 8rem 1rem 5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .value-prop {
+        font-size: 0.95rem;
+        padding: 1.25rem;
+        border-left-width: 3px;
+        border-right-width: 3px;
+    }
+
+    .btn {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        min-height: 340px;
+    }
+
+    footer h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Section Dividers and Separation */
+section {
+    position: relative;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--violet), transparent);
+    opacity: 0.3;
+}
+
+#hero::after {
+    display: none;
+}
+
+/* Visual breathing room between sections */
+#about {
+    margin-top: 2rem;
+}
+
+#projects {
+    margin-top: 2rem;
+}
+
+#experience {
+    margin-top: 2rem;
+}
+
+#skills {
+    margin-top: 2rem;
+}
+
+/* Better section transitions */
+section {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+section:nth-child(1) { animation-delay: 0s; }
+section:nth-child(2) { animation-delay: 0.1s; }
+section:nth-child(3) { animation-delay: 0.2s; }
+section:nth-child(4) { animation-delay: 0.3s; }
+section:nth-child(5) { animation-delay: 0.4s; }
+
+/* Improved Navigation Layout */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-white);
+    border-bottom: 2px solid var(--line);
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+nav .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+nav a {
+    font-size: 0.95rem;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--violet);
+}
+
+/* Mobile nav adjustments */
+@media (max-width: 768px) {
+    nav .nav-container {
+        padding: 0 1.5rem;
+        height: 65px;
+    }
+}
+
+/* ============================================
+   TYPOGRAPHIC SYSTEM & HIERARCHY
+   ============================================ */
+
+/* Type Scale (Major Third: 1.25x) */
+/* Base: 16px → 20px → 25px → 31px → 39px → 49px → 61px */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 3.75rem; /* 61px */
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.3;
+}
+
+h5 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: 1rem; /* 16px */
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+/* Body Text Optimization */
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.003em;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+p strong {
+    font-weight: 700;
+    color: var(--ink);
+}
+
+p em {
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Small Text */
+small, .small {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+}
+
+/* Large Text */
+.large {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75;
+    letter-spacing: 0.005em;
+}
+
+/* Lists */
+ul, ol {
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.002em;
+}
+
+li {
+    margin-bottom: 0.75rem;
+}
+
+/* Links */
+a {
+    color: var(--violet);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+a:hover {
+    color: var(--amber);
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid var(--violet);
+    outline-offset: 2px;
+}
+
+/* Code & Monospace */
+code {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 0.9rem;
+    background: var(--bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    color: var(--violet);
+    font-weight: 500;
+}
+
+pre {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    padding: 1rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+}
+
+/* Blockquotes */
+blockquote {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: var(--ink-soft);
+    border-left: 4px solid var(--amber);
+    padding-left: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Typography for Specific Elements */
+
+.kicker {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+}
+
+.eyebrow {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--violet);
+}
+
+.section-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+}
+
+/* Card Titles */
+.card h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    letter-spacing: 0.002em;
+    color: var(--ink-soft);
+}
+
+/* Skill Category */
+.skill-category h3 {
+    font-size: 1.3rem;
+    font-weight: 750;
+    letter-spacing: 0;
+}
+
+.skill-category li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.002em;
+}
+
+/* Timeline */
+.timeline-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+}
+
+.timeline-item p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+footer p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    letter-spacing: 0.003em;
+}
+
+/* Value Proposition */
+.value-prop {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    letter-spacing: 0.004em;
+    font-weight: 500;
+}
+
+/* Button Typography */
+.btn, .email-button {
+    font-family: 'Space Mono', 'Courier New', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.floating-cta {
+    font-size: 1.5rem;
+}
+
+/* Focus States */
+*:focus-visible {
+    outline: 2px solid var(--violet);
+    outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+    background: var(--amber);
+    color: var(--ink);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: var(--amber);
+    color: var(--ink);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
+    footer h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    footer h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Ensure fonts load properly without layout shift */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    font-display: swap;
+}
+
+/* Optimize images for performance */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    loading: lazy;
+}
+
+/* Preload critical resources */
+link[rel="preload"] {
+    as: font;
+    type: font/woff2;
+}
+
+/* GPU acceleration for smooth animations */
+.card, .timeline-item, .skill-category {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Optimize button performance */
+.btn, .email-button {
+    will-change: transform, box-shadow;
+}
+
+/* Reduce repaints on hover */
+a:hover, button:hover {
+    will-change: transform, color;
+}
+
+/* Optimize scrolling performance */
+html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+}
+
+/* Reduce motion for better performance on low-end devices */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   PREMIUM VISUAL DEPTH (OVERDRIVE)
+   ============================================ */
+
+/* Enhanced shadow layers for premium feel */
+.card {
+    box-shadow: 
+        8px 8px 0 rgba(107, 47, 191, 0.08),     /* Depth layer 1 */
+        0 4px 20px rgba(107, 47, 191, 0.06),    /* Ambient shadow */
+        inset 0 1px 0 rgba(255, 255, 255, 0.4); /* Inner highlight */
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 100%);
+    border-radius: 0.5rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Premium button refinements */
+.btn {
+    box-shadow: 
+        6px 6px 0 rgba(107, 47, 191, 0.12),
+        0 2px 8px rgba(107, 47, 191, 0.08);
+    position: relative;
+    z-index: 1;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: inherit;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover::after {
+    opacity: 0.5;
+    filter: blur(4px);
+}
+
+/* Timeline premium enhancement */
+.timeline-item {
+    box-shadow: 
+        8px 8px 0 rgba(232, 150, 59, 0.1),
+        0 2px 12px rgba(232, 150, 59, 0.05);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -32px;
+    width: 24px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(232, 150, 59, 0.6) 0%, transparent 100%);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover::after {
+    opacity: 1;
+    right: -34px;
+}
+
+/* Skill category premium touch */
+.skill-category {
+    background: linear-gradient(135deg, 
+        rgba(107, 47, 191, 0.04) 0%,
+        rgba(232, 150, 59, 0.02) 100%);
+    box-shadow: 
+        inset 0 1px 2px rgba(255, 255, 255, 0.5),
+        inset 0 -1px 2px rgba(107, 47, 191, 0.05);
+    position: relative;
+}
+
+/* Section divider premium */
+section::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(107, 47, 191, 0.2) 50%,
+        transparent 100%);
+}
+
+/* Premium link styling */
+a:not(.btn) {
+    position: relative;
+}
+
+a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(232, 150, 59, 0.6);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+a:not(.btn):hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Premium focus states */
+:focus-visible {
+    outline: 3px solid var(--violet);
+    outline-offset: 3px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 6px rgba(107, 47, 191, 0.1);
+}
+
+button:focus-visible, .btn:focus-visible {
+    outline: 2px solid var(--violet);
+    outline-offset: 4px;
+}
+
+/* Content readability premium */
+p, li {
+    letter-spacing: 0.3px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium code block styling */
+code {
+    background: rgba(107, 47, 191, 0.08);
+    border: 1px solid rgba(107, 47, 191, 0.15);
+    box-shadow: inset 0 1px 3px rgba(107, 47, 191, 0.05);
+    transition: all 0.2s ease;
+}
+
+code:hover {
+    background: rgba(107, 47, 191, 0.12);
+    box-shadow: inset 0 1px 3px rgba(107, 47, 191, 0.1), 0 2px 6px rgba(107, 47, 191, 0.06);
+}
+
+/* Premium heading enhancement */
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 2px 4px rgba(107, 47, 191, 0.05);
+    background: linear-gradient(135deg, var(--ink) 0%, rgba(36, 21, 49, 0.95) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero heading special treatment */
+.hero-content h1 {
+    text-shadow: 
+        0 4px 12px rgba(107, 47, 191, 0.15),
+        0 2px 4px rgba(107, 47, 191, 0.1);
+    background: linear-gradient(135deg, 
+        var(--ink) 0%,
+        var(--violet) 50%,
+        var(--ink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
