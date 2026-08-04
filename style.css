@@ -31,28 +31,6 @@ html {
     }
 }
 
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 @keyframes slideInRight {
     from {
         opacity: 0;
@@ -82,24 +60,6 @@ html {
     }
 }
 
-@keyframes numberCount {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes bounce-delight {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-4px);
-    }
-}
-
 @keyframes wiggle {
     0%, 100% {
         transform: rotate(0deg);
@@ -112,21 +72,13 @@ html {
     }
 }
 
-@keyframes glow-pulse {
-    0%, 100% {
-        box-shadow: 8px 8px 0 var(--violet);
-    }
-    50% {
-        box-shadow: 8px 8px 0 var(--amber);
-    }
-}
-
 /* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
 
@@ -154,11 +106,8 @@ body {
 /* Navigation */
 nav {
     background-color: var(--bg-white);
-    border-bottom: 2px solid var(--ink);
-    position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -192,8 +141,6 @@ nav a {
     text-decoration: none;
     color: var(--ink);
     font-family: 'Space Mono', 'Courier New', monospace;
-    font-size: 0.85rem;
-    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     transition: color 0.2s;
@@ -308,7 +255,6 @@ nav a:hover {
 .kicker {
     font-family: 'Space Mono', 'Courier New', monospace;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--amber);
@@ -403,7 +349,6 @@ nav a:hover {
 
 .email-button:hover {
     transform: translate(2px, 2px);
-    box-shadow: 4px 4px 3px rgba(36, 21, 49, 0.10);
 }
 
 .email-button:focus {
@@ -431,7 +376,6 @@ nav a:hover {
     text-align: center;
     position: relative;
     padding-bottom: 1rem;
-    letter-spacing: -0.01em;
     line-height: 1.2;
 }
 
@@ -444,7 +388,7 @@ nav a:hover {
     width: 60px;
     height: 5px;
     background: var(--amber);
-    animation: underlineGrow 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation: underlineGrow 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     transform-origin: center;
 }
 
@@ -485,7 +429,6 @@ hr {
 }
 
 .timeline-item:hover {
-    transform: translate(-2px, -2px);
     box-shadow: 7px 7px 5px rgba(107, 47, 191, 0.08);
 }
 
@@ -495,8 +438,6 @@ hr {
 
 .timeline-item h3 {
     color: var(--ink);
-    font-weight: 600;
-    font-size: 1.15rem;
 }
 
 .timeline-item .date {
@@ -529,14 +470,17 @@ hr {
 }
 
 .current-badge {
+    display: inline-block;
     font-size: 0.75rem;
     background: var(--violet);
     color: var(--bg-white);
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     margin-left: 0.5rem;
-    font-weight: 600;
+    font-weight: 700;
     font-family: 'Space Mono', 'Courier New', monospace;
+    text-shadow: none;
+    vertical-align: middle;
 }
 
 /* Link Focus States - Accessibility */
@@ -605,7 +549,6 @@ nav a:focus {
 }
 
 .card:hover {
-    transform: translate(2px, 2px);
     box-shadow: 3px 3px 0 var(--violet);
 }
 
@@ -627,7 +570,6 @@ nav a:focus {
 }
 
 .card .tags {
-    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -675,16 +617,11 @@ nav a:focus {
 }
 
 .skill-category {
-    background: var(--bg-white);
-    padding: 2rem;
     text-align: left;
-    border: 2px solid var(--ink);
     box-shadow: 8px 8px 0 var(--line);
-    transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .skill-category:hover {
-    transform: translate(-2px, -2px);
     box-shadow: 7px 7px 0 var(--line);
 }
 
@@ -694,9 +631,6 @@ nav a:focus {
 
 .skill-category h3 {
     font-weight: 750;
-    color: var(--violet);
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
 }
 
 .skill-category p {
@@ -736,7 +670,6 @@ nav a:focus {
 .floating-cta:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 var(--ink);
-    animation: none;
 }
 
 @media (max-width: 768px) {
@@ -810,30 +743,20 @@ footer h2 {
     font-weight: 800;
     margin-bottom: 1.5rem;
     font-size: 2.8rem;
-    letter-spacing: -0.01em;
     line-height: 1.2;
 }
 
 footer p {
-    color: rgba(255, 253, 249, 0.8);
-    margin-bottom: 1.5rem;
-    max-width: 600px;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
 }
 
 .contact-item h4 {
     font-family: 'Space Mono', 'Courier New', monospace;
-    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
     color: var(--amber);
-    margin-bottom: 0.5rem;
 }
 
 .contact-link {
@@ -1003,51 +926,15 @@ footer p {
     transition: color 0.3s ease;
 }
 
-[data-target]::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--amber), transparent);
-    opacity: 0;
-    animation: slideInRight 0.8s ease 0.6s forwards;
-}
-
-/* Delight Interactions */
+/* Press feedback: the card settles into its shadow. */
 .card:active {
-    animation: bounce-delight 0.4s ease-out;
-}
-
-.card:active::after {
-    content: "✨";
-    position: absolute;
-    top: -20px;
-    right: 10px;
-    font-size: 1.5rem;
-    animation: float-up 0.8s ease-out forwards;
-}
-
-@keyframes float-up {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-}
-
-/* Playful hover for email button */
-.email-button:hover {
-    animation: none;
-    box-shadow: 6px 6px 5px rgba(232, 150, 59, 0.15);
+    transform: translate(3px, 3px);
+    box-shadow: 5px 5px 4px rgba(107, 47, 191, 0.10);
 }
 
 .email-button:active {
-    animation: bounce-delight 0.3s ease-out;
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 3px rgba(36, 21, 49, 0.12);
 }
 
 /* Floating button special hover */
@@ -1063,7 +950,6 @@ footer p {
 
 /* Skill category hover - subtle lift */
 .skill-category:hover {
-    transform: translateY(-2px);
     transition: transform 0.2s ease;
 }
 
@@ -1091,32 +977,7 @@ footer p {
     transform: translate(2px, 2px) scale(1.01);
 }
 
-/* Star sparkle animation */
-@keyframes sparkle {
-    0%, 100% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Add sparkles on hover */
-.card::before {
-    content: "✨";
-    position: absolute;
-    top: 5px;
-    right: 8px;
-    font-size: 1rem;
-    opacity: 0;
-    animation: none;
-}
-
-.card:hover::before {
-    animation: sparkle 0.6s ease-out;
-}
+/* Card hover is carried by transform + shadow alone (see .card:hover). */
 
 /* Floating button extra delight */
 .floating-cta::after {
@@ -1179,7 +1040,6 @@ a:not(.btn):not(.email-button):not(.floating-cta):hover {
 
 /* Skill category delight */
 .skill-category {
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
 }
 
@@ -1281,7 +1141,7 @@ body {
     line-height: 1.7;
     font-weight: 500;
     color: var(--ink);
-    animation: fadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .value-prop strong {
@@ -1350,7 +1210,6 @@ footer .container {
 footer h2 {
     margin-bottom: 1.5rem;
     font-size: 2.8rem;
-    letter-spacing: -0.01em;
     line-height: 1.2;
 }
 
@@ -1417,11 +1276,10 @@ footer .email-button {
     padding: 2.2rem;
     border: 1px solid var(--line);
     border-radius: 4px;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .skill-category h3 {
-    font-size: 1.3rem;
     margin-bottom: 1.5rem;
     color: var(--ink);
     display: flex;
@@ -2012,205 +1870,12 @@ footer ::-moz-selection {
    PERFORMANCE OPTIMIZATIONS
    ============================================ */
 
-/* Ensure fonts load properly without layout shift */
-@font-face {
-    font-family: 'Space Grotesk';
-    font-display: swap;
-}
+/* font-display is set via &display=swap on the Google Fonts URL.
+   Do not re-declare @font-face here: a rule with a font-family but no
+   src declares an empty face that can shadow the real loaded family. */
 
-@font-face {
-    font-family: 'Space Mono';
-    font-display: swap;
-}
-
-/* Optimize images for performance */
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    loading: lazy;
-}
-
-/* Preload critical resources */
-link[rel="preload"] {
-    as: font;
-    type: font/woff2;
-}
-
-/* GPU acceleration for smooth animations */
-.card, .timeline-item, .skill-category {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
-
-/* Optimize button performance */
-.btn, .email-button {
-    will-change: transform, box-shadow;
-}
-
-/* Reduce repaints on hover */
-a:hover, button:hover {
-    will-change: transform, color;
-}
-
-/* Optimize scrolling performance */
-html {
-    scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
-}
-
-/* Reduce motion for better performance on low-end devices */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* ============================================
-   PREMIUM VISUAL DEPTH (OVERDRIVE)
-   ============================================ */
-
-/* Enhanced shadow layers for premium feel */
-.card {
-    box-shadow: 
-        8px 8px 0 rgba(107, 47, 191, 0.08),     /* Depth layer 1 */
-        0 4px 20px rgba(107, 47, 191, 0.06),    /* Ambient shadow */
-        inset 0 1px 0 rgba(255, 255, 255, 0.4); /* Inner highlight */
-    position: relative;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 100%);
-    border-radius: 0.5rem;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.card:hover::before {
-    opacity: 1;
-}
-
-/* Premium button refinements */
-.btn {
-    box-shadow: 
-        6px 6px 0 rgba(107, 47, 191, 0.12),
-        0 2px 8px rgba(107, 47, 191, 0.08);
-    position: relative;
-    z-index: 1;
-}
-
-.btn::after {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    background: inherit;
-    border-radius: inherit;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.btn:hover::after {
-    opacity: 0.5;
-    filter: blur(4px);
-}
-
-/* Timeline premium enhancement */
-.timeline-item {
-    box-shadow: 
-        8px 8px 0 rgba(232, 150, 59, 0.1),
-        0 2px 12px rgba(232, 150, 59, 0.05);
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -32px;
-    width: 24px;
-    height: 2px;
-    background: linear-gradient(90deg, rgba(232, 150, 59, 0.6) 0%, transparent 100%);
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.timeline-item:hover::after {
-    opacity: 1;
-    right: -34px;
-}
-
-/* Skill category premium touch */
-.skill-category {
-    background: linear-gradient(135deg, 
-        rgba(107, 47, 191, 0.04) 0%,
-        rgba(232, 150, 59, 0.02) 100%);
-    box-shadow: 
-        inset 0 1px 2px rgba(255, 255, 255, 0.5),
-        inset 0 -1px 2px rgba(107, 47, 191, 0.05);
-    position: relative;
-}
-
-/* Section divider is defined once, earlier in this file. */
-
-/* Link underline is handled by text-decoration above (hugs the text,
-   wraps correctly, and does not stretch across flex-item links). */
-
-/* Premium focus states */
-:focus-visible {
-    outline: 3px solid var(--violet);
-    outline-offset: 3px;
-    border-radius: 2px;
-    box-shadow: 0 0 0 6px rgba(107, 47, 191, 0.1);
-}
-
-button:focus-visible, .btn:focus-visible {
-    outline: 2px solid var(--violet);
-    outline-offset: 4px;
-}
-
-/* Content readability premium */
-p, li {
-    letter-spacing: 0.3px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Premium code block styling */
-code {
-    background: rgba(107, 47, 191, 0.08);
-    border: 1px solid rgba(107, 47, 191, 0.15);
-    box-shadow: inset 0 1px 3px rgba(107, 47, 191, 0.05);
-    transition: all 0.2s ease;
-}
-
-code:hover {
-    background: rgba(107, 47, 191, 0.12);
-    box-shadow: inset 0 1px 3px rgba(107, 47, 191, 0.1), 0 2px 6px rgba(107, 47, 191, 0.06);
-}
-
-/* Premium heading enhancement */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--ink);
-    text-shadow: 0 1px 2px rgba(107, 47, 191, 0.04);
-}
-
-/* Hero heading special treatment */
-.hero-content h1 {
-    color: var(--ink);
-    text-shadow: 
-        0 4px 12px rgba(107, 47, 191, 0.12),
-        0 2px 4px rgba(107, 47, 191, 0.08);
 }
