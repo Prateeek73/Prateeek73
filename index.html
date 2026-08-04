@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prateek Singh | Full Stack Software Engineer</title>
+    <title>Prateek Singh | Full Stack Software Engineer & ML Systems</title>
+    <meta name="description" content="Full Stack Software Engineer with 5+ years of experience in backend systems, ML engineering, and distributed infrastructure.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <h2 class="logo">PS</h2>
@@ -23,25 +25,32 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header id="hero">
         <div class="hero-content">
             <p class="kicker">Backend &middot; Full Stack &middot; ML Engineering</p>
             <h1>Prateek Singh</h1>
             <h2>Building production systems that scale.</h2>
-            <p class="hero-meta">Michigan, USA &middot; M.S. Data Science, Michigan Tech &middot; Available April 2026</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <p class="hero-meta">Chicago, IL &middot; M.S. Data Science (3.85 GPA) &middot; 5+ Years Experience</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
         </div>
     </header>
 
+    <!-- About Section -->
     <section id="about" class="container">
         <span class="eyebrow">// 01_about</span>
         <h2 class="section-title">About Me</h2>
         <p>I am a Full Stack Software Engineer with 5+ years of experience designing, building, and shipping end-to-end web applications across fintech, automotive, and scientific research domains.</p>
-        <p>I have a proven ability to own production systems at scale, building and operating microservices processing 1M+ requests/min at 99.99% uptime, with a strong foundation in Java/Spring Boot and Node.js/TypeScript stacks.</p>
+        <p>I have a proven ability to own production systems at scale, building and operating microservices processing 1M+ requests/min at 99.99% uptime, with a strong foundation in Java/Spring Boot and Node.js/TypeScript stacks. My recent focus has been on productionizing ML systems, deploying models to real users via FastAPI, React, and HPC infrastructure.</p>
+        <p>I'm a daily user of AI-assisted development tools (GitHub Copilot, Claude) and am deeply interested in LLM-based code generation, automated program repair, and legacy code modernization.</p>
     </section>
 
     <hr>
 
+    <!-- Experience Section -->
     <section id="experience" class="container">
         <span class="eyebrow">// 02_experience</span>
         <h2 class="section-title">Professional Experience</h2>
@@ -50,9 +59,9 @@
             <h3>Graduate Research Engineer | Michigan Technological University</h3>
             <span class="date">05/2025 - 04/2026 | Michigan, USA</span>
             <ul>
-                <li>Owned end-to-end productionization of FragBERTa, delivering batch inference of 1k+ compounds in under 90 seconds via FastAPI and React.</li>
-                <li>Shipped nuGAN, a GAN-based cosmological simulator, as a full-stack web application on an HPC cluster via Flask-Gunicorn-Nginx.</li>
-                <li>Migrated the lab's public website to a React SPA, improving page load speed and content ownership.</li>
+                <li><strong>FragBERTa (LLM Serving Platform):</strong> Owned end-to-end productionization of a fine-tuned 110M-parameter BERT model for compound screening, delivering batch inference of 1k+ compounds in under 90 seconds via FastAPI backend and React frontend on HPC infrastructure.</li>
+                <li><strong>nuGAN (Generative Model Deployment):</strong> Shipped a GAN-based cosmological simulator as a full-stack web application on an HPC cluster via Flask-Gunicorn-Nginx with SSL termination and rate limiting, enabling real-time 512×512 map generation for research users.</li>
+                <li><strong>Lab Infrastructure:</strong> Migrated the lab's public website from Google Sites to a React SPA on cPanel, coordinating DNS migration with university IT and improving page load speed while giving the lab full content ownership.</li>
             </ul>
         </div>
 
@@ -60,20 +69,41 @@
             <h3>Senior Software Engineer | Capgemini</h3>
             <span class="date">09/2022 - 07/2024 | Bangalore, India</span>
             <ul>
-                <li>Owned critical Spring Boot microservices for personalized-offer delivery to millions of users for a fintech client.</li>
-                <li>Scaled the platform to 1M+ requests/min at 99.99% uptime by implementing horizontal autoscaling and graceful degradation.</li>
-                <li>Built asynchronous pipelines with Amazon SQS, Kafka, and parallel workers, reducing synchronous load by 45%.</li>
-                <li>Designed multi-layer caching across Redis and DynamoDB/RDS, cutting read load by 75%.</li>
+                <li><strong>Personalized Offer Platform:</strong> Owned critical Spring Boot microservices for personalized-offer delivery to millions of users for a fintech client, delivering a system the client's revenue workflows depended on daily.</li>
+                <li><strong>High-Throughput Scaling:</strong> Scaled the platform to 1M+ requests/min at 99.99% uptime by implementing horizontal autoscaling and graceful degradation, keeping offer delivery uninterrupted through peak campaign windows.</li>
+                <li><strong>Asynchronous Architecture:</strong> Built asynchronous pipelines with Amazon SQS, Kafka, and parallel workers, reducing synchronous load by 45% and enabling near-linear horizontal scalability.</li>
+                <li><strong>Performance Optimization:</strong> Designed multi-layer caching across Redis and DynamoDB/RDS, cutting read load by 75% and stabilizing response times during peak traffic.</li>
+                <li><strong>Observability & Incident Response:</strong> Instrumented microservices with Prometheus metrics and Grafana dashboards tracking p95/p99 latency, error rates, and throughput, reducing mean time to detect (MTTD) from hours to minutes.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Software Engineer | Capgemini</h3>
+            <span class="date">12/2021 - 08/2022 | Bangalore, India</span>
+            <ul>
+                <li><strong>Cloud Infrastructure:</strong> Containerized services onto AWS ECS/EKS with Lambda for event-driven processing and S3 for asset storage, achieving zero-downtime rolling deployments on staging and production.</li>
+                <li><strong>Real-Time Updates:</strong> Implemented WebSocket-based real-time updates, cutting redundant API calls by ~60% during peak hours and improving bandwidth efficiency.</li>
+                <li><strong>Stakeholder Collaboration:</strong> Partnered with stakeholders to translate ambiguous business objectives into structured technical requirements and performed ad-hoc root cause analysis to resolve data inconsistencies.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>ERP Systems Administrator (Part-time) | KIET Group of Institutions</h3>
+            <span class="date">05/2019 - 11/2021 | India</span>
+            <ul>
+                <li>Administered login portals and access provisioning for 1,500+ students and 50+ faculty, ensuring reliable day-to-day academic operations.</li>
+                <li>Maintained grade management and academic record modules, coordinating with departments to resolve data discrepancies and ensure timely result publication.</li>
             </ul>
         </div>
     </section>
 
     <hr>
 
+    <!-- Projects Section -->
     <section id="projects" class="container">
         <span class="eyebrow">// 03_projects</span>
         <h2 class="section-title">Featured Projects</h2>
-        <p class="subtitle">Check out my <a href="https://github.com/Prateeek73" target="_blank">GitHub (Prateeek73)</a> for close to 35 repositories spanning AI, distributed systems, and full-stack development.</p>
+        <p class="subtitle">Check out my <a href="https://github.com/Prateeek73" target="_blank">GitHub (Prateeek73)</a> for close to 35 repositories spanning ML systems, distributed computing, and full-stack development.</p>
 
         <div class="project-group">
             <h3 class="group-title">Applied ML Engineering</h3>
@@ -82,31 +112,29 @@
                 <div class="card">
                     <span class="card-num">01</span>
                     <h3>FragBERTa</h3>
-                    <p>Owned end-to-end productionization of a compound-screening model, delivering batch inference of 1k+ compounds in under 90 seconds via a FastAPI + React interface.</p>
+                    <p>Owned end-to-end productionization of a compound-screening model, delivering batch inference of 1k+ compounds in under 90 seconds via a FastAPI + React interface on HPC infrastructure.</p>
                     <div class="tags">
-                        <span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Batch Inference</span>
+                        <span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Batch Inference</span><span class="tag">HPC</span>
                     </div>
-                    <a href="https://github.com/Prateeek73?tab=repositories" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
-                    <!-- TODO: swap in the direct repo URL for this project -->
+                    <a href="https://github.com/Prateeek73" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
                 <div class="card">
                     <span class="card-num">02</span>
                     <h3>nuGAN</h3>
-                    <p>Shipped a GAN-based cosmological simulator as a full-stack web application on an HPC cluster via a Flask-Gunicorn-Nginx stack, for use by non-technical researchers.</p>
+                    <p>Shipped a GAN-based cosmological simulator as a full-stack web application on an HPC cluster via Flask-Gunicorn-Nginx stack, for use by non-technical researchers. Features SSL termination and rate limiting.</p>
                     <div class="tags">
-                        <span class="tag">GANs</span><span class="tag">Flask</span><span class="tag">HPC Deploy</span>
+                        <span class="tag">GANs</span><span class="tag">Flask</span><span class="tag">HPC Deploy</span><span class="tag">Nginx</span>
                     </div>
-                    <a href="https://github.com/Prateeek73?tab=repositories" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
-                    <!-- TODO: swap in the direct repo URL for this project -->
+                    <a href="https://github.com/Prateeek73" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
                 <div class="card">
                     <span class="card-num">03</span>
                     <h3>RAG IDP Q&A System</h3>
-                    <p>Built an intelligent document processing system with custom knowledge ingestion using RAG, FastAPI, and pgVector for context-aware semantic search.</p>
+                    <p>Built an intelligent document processing system with custom knowledge ingestion using RAG, FastAPI, and pgVector for context-aware semantic search and grounded answers.</p>
                     <div class="tags">
-                        <span class="tag">RAG</span><span class="tag">FastAPI</span><span class="tag">pgVector</span>
+                        <span class="tag">RAG</span><span class="tag">FastAPI</span><span class="tag">pgVector</span><span class="tag">LLM</span>
                     </div>
-                    <a href="https://github.com/Prateeek73/LMForge_RAG" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
+                    <a href="https://github.com/Prateeek73/LMForge_RAG" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
             </div>
         </div>
@@ -118,21 +146,20 @@
                 <div class="card">
                     <span class="card-num">01</span>
                     <h3>Distributed Deep Learning with Spark</h3>
-                    <p>Designed a GPU-accelerated Apache Spark pipeline for distributed processing, achieving 97.37% accuracy on 20k+ COCO images in 6 minutes.</p>
+                    <p>Designed a GPU-accelerated Apache Spark pipeline for distributed processing, achieving 97.37% accuracy on 20k+ COCO images in 6 minutes using data parallelism and distributed training.</p>
                     <div class="tags">
-                        <span class="tag">Apache Spark</span><span class="tag">GPU</span><span class="tag">Computer Vision</span>
+                        <span class="tag">Apache Spark</span><span class="tag">GPU</span><span class="tag">Computer Vision</span><span class="tag">Distributed</span>
                     </div>
-                    <a href="https://github.com/Prateeek73/SP4" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
+                    <a href="https://github.com/Prateeek73/SP4" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
                 <div class="card">
                     <span class="card-num">02</span>
-                    <h3>Multi-Agent LLM Code Refactoring Pipeline</h3>
-                    <p>Built a multi-agent LLM pipeline that detects code smells and refactoring opportunities across Apache open-source repositories with automated compile-pass verification.</p>
+                    <h3>Multi-Agent LLM Code Refactoring</h3>
+                    <p>Built a multi-agent LLM pipeline that detects code smells (Designite) and refactoring opportunities (RefactoringMiner) across Apache open-source repositories, with automated compile-pass verification.</p>
                     <div class="tags">
-                        <span class="tag">LLM Agents</span><span class="tag">Python</span><span class="tag">CI/CD</span>
+                        <span class="tag">LLM Agents</span><span class="tag">Python</span><span class="tag">CI/CD</span><span class="tag">Java</span>
                     </div>
-                    <a href="https://github.com/Prateeek73?tab=repositories" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
-                    <!-- TODO: swap in the direct repo URL for this project -->
+                    <a href="https://github.com/Prateeek73" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
             </div>
         </div>
@@ -144,30 +171,29 @@
                 <div class="card">
                     <span class="card-num">01</span>
                     <h3>Mormon-NLT: Neural Shakespeare Style Transfer</h3>
-                    <p>Compared LoRA adapters vs. full fine-tuning on Qwen2.5 LLMs for style transfer from Modern English to Shakespearean English, achieving state-of-the-art BERTScore.</p>
+                    <p>Compared LoRA adapters vs. full fine-tuning on Qwen2.5 LLMs for style transfer from Modern English to Shakespearean English, achieving state-of-the-art BERTScore metrics.</p>
                     <div class="tags">
-                        <span class="tag">LoRA/PEFT</span><span class="tag">NLP</span><span class="tag">PyTorch</span>
+                        <span class="tag">LoRA/PEFT</span><span class="tag">NLP</span><span class="tag">PyTorch</span><span class="tag">LLM</span>
                     </div>
-                    <a href="https://github.com/Prateeek73/Mormon-NLT" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
+                    <a href="https://github.com/Prateeek73/Mormon-NLT" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
                 <div class="card">
                     <span class="card-num">02</span>
                     <h3>BLT Chess Engine</h3>
-                    <p>Building a chess engine on a Byte Latent Transformer architecture, trained without hand-crafted evaluation functions.</p>
+                    <p>Building a chess engine on a Byte Latent Transformer architecture, trained without hand-crafted evaluation functions. Exploring whether byte-level models can learn strong play from raw game data.</p>
                     <div class="tags">
-                        <span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">Chess AI</span>
+                        <span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">Chess AI</span><span class="tag">RL</span>
                     </div>
-                    <a href="https://github.com/Prateeek73?tab=repositories" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
-                    <!-- TODO: swap in the direct repo URL for this project -->
+                    <a href="https://github.com/Prateeek73" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
                 <div class="card">
                     <span class="card-num">03</span>
                     <h3>Investigating Fibroblast Migration</h3>
-                    <p>U-Net vs. lightweight CNN for wound-area segmentation in microscopy images, achieving a 0.914 Dice score to automate a traditionally manual process.</p>
+                    <p>U-Net vs. lightweight CNN for wound-area segmentation in microscopy images, achieving a 0.914 Dice score to automate a traditionally manual process in biomedical research.</p>
                     <div class="tags">
-                        <span class="tag">PyTorch</span><span class="tag">Computer Vision</span><span class="tag">Biomedical</span>
+                        <span class="tag">PyTorch</span><span class="tag">Computer Vision</span><span class="tag">Biomedical</span><span class="tag">Segmentation</span>
                     </div>
-                    <a href="https://github.com/Prateeek73/Investigating-Fibroblast-Migration-Using-Deep-Learning" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
+                    <a href="https://github.com/Prateeek73/Investigating-Fibroblast-Migration-Using-Deep-Learning" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
             </div>
         </div>
@@ -181,42 +207,43 @@
                     <h3>PJM Interconnection Energy Consumption</h3>
                     <p>Time-series analysis of 2002&ndash;2018 hourly energy consumption data, using SARIMA models to forecast demand and detect structural shifts post-2011.</p>
                     <div class="tags">
-                        <span class="tag">SARIMA</span><span class="tag">Time Series</span><span class="tag">Forecasting</span>
+                        <span class="tag">SARIMA</span><span class="tag">Time Series</span><span class="tag">Forecasting</span><span class="tag">Python</span>
                     </div>
-                    <a href="https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
+                    <a href="https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
                 <div class="card">
                     <span class="card-num">02</span>
                     <h3>Real-Estate Price Prediction</h3>
-                    <p>Compared Linear Regression, Random Forest, k-NN, and SVR for housing price prediction; Random Forest led with an R&sup2; of 0.7357.</p>
+                    <p>Compared Linear Regression, Random Forest, k-NN, and SVR for housing price prediction; Random Forest achieved the best R&sup2; of 0.7357 with comprehensive feature engineering.</p>
                     <div class="tags">
-                        <span class="tag">Regression</span><span class="tag">XGBoost</span><span class="tag">Feature Engineering</span>
+                        <span class="tag">Regression</span><span class="tag">XGBoost</span><span class="tag">Feature Engineering</span><span class="tag">sklearn</span>
                     </div>
-                    <a href="https://github.com/Prateeek73/Housing-Price-Predection" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
+                    <a href="https://github.com/Prateeek73/Housing-Price-Predection" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
                 <div class="card">
                     <span class="card-num">03</span>
                     <h3>Surface Temperature Analysis</h3>
-                    <p>Interactive Plotly visualizations of global and regional temperature trends &mdash; time series, choropleth maps, and sunburst diagrams.</p>
+                    <p>Interactive Plotly visualizations of global and regional temperature trends &mdash; time series, choropleth maps, and sunburst diagrams for climate analysis.</p>
                     <div class="tags">
-                        <span class="tag">Plotly</span><span class="tag">Geospatial</span><span class="tag">Data Viz</span>
+                        <span class="tag">Plotly</span><span class="tag">Geospatial</span><span class="tag">Data Viz</span><span class="tag">Climate</span>
                     </div>
-                    <a href="https://github.com/Prateeek73/Surface-Temperature-Analysis" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
+                    <a href="https://github.com/Prateeek73/Surface-Temperature-Analysis" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
                 <div class="card">
                     <span class="card-num">04</span>
                     <h3>Glucose Bayesian Analysis</h3>
-                    <p>Two-component Bayesian mixture model of plasma glucose levels, using Gibbs sampling and JAGS to approximate the posterior distribution.</p>
+                    <p>Two-component Bayesian mixture model of plasma glucose levels, using Gibbs sampling and JAGS to approximate the posterior distribution for healthcare analytics.</p>
                     <div class="tags">
-                        <span class="tag">Bayesian</span><span class="tag">R/JAGS</span><span class="tag">Healthcare Analytics</span>
+                        <span class="tag">Bayesian</span><span class="tag">R/JAGS</span><span class="tag">Healthcare Analytics</span><span class="tag">Statistics</span>
                     </div>
-                    <a href="https://github.com/Prateeek73/Glucose-Bayesian-Analysis" target="_blank" class="card-link">View GitHub Repository &rarr;</a>
+                    <a href="https://github.com/Prateeek73/Glucose-Bayesian-Analysis" target="_blank" class="card-link">View GitHub &rarr;</a>
                 </div>
             </div>
         </div>
 
         <div id="github-repos" class="github-section">
             <h3>Recent GitHub Repositories</h3>
+            <p style="color: var(--ink-soft); margin-top: 0.5rem;">Dynamically loading from GitHub API...</p>
             <ul id="repo-list" class="repo-list">
                 <!-- Repos will be injected here via JavaScript -->
             </ul>
@@ -225,40 +252,80 @@
 
     <hr>
 
+    <!-- Skills Section -->
     <section id="skills" class="container">
         <span class="eyebrow">// 04_skills</span>
         <h2 class="section-title">Technical Expertise</h2>
         <div class="skills-grid">
             <div class="skill-category">
                 <h3>Languages</h3>
-                <p>Java, TypeScript, JavaScript (ES6+), Python, SQL, HTML/CSS</p>
+                <p>Java, TypeScript, JavaScript (ES6+), Python, Ruby, SQL, HTML/CSS</p>
             </div>
             <div class="skill-category">
                 <h3>Backend & APIs</h3>
-                <p>Spring Boot, Node.js, Express.js, FastAPI, Flask, REST APIs, Microservices, Event-Driven Architecture</p>
+                <p>Spring Boot, Node.js, Express.js, FastAPI, Flask, REST APIs, GraphQL, WebSockets, Microservices, Event-Driven Architecture</p>
             </div>
             <div class="skill-category">
-                <h3>Frontend</h3>
-                <p>React, Angular, Vue.js, Bootstrap, Streamlit</p>
+                <h3>Frontend & UX</h3>
+                <p>React, Angular, Vue.js, Bootstrap, Streamlit, Responsive Design, State Management</p>
+            </div>
+            <div class="skill-category">
+                <h3>Databases & Caching</h3>
+                <p>PostgreSQL, MySQL, MongoDB, Redis, DynamoDB, Firebase, Query Optimization, ORM</p>
+            </div>
+            <div class="skill-category">
+                <h3>ML & Data</h3>
+                <p>PyTorch, TensorFlow, Transformers, LLMs, RAG, FastAPI, Batch Inference, HPC Deployment</p>
             </div>
             <div class="skill-category">
                 <h3>Cloud & DevOps</h3>
-                <p>AWS (Lambda, EC2, S3, ECS/EKS), Azure, Docker, Kubernetes, Jenkins, GitHub Actions</p>
+                <p>AWS (Lambda, EC2, ECS/EKS, S3, RDS), Azure, Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, CI/CD</p>
+            </div>
+            <div class="skill-category">
+                <h3>Messaging & Streaming</h3>
+                <p>Apache Kafka, Amazon SQS, Async Pipelines, Parallel Workers, Real-Time Processing</p>
+            </div>
+            <div class="skill-category">
+                <h3>Observability & Monitoring</h3>
+                <p>Prometheus, Grafana, Structured Logging, Incident Response, Production Debugging</p>
             </div>
         </div>
     </section>
 
+    <hr>
+
+    <!-- Contact/Footer Section -->
     <footer id="contact">
-        <div class="container text-center">
-            <h2>Let's Connect</h2>
-            <p>Email: <a href="mailto:pra73ek.singh@gmail.com">pra73ek.singh@gmail.com</a></p>
-            <p>Phone: +1 (224) 363-8696</p>
-            <div class="social-links">
-                <a href="https://github.com/Prateeek73" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/prateek-singh-7392041a0/" target="_blank">LinkedIn</a>
-                <a href="https://leetcode.com/u/Prateek73/" target="_blank">LeetCode</a>
+        <div class="container">
+            <div class="footer-content">
+                <h2>Let's Connect</h2>
+                <p>I'm actively looking for opportunities in Full Stack, Backend, Data Engineering, and ML Systems engineering roles. Let's chat!</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <a href="mailto:pra73ek.singh@gmail.com" class="contact-link">pra73ek.singh@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <a href="tel:+12243638696" class="contact-link">+1 (224) 363-8696</a>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Location</h4>
+                        <p class="contact-link">Chicago, Illinois, USA</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/Prateeek73" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/pra73ek-singh/" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="https://leetcode.com/u/Prateek73/" target="_blank" class="social-link">LeetCode</a>
+                    <a href="https://datascienceportfol.io/pra73eksingh" target="_blank" class="social-link">Portfolio</a>
+                </div>
             </div>
-            <p class="copyright">&copy; 2026 Prateek Singh. All Rights Reserved.</p>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Prateek Singh. All Rights Reserved. Last updated August 2026.</p>
         </div>
     </footer>
 
