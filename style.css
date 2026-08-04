@@ -1076,12 +1076,14 @@ footer p {
 /* Gradient Button Hover */
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--amber), #D4842D);
-    box-shadow: 4px 4px 0 var(--ink), 0 0 12px rgba(232, 150, 59, 0.4);
+    color: var(--ink);
+    box-shadow: 4px 4px 3px rgba(36, 21, 49, 0.10), 0 0 12px rgba(232, 150, 59, 0.30);
 }
 
 .email-button:hover {
     background: linear-gradient(135deg, var(--amber), #D4842D);
-    box-shadow: 6px 6px 0 var(--ink), 0 0 16px rgba(232, 150, 59, 0.5);
+    color: var(--ink);
+    box-shadow: 6px 6px 5px rgba(36, 21, 49, 0.12), 0 0 16px rgba(232, 150, 59, 0.35);
 }
 
 /* Playful card transforms */
@@ -1149,11 +1151,7 @@ footer p {
     }
 }
 
-/* Playful text selection */
-::selection {
-    background: var(--amber);
-    color: var(--ink);
-}
+/* Text selection is defined once, later in this file. */
 
 /* Playful focus ring with animation */
 :focus-visible {
@@ -1223,24 +1221,9 @@ a:not(.btn):not(.email-button):not(.floating-cta):hover {
     width: 30px;
 }
 
-/* Project group delight */
+/* Project group */
 .project-group {
     position: relative;
-}
-
-.project-group::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--violet), var(--amber));
-    transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.project-group:hover::before {
-    width: 100%;
 }
 
 /* Success state for forms (if added later) */
@@ -1789,7 +1772,10 @@ a {
     transition: color 0.2s, text-decoration 0.2s;
 }
 
-a:hover {
+/* Text links only. Button-shaped anchors keep their own colours — a bare
+   `a:hover` (specificity 0,1,1) outranks `.email-button` / `.btn-primary`
+   (0,1,0) and would repaint their label amber on an amber background. */
+a:not(.btn):not(.email-button):not(.floating-cta):hover {
     color: var(--amber);
     text-decoration: underline;
 }
@@ -1934,16 +1920,25 @@ footer p {
     outline-offset: 2px;
 }
 
-/* Selection */
+/* Selection — translucent violet tint. No `color` override, so text keeps
+   its own colour and stays readable on the light page and the dark footer. */
 ::selection {
-    background: var(--amber);
-    color: var(--ink);
+    background: rgba(107, 47, 191, 0.22);
     text-shadow: none;
 }
 
 ::-moz-selection {
-    background: var(--amber);
-    color: var(--ink);
+    background: rgba(107, 47, 191, 0.22);
+    text-shadow: none;
+}
+
+/* The footer sits on --ink, so the tint needs more presence to read there. */
+footer ::selection {
+    background: rgba(160, 110, 230, 0.32);
+}
+
+footer ::-moz-selection {
+    background: rgba(160, 110, 230, 0.32);
 }
 
 /* Responsive Typography */
@@ -2167,43 +2162,10 @@ html {
     position: relative;
 }
 
-/* Section divider premium */
-section::after {
-    content: '';
-    position: absolute;
-    bottom: -1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%,
-        rgba(107, 47, 191, 0.2) 50%,
-        transparent 100%);
-}
+/* Section divider is defined once, earlier in this file. */
 
-/* Premium link styling */
-a:not(.btn) {
-    position: relative;
-}
-
-a:not(.btn)::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: rgba(232, 150, 59, 0.6);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-a:not(.btn):hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
+/* Link underline is handled by text-decoration above (hugs the text,
+   wraps correctly, and does not stretch across flex-item links). */
 
 /* Premium focus states */
 :focus-visible {
