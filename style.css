@@ -122,6 +122,10 @@ nav a:hover {
     transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
+.nav-menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
 /* Mobile responsiveness for nav menu */
 @media (max-width: 768px) {
     .mobile-menu-toggle {
@@ -135,16 +139,16 @@ nav a:hover {
     }
 
     .nav-menu {
-        display: none;
+        display: flex;
         flex-direction: column;
         gap: 0.75rem;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
+        transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
     }
 
     .nav-menu.active {
-        display: flex;
         max-height: 300px;
         opacity: 1;
     }
@@ -153,6 +157,11 @@ nav a:hover {
         display: block;
         padding: 0.5rem 0;
         border-bottom: 1px solid var(--line);
+        transition: color 0.2s;
+    }
+
+    .nav-menu li a:hover {
+        color: var(--violet);
     }
 }
 
@@ -235,6 +244,11 @@ nav a:hover {
     box-shadow: 2px 2px 0 var(--ink);
 }
 
+.btn:focus {
+    outline: 2px solid var(--violet);
+    outline-offset: 2px;
+}
+
 .btn-primary {
     background-color: var(--amber);
     color: var(--ink);
@@ -247,6 +261,38 @@ nav a:hover {
 
 .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Email Contact Button */
+.email-button {
+    display: inline-block;
+    background: var(--amber);
+    color: var(--ink);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--ink);
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--ink);
+    margin-bottom: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.email-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.email-button:focus {
+    outline: 2px solid var(--violet);
+    outline-offset: 2px;
+}
+
+.email-highlight {
+    margin-bottom: 1rem;
 }
 
 /* Common Container */
@@ -330,6 +376,10 @@ hr {
     box-shadow: 7px 7px 0 var(--line);
 }
 
+.timeline-item:focus-within {
+    box-shadow: 7px 7px 0 var(--line);
+}
+
 .timeline-item h3 {
     color: var(--ink);
     font-weight: 600;
@@ -357,6 +407,43 @@ hr {
 .timeline-item strong {
     color: var(--ink);
     font-weight: 600;
+}
+
+/* Current Role Highlight */
+.timeline-item-current {
+    border-left: 4px solid var(--violet);
+    background: linear-gradient(135deg, rgba(107, 47, 191, 0.03) 0%, transparent 100%);
+}
+
+.current-badge {
+    font-size: 0.75rem;
+    background: var(--violet);
+    color: var(--bg-white);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Link Focus States - Accessibility */
+a:focus {
+    outline: 2px solid var(--violet);
+    outline-offset: 2px;
+}
+
+nav a:focus {
+    color: var(--violet);
+}
+
+.card-link:focus {
+    outline: 2px solid var(--violet);
+    outline-offset: 2px;
+}
+
+.contact-link:focus {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
 }
 
 /* Grid Layouts for Projects and Skills */
@@ -405,6 +492,11 @@ hr {
 .card:hover {
     transform: translate(2px, 2px);
     box-shadow: 3px 3px 0 var(--violet);
+}
+
+.card:focus-within {
+    outline: 2px solid var(--violet);
+    outline-offset: -2px;
 }
 
 .card h3 {
@@ -481,6 +573,10 @@ hr {
     box-shadow: 7px 7px 0 var(--line);
 }
 
+.skill-category:focus-within {
+    box-shadow: 7px 7px 0 var(--line);
+}
+
 .skill-category h3 {
     font-weight: 600;
     color: var(--violet);
@@ -494,19 +590,52 @@ hr {
     line-height: 1.5;
 }
 
-/* GitHub Dynamic Section */
-.github-section {
-    margin-top: 3rem;
-    background: var(--bg-white);
-    padding: 2rem;
-    border: 2px solid var(--ink);
-    box-shadow: 5px 5px 0 var(--amber);
+.skill-category strong {
+    color: var(--ink);
+    font-weight: 700;
 }
 
-.github-section h3 {
-    font-weight: 600;
+/* Floating CTA Button (Mobile) */
+.floating-cta {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    background: var(--amber);
     color: var(--ink);
-    margin-bottom: 1rem;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 4px 4px 0 var(--ink);
+    text-decoration: none;
+}
+
+.floating-cta:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+@media (max-width: 768px) {
+    .floating-cta {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-cta {
+        bottom: 1rem;
+        right: 1rem;
+        width: 55px;
+        height: 55px;
+        font-size: 1.25rem;
+    }
 }
 
 .repo-list {
@@ -618,6 +747,12 @@ footer p {
     text-decoration: underline;
 }
 
+.social-link:focus {
+    outline: 2px solid var(--bg-white);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 253, 249, 0.2);
     padding: 1.5rem 1rem;
@@ -652,6 +787,11 @@ footer p {
     .btn {
         width: 100%;
         text-align: center;
+    }
+
+    .btn-secondary {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: var(--bg-white);
     }
 
     .section-title {
