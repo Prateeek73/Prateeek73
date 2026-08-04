@@ -1492,7 +1492,7 @@ footer .email-button {
 /* Optimize Reading Line Length */
 .container > p,
 .container > h2 {
-    max-width: 900px;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
 }
