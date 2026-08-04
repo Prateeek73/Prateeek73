@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg);
     background-image:
@@ -23,6 +27,9 @@ body {
     color: var(--ink);
     line-height: 1.6;
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .mono {
@@ -37,6 +44,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -53,8 +61,10 @@ nav {
     font-weight: 600;
     background: var(--violet);
     color: var(--bg-white);
-    padding: 0.25rem 0.6rem;
+    padding: 0.35rem 0.75rem;
     border: 2px solid var(--ink);
+    border-radius: 4px;
+    font-size: 0.95rem;
 }
 
 nav ul {
@@ -92,6 +102,7 @@ nav a:hover {
     padding: 9rem 1rem 5rem;
     text-align: center;
     border-bottom: 2px solid var(--ink);
+    margin-top: 60px;
 }
 
 .hero-content h1 {
@@ -120,6 +131,7 @@ nav a:hover {
     font-size: 0.85rem;
     opacity: 0.85;
     margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-content h2 {
@@ -129,18 +141,25 @@ nav a:hover {
     opacity: 0.95;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+}
+
 .btn {
     display: inline-block;
-    background-color: var(--amber);
-    color: var(--ink);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border: 2px solid var(--ink);
     box-shadow: 4px 4px 0 var(--ink);
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 600;
-    margin-top: 1.75rem;
     transition: transform 0.15s, box-shadow 0.15s;
+    cursor: pointer;
+    font-size: 0.9rem;
 }
 
 .btn:hover {
@@ -148,11 +167,26 @@ nav a:hover {
     box-shadow: 2px 2px 0 var(--ink);
 }
 
+.btn-primary {
+    background-color: var(--amber);
+    color: var(--ink);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--bg-white);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* Common Container */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 4rem 1rem;
+    flex: 1;
 }
 
 .eyebrow {
@@ -193,6 +227,18 @@ nav a:hover {
     color: var(--ink-soft);
 }
 
+.subtitle a {
+    color: var(--violet);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.subtitle a:hover {
+    color: var(--violet-deep);
+    text-decoration: underline;
+}
+
 hr {
     border: 0;
     height: 2px;
@@ -208,11 +254,18 @@ hr {
     border: 2px solid var(--ink);
     box-shadow: 5px 5px 0 var(--line);
     margin-bottom: 1.75rem;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.timeline-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--line);
 }
 
 .timeline-item h3 {
     color: var(--ink);
     font-weight: 600;
+    font-size: 1.15rem;
 }
 
 .timeline-item .date {
@@ -221,11 +274,21 @@ hr {
     font-size: 0.85rem;
     display: block;
     margin: 0.35rem 0 1rem;
+    font-weight: 500;
 }
 
 .timeline-item ul {
     margin-left: 1.5rem;
     color: var(--ink-soft);
+}
+
+.timeline-item li {
+    margin-bottom: 0.75rem;
+}
+
+.timeline-item strong {
+    color: var(--ink);
+    font-weight: 600;
 }
 
 /* Grid Layouts for Projects and Skills */
@@ -278,10 +341,14 @@ hr {
 
 .card h3 {
     font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--ink);
 }
 
 .card p {
     color: var(--ink-soft);
+    font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .card .tags {
@@ -299,6 +366,7 @@ hr {
     font-weight: 500;
     padding: 0.25rem 0.5rem;
     border: 1px solid var(--line);
+    border-radius: 3px;
 }
 
 .card-num {
@@ -317,6 +385,7 @@ hr {
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 .card-link:hover {
@@ -333,18 +402,28 @@ hr {
 .skill-category {
     background: var(--bg-white);
     padding: 1.5rem;
-    text-align: center;
+    text-align: left;
     border: 2px solid var(--ink);
     box-shadow: 5px 5px 0 var(--line);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.skill-category:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--line);
 }
 
 .skill-category h3 {
     font-weight: 600;
     color: var(--violet);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
 }
 
 .skill-category p {
     color: var(--ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 /* GitHub Dynamic Section */
@@ -358,6 +437,8 @@ hr {
 
 .github-section h3 {
     font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1rem;
 }
 
 .repo-list {
@@ -365,52 +446,225 @@ hr {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
-    margin-top: 1rem;
 }
 
 .repo-list li {
     background: var(--bg);
     padding: 1rem;
     border: 1px solid var(--line);
+    border-radius: 4px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.repo-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .repo-list a {
     text-decoration: none;
     color: var(--violet);
     font-weight: bold;
+    transition: color 0.2s;
+}
+
+.repo-list a:hover {
+    color: var(--violet-deep);
+}
+
+.repo-list p {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
 }
 
 /* Footer */
 footer {
     background-color: var(--ink);
     color: var(--bg-white);
-    padding: 3rem 1rem;
     border-top: 2px solid var(--violet);
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
 }
 
 footer h2 {
     font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: 1.8rem;
 }
 
-footer a {
-    color: var(--amber);
+footer p {
+    color: rgba(255, 253, 249, 0.8);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-item h4 {
     font-family: 'IBM Plex Mono', monospace;
-    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--amber);
+    margin-bottom: 0.5rem;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.contact-link {
+    color: var(--bg-white);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: var(--amber);
 }
 
 .social-links {
-    margin: 1.5rem 0;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: var(--amber);
+    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: var(--bg-white);
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 253, 249, 0.2);
+    padding: 1.5rem 1rem;
+    text-align: center;
 }
 
 .copyright {
     font-family: 'IBM Plex Mono', monospace;
     color: #9C8BAF;
     font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
+    .timeline-item {
+        padding: 1.25rem;
+        box-shadow: 3px 3px 0 var(--line);
+    }
+
+    .timeline-item:hover {
+        box-shadow: 4px 4px 0 var(--line);
+    }
+
+    .card {
+        box-shadow: 3px 3px 0 var(--violet);
+    }
+
+    .card:hover {
+        box-shadow: 2px 2px 0 var(--violet);
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        position: relative;
+    }
+
+    .nav-container {
+        padding: 0.75rem;
+    }
+
+    #hero {
+        padding: 6rem 1rem 3rem;
+        margin-top: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .kicker {
+        font-size: 0.7rem;
+    }
+
+    .hero-meta {
+        font-size: 0.75rem;
+    }
+
+    .container {
+        padding: 2.5rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .logo {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+    }
 }
