@@ -80,9 +80,7 @@
     </script>
     <title>Prateek Singh | Full Stack Software Engineer & ML Systems</title>
     <meta name="description" content="Full Stack Software Engineer & ML Systems. 3 years shipping production systems at scale with Capgemini and Michigan Tech. Expertise in Java, Python, React, FastAPI, distributed systems.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Fonts are loaded once, in the block above. -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -429,7 +427,7 @@
             heroElements.forEach((el, idx) => {
                 // Use CSS animation with delay - cleaner, more performant
                 el.style.opacity = '0';
-                el.style.animation = `fadeInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards`;
+                el.style.animation = `fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards`;
                 el.style.animationDelay = `${idx * 80}ms`;
             });
         });
