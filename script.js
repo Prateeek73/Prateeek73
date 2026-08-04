@@ -90,10 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => {
                 console.error("Error fetching GitHub repos:", error);
                 repoList.innerHTML = `
-                    <li style="grid-column: 1/-1; text-align: center; padding: 2rem;">
-                        <p style="color: var(--ink-soft);">Failed to load repositories from GitHub.</p>
+                    <li style="grid-column: 1/-1; text-align: center; padding: 2rem; background: var(--bg); border: 2px solid var(--line); border-radius: 4px;">
+                        <p style="color: var(--ink-soft); margin-bottom: 0.5rem;">Unable to load GitHub repositories at this moment.</p>
                         <p style="font-size: 0.9rem; margin-top: 0.5rem;">
-                            Check out my <a href="https://github.com/Prateeek73" target="_blank" style="color: var(--violet);">GitHub profile</a> directly for the full list.
+                            Check out my <a href="https://github.com/Prateeek73" target="_blank" style="color: var(--violet); font-weight: 600;">GitHub profile (Prateeek73)</a> directly for all projects.
                         </p>
                     </li>
                 `;
