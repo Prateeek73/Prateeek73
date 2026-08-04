@@ -41,9 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.json();
             })
             .then(data => {
-                // Filter out forked repos if desired, keep only owned/primary repos
-                // For now, we'll show the top 6 most recently updated
-                const displayRepos = data.slice(0, 6);
+                // Show only 4 most recently updated repos to avoid redundancy with Featured Projects
+                const displayRepos = data.slice(0, 4);
 
                 if (displayRepos.length === 0) {
                     repoList.innerHTML = "<li style='grid-column: 1/-1; text-align: center; padding: 2rem;'>No public repositories found. Visit <a href='https://github.com/Prateeek73' target='_blank'>GitHub</a> to see more.</li>";
@@ -163,19 +162,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ============================================
-    // 7. Mobile Menu Toggle (if implemented)
+    // 7. Mobile Menu Toggle
     // ============================================
     const mobileMenuButton = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('nav ul');
+    const navMenu = document.querySelector('.nav-menu');
     
     if (mobileMenuButton) {
         mobileMenuButton.addEventListener('click', () => {
+            mobileMenuButton.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
         // Close menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
+                mobileMenuButton.classList.remove('active');
                 navMenu.classList.remove('active');
             });
         });
