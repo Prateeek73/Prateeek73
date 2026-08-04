@@ -69,6 +69,21 @@ nav a:hover {
     margin-bottom: 0.5rem;
 }
 
+.kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 0.75rem;
+}
+
+.hero-meta {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-top: 0.25rem;
+}
+
 .hero-content h2 {
     font-size: 1.5rem;
     font-weight: 400;
@@ -174,6 +189,15 @@ hr {
     font-weight: 600;
     padding: 0.25rem 0.6rem;
     border-radius: 999px;
+}
+
+.card-num {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
 }
 
 .card-link {
