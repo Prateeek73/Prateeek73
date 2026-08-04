@@ -88,6 +88,74 @@ nav a:hover {
     color: var(--violet);
 }
 
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.35rem;
+    padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background-color: var(--ink);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mobile responsiveness for nav menu */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.75rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--line);
+    }
+}
+
 /* Hero Section */
 #hero {
     background: var(--violet);
@@ -564,7 +632,7 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
+    nav ul.nav-menu {
         gap: 1rem;
         font-size: 0.75rem;
     }
