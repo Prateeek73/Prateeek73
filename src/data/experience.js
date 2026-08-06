@@ -64,7 +64,7 @@ export const experience = [
     roles: [
       {
         id: 'capgemini-senior',
-        title: 'Senior Software Engineer',
+        title: 'Senior Software Engineer (Backend & Cloud Platform)',
         period: 'Sep 2022 — Jul 2024',
         mode: 'On-site',
         client: 'Fintech client',
@@ -118,7 +118,7 @@ export const experience = [
       },
       {
         id: 'capgemini-swe',
-        title: 'Software Engineer',
+        title: 'Software Engineer (Full Stack)',
         period: 'Dec 2021 — Aug 2022',
         mode: 'Hybrid',
         client: 'EMS client · internal platform',
