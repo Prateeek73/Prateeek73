@@ -75,7 +75,7 @@ export const experience = [
             text: "The client's fintech platform had run on a mainframe for the better part of two decades. Capgemini was brought in to move the whole stack to a cloud-native architecture on AWS with an Angular front end; my team owned two of its core features.",
           },
           {
-            text: 'Owned the critical Spring Boot microservices behind offer delivery to millions of users — creation, validation and distribution, plus personalized recommendations and automated payment and subscription management.',
+            text: 'Owned the critical Spring microservices behind offer delivery to millions of users — creation, validation and distribution, plus personalized recommendations and automated payment and subscription management.',
           },
           {
             text: 'Scaled the platform to',
@@ -106,7 +106,7 @@ export const experience = [
         ],
         stack: [
           'Java',
-          'Spring Boot',
+          'Spring Framework',
           'Kafka',
           'Amazon SQS',
           'Redis',

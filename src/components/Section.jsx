@@ -10,7 +10,7 @@ import { sections } from '../data'
  * scroll-mt keeps the header clear of the sticky mobile bar when a nav click
  * scrolls a section to the top.
  */
-export default function Section({ title, description, children }) {
+export default function Section({ title, description, wide = false, children }) {
   const index = sections.findIndex((s) => s.name === title)
   const meta = sections[index]
   const number = index + 1
@@ -21,7 +21,11 @@ export default function Section({ title, description, children }) {
       id={meta?.id}
       data-section={meta?.to}
       aria-labelledby={`${meta?.id}-heading`}
-      className="scroll-mt-20 border-t border-rule pb-24 pt-16 first:border-t-0 first:pt-0 lg:scroll-mt-8"
+      className={[
+        'scroll-mt-20 border-t border-rule pb-24 pt-16 first:border-t-0 first:pt-0 lg:scroll-mt-8',
+        'mx-auto lg:mx-0',
+        wide ? 'max-w-[1040px]' : 'max-w-[840px]',
+      ].join(' ')}
     >
       <div className="flex items-baseline justify-between gap-4">
         <MonoLabel>

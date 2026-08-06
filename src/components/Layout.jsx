@@ -77,8 +77,11 @@ export default function Layout() {
           On desktop the column sits just past the sidebar rather than centring in
           the space beside it — centring let it drift right as the viewport grew.
           Below lg there is no sidebar, so it centres normally. */}
+      {/* Width lives on each Section rather than here, so a list-heavy section
+          like Projects can run wider than a prose one without dragging the
+          reading measure of About and Experience out with it. */}
       <main id="main" className="flex-1 lg:overflow-y-auto">
-        <div className="mx-auto max-w-[840px] px-5 py-10 sm:px-10 lg:mx-0 lg:py-14 lg:pl-12">
+        <div className="px-5 py-10 sm:px-10 lg:py-14 lg:pl-12">
           <Outlet />
         </div>
       </main>

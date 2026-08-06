@@ -66,6 +66,7 @@ export default function Projects() {
   return (
     <Section
       title="Projects"
+      wide
       description="Personal and academic work across applied ML, data engineering, and research. Most of what I build is meant to be used by someone who did not write it."
     >
       <KindFilter activeKind={activeKind} tag={tag} count={visible.length} />

@@ -52,7 +52,7 @@ export default function ProjectCard({ project, activeTag }) {
         {status && ` · ${status}`}
       </p>
 
-      <p className="mt-2 max-w-2xl text-[13.5px] leading-relaxed text-text-muted">{blurb}</p>
+      <p className="mt-2 text-[13.5px] leading-relaxed text-text-muted">{blurb}</p>
 
       {metric && <p className="mt-1.5 font-mono text-[11.5px] text-accent">{metric}</p>}
 
