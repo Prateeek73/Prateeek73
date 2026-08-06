@@ -70,13 +70,13 @@ export const projects = [
   {
     id: 'blt-chess',
     kind: 'Personal',
-    title: 'Byte Latent Transformer Chess Engine',
+    title: 'MessBot — Byte Latent Transformer Chess Engine',
+    // Blurb follows the repo's own description: the model is paired with an
+    // alpha-beta search, not used in place of search.
     blurb:
-      'A chess engine with no hand-crafted evaluation function — the position understanding has to come from the model.',
-    tags: ['Python', 'PyTorch', 'Transformers'],
-    // TODO(Prateek): repo URL. No longer marked in progress, but no link was
-    // supplied — renders unlinked until this is filled in.
-    url: null,
+      'A Byte Latent Transformer chess bot, pairing the learned model with alpha-beta search over depth and heuristic objectives.',
+    tags: ['C++', 'Transformers'],
+    url: 'https://github.com/Prateeek73/MessBot',
   },
   {
     id: 'fibroblast-unet',

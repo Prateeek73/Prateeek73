@@ -83,8 +83,12 @@ export default function Home() {
 
         <p>
           Right now I am architecting a multi-agent code-refactoring system with a
-          professor, with a paper to come out of it. When I am not deep in a deployment, I
-          am playing chess in the park with the uncles.
+          professor, with a paper to come out of it.
+        </p>
+
+        <p>
+          When I am not deep in a deployment, I am playing chess in the park with the
+          uncles.
         </p>
       </div>
 
