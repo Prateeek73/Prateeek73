@@ -18,16 +18,21 @@ export default function Education() {
                 drops rather than rendering an empty separator. */}
             {(item.school || item.detail) && (
               <p className="mt-1 text-[13.5px] text-text-muted">
-                {item.school && (
-                  <a
-                    href={item.schoolUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-text underline decoration-rule-strong underline-offset-4 transition-colors duration-200 hover:text-accent hover:decoration-accent"
-                  >
-                    {item.school}
-                  </a>
-                )}
+                {item.school &&
+                  (item.schoolUrl ? (
+                    <a
+                      href={item.schoolUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-text underline decoration-rule-strong underline-offset-4 transition-colors duration-200 hover:text-accent hover:decoration-accent"
+                    >
+                      {item.school}
+                    </a>
+                  ) : (
+                    // No URL supplied, so this renders as text: an anchor
+                    // without an href is not a link and is not focusable.
+                    <span className="text-text">{item.school}</span>
+                  ))}
                 {item.school && item.location && ` · ${item.location}`}
                 {item.detail && `${item.school ? ' · ' : ''}${item.detail}`}
               </p>
