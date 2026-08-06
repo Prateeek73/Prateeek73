@@ -59,7 +59,7 @@ export default function Certifications() {
   return (
     <Section
       title="Certifications"
-      description="Certificates and letters from the internships, held on LinkedIn."
+      description="Certificates and letters of recommendation from early-career internships, held on LinkedIn."
     >
       {certifications.map((cert) => (
         <Certification key={cert.id} cert={cert} />

@@ -92,7 +92,7 @@ export const sections = [
     to: '/certifications',
     id: 'certifications',
     name: 'Certifications',
-    blurb: 'Certificates and letters from the internships.',
+    blurb: 'Certificates and letters of recommendation.',
   },
   {
     to: '/testimonials',
