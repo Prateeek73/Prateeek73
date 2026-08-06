@@ -1,4 +1,4 @@
-import Page from '../components/Page'
+import Section from '../components/Section'
 import MonoLabel from '../components/MonoLabel'
 import { certifications } from '../data'
 
@@ -55,10 +55,9 @@ export default function Certifications() {
   const allPlaceholder = certifications.every((c) => c.placeholder)
 
   return (
-    <Page
+    <Section
       title="Certifications"
       description="Cloud and platform credentials."
-      seoDescription="Professional certifications held by Prateek Singh."
     >
       {allPlaceholder && (
         <div className="mb-8 border border-rule bg-bg-elev px-4 py-3">
@@ -72,6 +71,6 @@ export default function Certifications() {
       {certifications.map((cert) => (
         <Certification key={cert.id} cert={cert} />
       ))}
-    </Page>
+    </Section>
   )
 }

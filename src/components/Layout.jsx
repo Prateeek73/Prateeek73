@@ -1,22 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Link, Outlet, useLocation } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
-import RightRail from './RightRail'
 import ThemeToggle from './ThemeToggle'
+import useActiveSection from '../hooks/useActiveSection'
 import { site } from '../data'
 
 export default function Layout() {
-  const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
-
-  // Client-side navigation preserves scroll position by default, which lands you
-  // mid-page on a route you have never seen. The centre column scrolls, not the
-  // window, so reset that element rather than window.
-  useEffect(() => {
-    document.getElementById('main')?.scrollTo(0, 0)
-    window.scrollTo(0, 0)
-    setMenuOpen(false)
-  }, [pathname])
+  const active = useActiveSection()
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -41,7 +32,7 @@ export default function Layout() {
         Skip to content
       </a>
 
-      {/* Mobile bar — the rails collapse away below lg. */}
+      {/* Mobile bar — the sidebar collapses behind it below lg. */}
       <header className="sticky top-0 z-40 flex h-14 items-center justify-between border-b border-rule bg-bg/90 px-5 backdrop-blur-md lg:hidden">
         <Link to="/" className="font-display text-[19px] leading-none text-text">
           <span className="italic">{site.firstName}</span> {site.lastName}
@@ -72,26 +63,20 @@ export default function Layout() {
 
       {menuOpen && (
         <div className="fixed inset-0 top-14 z-30 overflow-y-auto bg-bg lg:hidden">
-          <Sidebar onNavigate={() => setMenuOpen(false)} />
+          <Sidebar active={active} onNavigate={() => setMenuOpen(false)} />
         </div>
       )}
 
-      {/* Left rail */}
       <aside className="hidden w-[300px] shrink-0 overflow-y-auto border-r border-rule lg:block xl:w-[330px]">
-        <Sidebar />
+        <Sidebar active={active} />
       </aside>
 
-      {/* Centre column — the only thing that scrolls on desktop */}
-      <main id="main" className="flex-1 overflow-y-auto">
+      {/* The scroll container on desktop; below lg the window scrolls instead. */}
+      <main id="main" className="flex-1 lg:overflow-y-auto">
         <div className="mx-auto max-w-[760px] px-5 py-10 sm:px-10 lg:py-14">
           <Outlet />
         </div>
       </main>
-
-      {/* Right rail — first thing to go as width runs out */}
-      <aside className="hidden w-[290px] shrink-0 overflow-y-auto border-l border-rule 2xl:block">
-        <RightRail />
-      </aside>
     </div>
   )
 }

@@ -1,32 +1,16 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
-import Home from './pages/Home'
-import Experience from './pages/Experience'
-import Projects from './pages/Projects'
-import Skills from './pages/Skills'
-import Education from './pages/Education'
-import Certifications from './pages/Certifications'
-import Testimonials from './pages/Testimonials'
-import Contact from './pages/Contact'
-import NotFound from './pages/NotFound'
+import SinglePage from './pages/SinglePage'
 
 export default function App() {
   return (
     <Routes>
+      {/* Deliberately one catch-all route rather than one per section. Scrolling
+          rewrites the URL as you go, and a route per section would make each
+          rewrite match a different <Route>, remounting the whole page mid-scroll.
+          SinglePage decides itself whether the path is a real section. */}
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/certifications" element={<Certifications />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/contact" element={<Contact />} />
-
-        {/* /workexp/ was the old URL for this section — keep it resolving. */}
-        <Route path="/workexp" element={<Navigate to="/experience" replace />} />
-
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<SinglePage />} />
       </Route>
     </Routes>
   )

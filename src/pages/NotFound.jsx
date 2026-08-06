@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom'
-import Seo from '../components/Seo'
 import MonoLabel from '../components/MonoLabel'
 import { sections } from '../data'
 
 export default function NotFound() {
   return (
     <>
-      <Seo title="Not found" description="That page does not exist." />
-
-      <div className="mx-auto max-w-3xl px-5 pt-20 sm:px-8 sm:pt-28">
+      {/* Already inside the layout's padded centre column — no container here. */}
+      <div className="pt-6">
         <MonoLabel>404</MonoLabel>
         <h1 className="mt-3 font-display text-[52px] leading-[0.95] tracking-tight text-text sm:text-[72px]">
           Not found
@@ -20,6 +18,8 @@ export default function NotFound() {
         <ul className="mt-10">
           {sections.map((s) => (
             <li key={s.to}>
+              {/* Each section path deep-links into the single page and scrolls
+                  there on arrival. */}
               <Link
                 to={s.to}
                 className="group flex items-baseline justify-between gap-4 border-b border-rule py-4"

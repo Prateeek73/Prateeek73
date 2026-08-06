@@ -1,4 +1,4 @@
-import Page from '../components/Page'
+import Section from '../components/Section'
 import MonoLabel, { RuledLabel } from '../components/MonoLabel'
 import { experience, internships } from '../data'
 
@@ -78,10 +78,9 @@ function Role({ job }) {
 
 export default function Experience() {
   return (
-    <Page
+    <Section
       title="Experience"
       description="Michigan Tech, Capgemini, KIET — embedded with the people who use what I build, from fintech at scale to research put behind real services."
-      seoDescription="Prateek Singh's work experience: graduate research engineer at Michigan Tech, senior software engineer at Capgemini, and ERP systems administrator at KIET."
     >
       {experience.map((job) => (
         <Role key={job.id} job={job} />
@@ -125,6 +124,6 @@ export default function Experience() {
           ))}
         </ul>
       </section>
-    </Page>
+    </Section>
   )
 }

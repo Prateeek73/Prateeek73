@@ -1,49 +1,59 @@
-// PLACEHOLDER CONTENT — the four names are real referees Prateek named, but every
-// quote below is written by Claude as filler so the page can be laid out and
-// reviewed. Nothing here should ship publicly until each person has supplied (and
-// approved) their own words. `placeholder: true` drives the banner on the page.
+// Real, named people who can speak to Prateek's work. Everything below is fact
+// he supplied or that is verifiable on the linked profile.
 //
-// TODO(Prateek): confirm the spelling of "Harsh Mishra" — it arrived transposed
-// as "Harhs Mihsra", and also confirm each person's current title and company.
-export const testimonials = [
+// `quote` is intentionally empty. These are identifiable people with public
+// profiles linked from this page — words put in their mouths would read as real
+// endorsements to anyone visiting. Fill a quote in only with what that person
+// actually wrote (a LinkedIn recommendation is ideal), and the page will render
+// it above their name automatically.
+export const references = [
   {
     id: 'naman-mahendra',
     name: 'Naman Mahendra',
-    title: 'Title TBC',
-    org: 'Organisation TBC',
+    title: 'SDE 3',
+    org: 'Blinkit',
+    relationship: 'Built Orion together in college',
+    // TODO(Prateek): Naman already left a recommendation on your LinkedIn —
+    // paste that text here verbatim and it becomes the first real quote.
+    quote: '',
+    url: '',
+  },
+  {
+    id: 'sarvesh-viraktamath',
+    name: 'Sarvesh L Viraktamath',
+    title: '',
+    org: 'Capgemini',
     relationship: 'Worked together at Capgemini',
-    quote:
-      'Prateek was the person you wanted on the service that could not go down. He took the offer platform from something that wobbled under campaign load to something we stopped worrying about, and he did it without making the codebase harder for anyone else to work in.',
-    placeholder: true,
+    quote: '',
+    url: 'https://www.linkedin.com/in/sarvesh-l-viraktamath/',
   },
   {
     id: 'harsh-mishra',
     name: 'Harsh Mishra',
-    title: 'Title TBC',
-    org: 'Organisation TBC',
-    relationship: 'Worked together at Capgemini',
-    quote:
-      'What stood out was how he handled incidents. He would find the actual cause rather than the first plausible one, write it down so the rest of us learned something, and then fix the class of problem instead of the instance.',
-    placeholder: true,
+    title: '',
+    org: '',
+    relationship: '',
+    quote: '',
+    url: 'https://www.linkedin.com/in/harsh-mishra-060911/',
   },
   {
     id: 'neerav-kaushal',
     name: 'Neerav Kaushal',
-    title: 'Title TBC',
-    org: 'Organisation TBC',
-    relationship: 'Michigan Technological University',
-    quote:
-      'He is unusually good at the part most people skip — taking research code that works on one machine and turning it into something other researchers can actually use, with the deployment and the docs and the error handling all thought through.',
-    placeholder: true,
+    title: 'Assistant Professor, Applied Computing',
+    org: 'Michigan Technological University',
+    relationship: 'Faculty at Michigan Tech',
+    quote: '',
+    // Found by search, not confirmed by Prateek — verify before relying on it.
+    url: 'https://www.linkedin.com/in/neerav-kaushal/',
   },
   {
     id: 'jie-wu',
     name: 'Jie Wu',
-    title: 'Title TBC',
-    org: 'Organisation TBC',
-    relationship: 'Michigan Technological University',
-    quote:
-      'Prateek asks the right questions early. He would rather spend an extra day understanding what the model is meant to do for the person using it than ship something fast that answers the wrong question.',
-    placeholder: true,
+    title: 'Assistant Professor, Computer Science',
+    org: 'Michigan Technological University',
+    relationship: 'Faculty at Michigan Tech',
+    quote: '',
+    // Found by search, not confirmed by Prateek — verify before relying on it.
+    url: 'https://www.linkedin.com/in/jiewu3/',
   },
 ]

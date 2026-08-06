@@ -1,4 +1,4 @@
-import Page from '../components/Page'
+import Section from '../components/Section'
 import MonoLabel from '../components/MonoLabel'
 import { site } from '../data'
 
@@ -34,10 +34,9 @@ function ContactRow({ label, href, handle }) {
 
 export default function Contact() {
   return (
-    <Page
+    <Section
       title="Contact"
       description="Inbox is open — questions, opportunities, or a hello. I'll get back to you."
-      seoDescription="Get in touch with Prateek Singh by email, LinkedIn, or GitHub."
     >
       <div className="mb-8 flex items-center gap-3">
         <span className="flex items-center gap-1" aria-hidden="true">
@@ -64,6 +63,6 @@ export default function Contact() {
         Send an email
         <span aria-hidden="true">→</span>
       </a>
-    </Page>
+    </Section>
   )
 }

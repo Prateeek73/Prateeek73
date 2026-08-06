@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Page from '../components/Page'
+import Section from '../components/Section'
 import MonoLabel from '../components/MonoLabel'
 import { countForTag, isFilterable, skills } from '../data'
 
@@ -30,10 +30,9 @@ function Skill({ name }) {
 
 export default function Skills() {
   return (
-    <Page
+    <Section
       title="Skills"
       description="Languages, frameworks, and platforms I work with. Underlined ones link to the projects I have used them on — the number is how many."
-      seoDescription="Technical skills of Prateek Singh across backend engineering, ML infrastructure, cloud, data, and observability."
     >
       <div className="space-y-10">
         {skills.map((group) => (
@@ -50,6 +49,6 @@ export default function Skills() {
           </section>
         ))}
       </div>
-    </Page>
+    </Section>
   )
 }

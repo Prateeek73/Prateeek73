@@ -1,5 +1,5 @@
 import { Link, useSearchParams } from 'react-router-dom'
-import Page from '../components/Page'
+import Section from '../components/Section'
 import MonoLabel from '../components/MonoLabel'
 import ProjectCard from '../components/ProjectCard'
 import { projectGroups, projectKinds, projects } from '../data'
@@ -49,10 +49,9 @@ export default function Projects() {
   )
 
   return (
-    <Page
+    <Section
       title="Projects"
       description="Personal and academic work across applied ML, data engineering, and research. Most of what I build is meant to be used by someone who did not write it."
-      seoDescription="Projects by Prateek Singh — applied ML services, GPU-accelerated data pipelines, LoRA fine-tuning research, and statistical modelling."
     >
       <KindFilter activeKind={activeKind} tag={tag} count={visible.length} />
 
@@ -111,6 +110,6 @@ export default function Projects() {
         </a>
         .
       </p>
-    </Page>
+    </Section>
   )
 }

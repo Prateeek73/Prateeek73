@@ -3,11 +3,10 @@ import { projects } from './projects'
 export { site, sections, colophon } from './site'
 export { experience, internships } from './experience'
 export { projects, projectGroups, projectKinds } from './projects'
-export { reading, dailyTools } from './rail'
 export { skills } from './skills'
 export { education } from './education'
 export { certifications } from './certifications'
-export { testimonials } from './testimonials'
+export { references } from './testimonials'
 
 // Every tag actually used by at least one project. Skills outside this set render
 // as plain text rather than a filter link, so the Skills page can never offer a

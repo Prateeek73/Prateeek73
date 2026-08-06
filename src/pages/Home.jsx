@@ -1,11 +1,10 @@
-import Page from '../components/Page'
+import Section from '../components/Section'
 import { site } from '../data'
 
 export default function Home() {
   return (
-    <Page
+    <Section
       title="About"
-      seoDescription="Prateek Singh is a forward-deployed engineer who ships systems end-to-end — production backends at scale and research models put in front of real users."
     >
       <h2 className="font-display text-[44px] leading-[0.95] tracking-tight text-text sm:text-[64px]">
         <span className="italic">{site.firstName}</span>
@@ -79,6 +78,6 @@ export default function Home() {
           {site.availability.status} — {site.availability.detail}
         </span>
       </div>
-    </Page>
+    </Section>
   )
 }

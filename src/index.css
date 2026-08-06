@@ -54,6 +54,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* On desktop the centre column scrolls rather than the window, so the smooth
+   behaviour has to be declared on it too or nav clicks would jump. */
+#main {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -193,7 +199,8 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html,
+  #main {
     scroll-behavior: auto;
   }
   .accent-cursor::after,

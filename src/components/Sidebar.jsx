@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 import MonoLabel from './MonoLabel'
 import { sections, site } from '../data'
@@ -88,60 +88,66 @@ function Identity() {
   )
 }
 
-function SectionNav({ onNavigate }) {
+function SectionNav({ active, onNavigate }) {
+  // Scrolls rather than navigates: the whole site is one page, so a nav click is
+  // the same gesture as scrolling there, just faster.
+  const go = (e, section) => {
+    e.preventDefault()
+    document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    onNavigate?.()
+  }
+
   return (
     <nav className="mb-10" aria-label="Sections">
       <MonoLabel className="mb-4">Sections</MonoLabel>
 
       <ul>
-        {sections.map((s, i) => (
-          <li key={s.to}>
-            <NavLink
-              to={s.to}
-              end={s.to === '/'}
-              onClick={onNavigate}
-              className={({ isActive }) =>
-                [
-                  'group flex items-center gap-3 py-[7px] text-[14px] transition-colors duration-200',
+        {sections.map((s, i) => {
+          const isActive = active === s.to
+
+          return (
+            <li key={s.to}>
+              <a
+                href={`#${s.id}`}
+                onClick={(e) => go(e, s)}
+                aria-current={isActive ? 'true' : undefined}
+                className={[
+                  'flex items-center gap-3 py-[7px] text-[14px] transition-colors duration-200',
                   isActive ? 'text-text' : 'text-text-muted hover:text-text',
-                ].join(' ')
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  <span
-                    className={[
-                      'font-mono text-[10px] tabular-nums',
-                      isActive ? 'text-accent' : 'text-text-faint',
-                    ].join(' ')}
-                  >
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <span className="flex-1">{s.name}</span>
-                  {/* The active row grows a rule out to the edge. */}
-                  <span
-                    className={[
-                      'h-px bg-accent transition-all duration-300',
-                      isActive ? 'w-6' : 'w-0',
-                    ].join(' ')}
-                    aria-hidden="true"
-                  />
-                </>
-              )}
-            </NavLink>
-          </li>
-        ))}
+                ].join(' ')}
+              >
+                <span
+                  className={[
+                    'font-mono text-[10px] tabular-nums',
+                    isActive ? 'text-accent' : 'text-text-faint',
+                  ].join(' ')}
+                >
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="flex-1">{s.name}</span>
+                {/* The active row grows a rule out to the edge. */}
+                <span
+                  className={[
+                    'h-px bg-accent transition-all duration-300',
+                    isActive ? 'w-6' : 'w-0',
+                  ].join(' ')}
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+          )
+        })}
       </ul>
     </nav>
   )
 }
 
-export default function Sidebar({ onNavigate }) {
+export default function Sidebar({ active, onNavigate }) {
   return (
     <div className="flex h-full flex-col justify-between px-8 py-10">
       <div>
         <Identity />
-        <SectionNav onNavigate={onNavigate} />
+        <SectionNav active={active} onNavigate={onNavigate} />
 
       </div>
 

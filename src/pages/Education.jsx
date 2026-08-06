@@ -1,13 +1,12 @@
-import Page from '../components/Page'
+import Section from '../components/Section'
 import MonoLabel from '../components/MonoLabel'
 import { education } from '../data'
 
 export default function Education() {
   return (
-    <Page
+    <Section
       title="Education"
       description="Formal education and academic background."
-      seoDescription="Prateek Singh's education — M.S. in Data Science at Michigan Technological University."
     >
       {education.map((item) => (
         <article key={item.id} className="border-b border-rule py-8 first:pt-0">
@@ -42,6 +41,6 @@ export default function Education() {
           )}
         </article>
       ))}
-    </Page>
+    </Section>
   )
 }

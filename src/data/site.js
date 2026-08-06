@@ -25,7 +25,7 @@ export const site = {
   // Shown next to the pulsing tx/rx dots on the home page.
   availability: {
     status: 'Open to work',
-    detail: 'Forward-deployed engineering roles — available April 2026',
+    detail: 'Forward-deployed engineering roles',
   },
 
   // TODO(Prateek): paste the shareable resume URL (Drive / Dropbox / Overleaf).
@@ -66,41 +66,49 @@ export const site = {
 export const sections = [
   {
     to: '/',
+    id: 'about',
     name: 'About',
     blurb: 'Who I am and how I work.',
   },
   {
     to: '/experience',
+    id: 'experience',
     name: 'Experience',
     blurb: 'Michigan Tech, Capgemini, KIET. Spring Boot at scale, ML on HPC.',
   },
   {
     to: '/projects',
+    id: 'projects',
     name: 'Projects',
     blurb: 'Applied ML, infrastructure, and research — thirteen of them.',
   },
   {
     to: '/skills',
+    id: 'skills',
     name: 'Skills',
     blurb: 'Languages, frameworks, and platforms. Tap one to filter projects.',
   },
   {
     to: '/education',
+    id: 'education',
     name: 'Education',
     blurb: 'M.S. Data Science at Michigan Tech, April 2026.',
   },
   {
     to: '/certifications',
+    id: 'certifications',
     name: 'Certifications',
     blurb: 'Cloud and platform credentials.',
   },
   {
     to: '/testimonials',
+    id: 'testimonials',
     name: 'Testimonials',
     blurb: 'What people I have worked with have said.',
   },
   {
     to: '/contact',
+    id: 'contact',
     name: 'Contact',
     blurb: 'Email, LinkedIn, GitHub. The inbox is open.',
   },
