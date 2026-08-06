@@ -255,12 +255,5 @@ export const gallery = [
     "full": "gallery/p36-full.webp",
     "width": 1080,
     "height": 810
-  },
-  {
-    "id": "p37",
-    "thumb": "gallery/p37-thumb.webp",
-    "full": "gallery/p37-full.webp",
-    "width": 1201,
-    "height": 1600
   }
 ]

@@ -30,8 +30,10 @@ if (!existsSync(SRC)) {
 await rm(OUT, { recursive: true, force: true })
 await mkdir(OUT, { recursive: true })
 
+// A leading underscore keeps a file in the source folder but out of the
+// gallery — used for the profile photo, which belongs in the sidebar only.
 const files = (await readdir(SRC))
-  .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
+  .filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && !f.startsWith('_'))
   .sort()
 
 if (files.length === 0) {

@@ -116,7 +116,7 @@ export const sections = [
 
 // Standalone routes, kept out of the numbered sections so the eight-section
 // scroll — its NN/08 counters, arrow-key stepping and scroll-spy — stays intact.
-export const pages = [{ to: '/gallery', name: 'Gallery' }]
+export const pages = [{ to: '/gallery', name: 'Photography' }]
 
 export const colophon = {
   text: 'Geist',

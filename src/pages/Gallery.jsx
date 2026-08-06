@@ -12,7 +12,7 @@ export default function Gallery() {
   const triggers = useRef([])
 
   useEffect(() => {
-    document.title = `Gallery — ${site.name}`
+    document.title = `Photography — ${site.name}`
   }, [])
 
   const close = () => {
@@ -32,7 +32,7 @@ export default function Gallery() {
             ← Index
           </Link>
           <span className="px-2 text-text-faint">·</span>
-          Gallery
+          Photography
         </MonoLabel>
         <MonoLabel className="tabular-nums">
           {String(gallery.length).padStart(2, '0')} photos
@@ -40,10 +40,15 @@ export default function Gallery() {
       </div>
 
       <h1 className="mt-3 font-display text-[44px] italic leading-[1.02] tracking-tight text-text sm:text-[52px]">
-        Gallery
+        Photography
       </h1>
 
       <div className="mt-6 h-px w-full bg-rule" aria-hidden="true" />
+
+      <p className="mt-8 max-w-xl text-[14.5px] leading-relaxed text-text-muted">
+        A hobby, not a portfolio. Mostly streets, weather and whatever the walk
+        home looked like.
+      </p>
 
       {/* CSS columns rather than a grid: the photos are a mix of portrait,
           landscape and square, and columns let each keep its own ratio instead
