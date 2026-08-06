@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "PowerShell($sp = \"C:\\\\Users\\\\pra73\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-pra73-Desktop-Projects-Prateeek73\\\\8a859c9e-8ab6-452c-88e3-417314df063e\\\\scratchpad\"; $chrome = \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\"; & $chrome --headless --disable-gpu --no-sandbox --hide-scrollbars --virtual-time-budget=7000 --window-size=1500,1200 \"--screenshot=$sp\\\\v9-experience.png\" \"http://localhost:4176/Prateeek73/experience\" | Out-Null; Write-Output ok)"
-    ]
-  }
-}
