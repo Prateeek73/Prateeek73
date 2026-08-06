@@ -18,10 +18,13 @@ function useUptime() {
 }
 
 function Avatar() {
-  // Falls back to the monogram if public/avatar.jpg has not been added yet.
-  const [failed, setFailed] = useState(false)
+  // Tries each candidate in turn and falls back to the monogram if none exist,
+  // so dropping the photo into public/ works whatever extension it happens to
+  // have — and a missing file is never a broken image.
+  const [attempt, setAttempt] = useState(0)
+  const candidates = site.avatarCandidates
 
-  if (failed) {
+  if (attempt >= candidates.length) {
     return (
       <span className="grid h-[52px] w-[52px] shrink-0 place-items-center border border-rule-strong font-display text-[20px] text-text-muted">
         {site.monogram}
@@ -31,9 +34,9 @@ function Avatar() {
 
   return (
     <img
-      src={site.avatar}
+      src={`${import.meta.env.BASE_URL}${candidates[attempt]}`}
       alt={site.name}
-      onError={() => setFailed(true)}
+      onError={() => setAttempt((n) => n + 1)}
       className="h-[52px] w-[52px] shrink-0 object-cover grayscale transition-[filter] duration-500 hover:grayscale-0"
     />
   )

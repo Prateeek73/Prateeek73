@@ -16,9 +16,10 @@ export const site = {
   // The mono status line under the name, next to the tx/rx dots.
   statusLine: 'Grad Research Engineer · Michigan Tech',
 
-  // TODO(Prateek): drop the photo in at public/avatar.jpg. Until it exists the
-  // sidebar falls back to a monogram, so nothing renders broken either way.
-  avatar: '/avatar.jpg',
+  // TODO(Prateek): drop the photo into public/ as avatar.jpg (or .png/.jpeg/.webp
+  // — each is tried in turn). Until one exists the sidebar shows the monogram,
+  // so nothing renders broken either way.
+  avatarCandidates: ['avatar.jpg', 'avatar.jpeg', 'avatar.png', 'avatar.webp'],
   monogram: 'PS',
 
   // Shown next to the pulsing tx/rx dots on the home page.
