@@ -57,7 +57,7 @@ export default function Home() {
           nobody wrote down, the client call where the real problem shows up, and the
           service that still has to be up at 2am.
         </p>
-
+        <br />
         <p>
           I started on ERP systems at{' '}
           <InlineLink href="https://www.kiet.edu/">KIET</InlineLink> while still an
@@ -89,7 +89,7 @@ export default function Home() {
           HPC cluster — and a couple of undergrad and grad students trained to take it
           over before I left.
         </p>
-
+        <br />
         <p>
           Right now I am architecting a multi-agent code-refactoring system with a
           professor, with a paper to come out of it.

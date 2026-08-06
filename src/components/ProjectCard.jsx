@@ -15,7 +15,7 @@ function CodeLink({ url }) {
 }
 
 export default function ProjectCard({ project, activeTag }) {
-  const { title, kind, blurb, metric, tags, url, status } = project
+  const { title, blurb, metric, tags, url, status } = project
 
   return (
     <article className="border-b border-rule py-4">
@@ -47,10 +47,14 @@ export default function ProjectCard({ project, activeTag }) {
         )}
       </div>
 
-      <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-text-faint">
-        {kind}
-        {status && ` · ${status}`}
-      </p>
+      {/* `kind` drives the filter above the list, so repeating it on every card
+          said nothing the chips had not already. `status` stays: it is the only
+          thing explaining why a card has no code link. */}
+      {status && (
+        <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-text-faint">
+          {status}
+        </p>
+      )}
 
       <p className="mt-2 text-[13.5px] leading-relaxed text-text-muted">{blurb}</p>
 

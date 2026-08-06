@@ -20,13 +20,14 @@ export const projects = [
   {
     id: 'nugan',
     kind: 'Professional',
-    title: 'nuGAN',
+    title: 'nuGAN — serving layer',
+    // The emulator itself is Neerav Kaushal's research (neeravkaushal/nuGAN).
+    // What is mine is the applet around it, so no PyTorch tag: I did not train
+    // the model.
     blurb:
-      'A GAN-based cosmological simulator, deployed with Flask, Gunicorn and Nginx — the same productionization treatment applied to cosmology.',
-    tags: ['Python', 'PyTorch', 'Flask', 'Nginx', 'HPC Deployment'],
-    // Lab research — the code is not public, so there is nothing to link to.
-    url: null,
-    status: 'Research',
+      "A web applet over Neerav Kaushal's cosmic-web emulator — pick a neutrino mass, get the matching 2D density map back. I built the Flask, Gunicorn and Nginx service and the frontend on the HPC cluster.",
+    tags: ['Python', 'Flask', 'Nginx', 'HPC Deployment'],
+    url: 'https://kaushallab.mtu.edu/nugan/',
   },
   {
     id: 'lmforge-rag',
