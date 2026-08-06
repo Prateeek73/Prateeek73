@@ -89,22 +89,22 @@ export const sections = [
     blurb: 'Languages, frameworks, and platforms. Tap one to filter projects.',
   },
   {
-    to: '/education',
-    id: 'education',
-    name: 'Education',
-    blurb: 'M.S. Data Science at Michigan Tech, April 2026.',
-  },
-  {
     to: '/certifications',
     id: 'certifications',
     name: 'Certifications',
-    blurb: 'Cloud and platform credentials.',
+    blurb: 'Certificates and letters from the internships.',
   },
   {
     to: '/testimonials',
     id: 'testimonials',
     name: 'Testimonials',
-    blurb: 'What people I have worked with have said.',
+    blurb: 'People who can speak to the work.',
+  },
+  {
+    to: '/education',
+    id: 'education',
+    name: 'Education',
+    blurb: 'M.S. Data Science at Michigan Tech, April 2026.',
   },
   {
     to: '/contact',

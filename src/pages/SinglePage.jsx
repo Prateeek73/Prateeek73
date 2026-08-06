@@ -45,9 +45,9 @@ export default function SinglePage() {
       <Experience />
       <Projects />
       <Skills />
-      <Education />
       <Certifications />
       <Testimonials />
+      <Education />
       <Contact />
     </>
   )
