@@ -41,10 +41,4 @@ export const certifications = [
     credentialId: '6QWE3R82XM1QQTGJ',
     url: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/6QWE3R82XM1QQTGJ',
   },
-  {
-    id: 'ibm-applied-ds',
-    name: 'Applied Data Science with Python — Level 2',
-    issuer: 'IBM',
-    issued: 'Dec 2020',
-  },
 ]

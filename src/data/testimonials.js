@@ -15,10 +15,10 @@ export const references = [
     name: 'Naman Mahendra',
     title: 'SDE 3',
     org: 'Blinkit',
-    relationship: 'Co-built Orion over final year · Aug 2020 – Jul 2021',
+    relationship: 'Co-built Orion across three years of undergrad',
     quote: '',
     draftQuote:
-      "Prateek and I built Orion together in our final year — an Android community for artists, put together around coursework and everything else going on. He took on the parts nobody volunteers for, the ones that have to keep working when you are not looking at them. What stuck with me is that he would rather understand why a feature mattered than start writing it, which is not a common instinct at that stage.",
+      "Prateek and I built Orion together across three years of undergrad, second year through to final — an Android community for artists, put together around coursework and everything else going on. He took on the parts nobody volunteers for, the ones that have to keep working when you are not looking at them. What stuck with me is that he would rather understand why a feature mattered than start writing it, which is not a common instinct at that stage.",
     url: '',
   },
   {
