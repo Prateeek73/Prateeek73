@@ -50,7 +50,7 @@ export default function Home() {
         <br />
         {site.location}.
       </p>
-
+      <br />
       <div className="mt-8 space-y-4 text-[14.5px] leading-relaxed text-text-muted">
         <p>
           Most people meet AI as a demo. I meet it as a deployment — the requirements

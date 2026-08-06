@@ -1,6 +1,6 @@
 // Ported from the old /projects/ page. `url: null` means there is no public repo
-// to point at — those render with a status chip and are deliberately not
-// clickable.
+// to point at — those render unlinked, with a hollow marker rather than a code
+// link.
 //
 // Two repo names carry upstream typos ("Energey", "Predection"). They are correct
 // as written; fixing the spelling here would break the links.
@@ -15,7 +15,6 @@ export const projects = [
     tags: ['Python', 'FastAPI', 'PyTorch', 'Transformers', 'React', 'HPC Deployment'],
     // Lab research — the code is not public, so there is nothing to link to.
     url: null,
-    status: 'Research',
   },
   {
     id: 'nugan',
