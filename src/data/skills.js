@@ -1,5 +1,7 @@
-// Five buckets rather than nine — the finer split ran the section long without
-// telling anyone anything extra.
+// Five buckets: Languages, Frameworks, Databases, Cloud & DevOps, Tools.
+//
+// ML libraries and the model-side concepts sit under Frameworks rather than
+// getting a sixth group — splitting them out is what ran this section long.
 //
 // Names that also appear in a project's `tags` become filter links
 // automatically (see isFilterable in src/data/index.js), so spelling has to
@@ -7,7 +9,17 @@
 export const skills = [
   {
     category: 'Languages',
-    items: ['Java', 'Python', 'TypeScript', 'JavaScript', 'SQL', 'C++', 'R', 'Ruby', 'HTML/CSS'],
+    items: [
+      'Java',
+      'Python',
+      'TypeScript',
+      'JavaScript',
+      'SQL',
+      'C++',
+      'R',
+      'Ruby',
+      'HTML/CSS',
+    ],
   },
   {
     category: 'Frameworks',
@@ -21,36 +33,32 @@ export const skills = [
       'Express.js',
       'React',
       'Angular',
+      'Streamlit',
       'PyTorch',
       'TensorFlow',
       'Transformers',
-      'Streamlit',
-    ],
-  },
-  {
-    category: 'Data & ML',
-    items: [
-      'PostgreSQL',
-      'MySQL',
-      'MongoDB',
-      'Redis',
-      'DynamoDB',
-      'Apache Kafka',
-      'Amazon SQS',
-      'Apache Spark',
-      'Distributed Systems',
+      'Hugging Face',
+      'Scikit-learn',
       'RAG',
       'LLMs',
       'Agentic AI',
-      'Hugging Face',
-      'Scikit-learn',
       'Computer Vision',
       'Deep Learning',
       'Time Series',
       'Bayesian Statistics',
-      'Plotly',
-      'Data Visualization',
-      'JAGS',
+    ],
+  },
+  {
+    category: 'Databases',
+    items: [
+      'PostgreSQL',
+      'pgVector',
+      'MySQL',
+      'MongoDB',
+      'Redis',
+      'DynamoDB',
+      'AWS RDS',
+      'Query Optimization',
     ],
   },
   {
@@ -67,6 +75,10 @@ export const skills = [
       'Jenkins',
       'GitHub Actions',
       'CI/CD',
+      'Apache Kafka',
+      'Amazon SQS',
+      'Apache Spark',
+      'Distributed Systems',
       'Nginx',
       'Gunicorn',
       'cPanel',
@@ -88,6 +100,9 @@ export const skills = [
       'Pytest',
       'Jest',
       'Static Analysis',
+      'Plotly',
+      'Data Visualization',
+      'JAGS',
       'GitHub Copilot',
       'Claude Code',
     ],
