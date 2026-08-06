@@ -2,7 +2,7 @@ import { projects } from './projects'
 
 export { site, sections, colophon } from './site'
 export { experience } from './experience'
-export { projects, projectGroups, projectKinds } from './projects'
+export { projects, projectKinds } from './projects'
 export { skills } from './skills'
 export { education } from './education'
 export { certifications } from './certifications'

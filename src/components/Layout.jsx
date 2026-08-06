@@ -71,8 +71,11 @@ export default function Layout() {
         <Sidebar active={active} />
       </aside>
 
-      {/* The scroll container on desktop; below lg the window scrolls instead. */}
-      <main id="main" className="flex-1 lg:overflow-y-auto">
+      {/* The scroll container on desktop; below lg the window scrolls instead.
+          The right padding mirrors the sidebar width so the column centres on the
+          viewport rather than on the space left over beside the sidebar — without
+          it the text sits visibly right of centre. */}
+      <main id="main" className="flex-1 lg:overflow-y-auto lg:pr-[300px] xl:pr-[330px]">
         <div className="mx-auto max-w-[760px] px-5 py-10 sm:px-10 lg:py-14">
           <Outlet />
         </div>

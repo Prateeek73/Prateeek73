@@ -2,11 +2,11 @@ import { Link, useSearchParams } from 'react-router-dom'
 import Section from '../components/Section'
 import MonoLabel from '../components/MonoLabel'
 import ProjectCard from '../components/ProjectCard'
-import { projectGroups, projectKinds, projects } from '../data'
+import { projectKinds, projects } from '../data'
 
 function KindFilter({ activeKind, tag, count }) {
   return (
-    <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
+    <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
       <div className="flex flex-wrap items-center gap-2">
         {projectKinds.map((kind) => {
           const isActive = activeKind === kind
@@ -43,6 +43,8 @@ export default function Projects() {
   const kindParam = searchParams.get('kind')
   const activeKind = projectKinds.includes(kindParam) ? kindParam : 'All'
 
+  // Flat list: the Personal/Professional filter already does the dividing, so
+  // group headings on top of it would be a second axis for no extra information.
   const visible = projects.filter(
     (p) =>
       (activeKind === 'All' || p.kind === activeKind) && (!tag || p.tags.includes(tag))
@@ -56,9 +58,9 @@ export default function Projects() {
       <KindFilter activeKind={activeKind} tag={tag} count={visible.length} />
 
       {tag && (
-        <div className="mb-8 flex flex-wrap items-center gap-3 border border-rule bg-bg-elev px-4 py-3">
+        <div className="mb-5 flex flex-wrap items-center gap-3 border border-rule bg-bg-elev px-3 py-2">
           <MonoLabel>Tag</MonoLabel>
-          <span className="font-mono text-[12px] text-accent">{tag}</span>
+          <span className="font-mono text-[11px] text-accent">{tag}</span>
           <Link
             to={activeKind === 'All' ? '/projects' : `/projects?kind=${activeKind}`}
             className="ml-auto font-mono text-[10px] uppercase tracking-[0.14em] text-text-faint transition-colors duration-200 hover:text-accent"
@@ -69,7 +71,7 @@ export default function Projects() {
       )}
 
       {visible.length === 0 ? (
-        <p className="py-10 text-[14px] text-text-muted">
+        <p className="py-8 text-[14px] text-text-muted">
           Nothing matches that combination.{' '}
           <Link to="/projects" className="text-accent hover:text-accent-hover">
             Show all {projects.length}
@@ -77,28 +79,14 @@ export default function Projects() {
           .
         </p>
       ) : (
-        projectGroups.map((group) => {
-          const inGroup = visible.filter((p) => p.group === group)
-          if (inGroup.length === 0) return null
-
-          return (
-            <section key={group} className="mb-12 last:mb-0">
-              <div className="mb-2 flex items-center gap-4 border-b border-rule pb-2">
-                <MonoLabel className="shrink-0">{group}</MonoLabel>
-                <span className="h-px flex-1" aria-hidden="true" />
-                <MonoLabel className="shrink-0 tabular-nums">
-                  {String(inGroup.length).padStart(2, '0')}
-                </MonoLabel>
-              </div>
-              {inGroup.map((project) => (
-                <ProjectCard key={project.id} project={project} activeTag={tag} />
-              ))}
-            </section>
-          )
-        })
+        <div className="border-t border-rule">
+          {visible.map((project) => (
+            <ProjectCard key={project.id} project={project} activeTag={tag} />
+          ))}
+        </div>
       )}
 
-      <p className="mt-10 text-[14px] text-text-muted">
+      <p className="mt-8 text-[14px] text-text-muted">
         Another thirty-odd repositories are{' '}
         <a
           href="https://github.com/Prateeek73"
