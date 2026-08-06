@@ -77,6 +77,9 @@ export const experience = [
             text: "The client's fintech platform had run on a mainframe for the better part of two decades. Capgemini was brought in to move the whole stack to a cloud-native architecture on AWS with an Angular front end; my team owned two of its core features.",
           },
           {
+            text: 'Co-led the team as one of two leads, six developers between us.',
+          },
+          {
             text: 'Owned the critical Spring microservices behind offer delivery to millions of users — creation, validation and distribution, plus personalized recommendations and automated payment and subscription management.',
           },
           {

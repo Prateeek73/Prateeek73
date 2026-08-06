@@ -24,10 +24,12 @@ export const references = [
   {
     id: 'sarvesh-viraktamath',
     name: 'Sarvesh L Viraktamath',
-    title: '',
+    title: 'Senior Software Engineer',
     org: 'Capgemini',
-    relationship: 'Worked together at Capgemini',
+    relationship: 'Dual team leads · six developers between us',
     quote: '',
+    draftQuote:
+      "Prateek and I led the team together at Capgemini — two leads over six developers on the offer platform. Splitting a lead role in half only works if neither person is precious about it, and he never was. He would take the unglamorous half of a problem without being asked, and he was who the team went to when something in production did not add up.",
     url: 'https://www.linkedin.com/in/sarvesh-l-viraktamath/',
   },
   {
