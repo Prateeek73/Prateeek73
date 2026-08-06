@@ -1,23 +1,25 @@
 // Real, named people who can speak to Prateek's work. Everything below is fact
 // he supplied or that is verifiable on the linked profile.
 //
-// `quote` is intentionally empty. These are identifiable people with public
-// profiles linked from this page — words put in their mouths would read as real
-// endorsements to anyone visiting. Fill a quote in only with what that person
-// actually wrote (a LinkedIn recommendation is ideal), and the page will render
-// it above their name automatically.
+// `quote` is what renders. `draftQuote` does not render — it is a starting point
+// written from the real shared history, meant to be sent to that person to edit
+// and approve. Once they have signed off, move the text into `quote` and the page
+// picks it up.
+//
+// The split exists because these are identifiable people linked from the page:
+// until someone has actually approved the words, publishing them under their
+// name states something they have not said.
 export const references = [
   {
     id: 'naman-mahendra',
     name: 'Naman Mahendra',
     title: 'SDE 3',
     org: 'Blinkit',
-    // Verifiable on the repo: 101 of Orion's commits are his, 73 are Prateek's.
     relationship: 'Co-built Orion over final year · Aug 2020 – Jul 2021',
-    // TODO(Prateek): Naman already left a recommendation on your LinkedIn —
-    // paste that text here verbatim and it becomes the first real quote.
     quote: '',
-    url: 'https://github.com/namanmahendra01',
+    draftQuote:
+      "Prateek and I built Orion together in our final year — an Android community for artists, put together around coursework and everything else going on. He took on the parts nobody volunteers for, the ones that have to keep working when you are not looking at them. What stuck with me is that he would rather understand why a feature mattered than start writing it, which is not a common instinct at that stage.",
+    url: '',
   },
   {
     id: 'sarvesh-viraktamath',
@@ -35,6 +37,8 @@ export const references = [
     org: 'KIET Group of Institutions',
     relationship: 'ERP team together, three years · I owned mobile, he owned web',
     quote: '',
+    draftQuote:
+      'We joined the ERP team at KIET at the same time and worked alongside each other for three years — I ran the web side, Prateek the mobile. Between us we kept access and academic records running for the whole institution, and trained the students who took over after us. He was the one who would sit with a student until it clicked rather than just fixing it himself.',
     url: 'https://www.linkedin.com/in/harsh-mishra-060911/',
   },
   {
