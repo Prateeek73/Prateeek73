@@ -115,6 +115,15 @@ export const projects = [
     url: 'https://github.com/Prateeek73/Surface-Temperature-Analysis',
   },
   {
+    id: 'orion',
+    kind: 'Personal',
+    title: 'Orion',
+    blurb:
+      'A community platform on Android for artists — sharing work, running competitions, conversations and a leaderboard. Built with Naman Mahendra over final year.',
+    tags: ['Java', 'Android', 'Firebase'],
+    url: 'https://github.com/Prateeek73/Orion1.0',
+  },
+  {
     id: 'glucose-bayesian',
     kind: 'Personal',
     title: 'Bayesian Glucose Mixture Model',

@@ -12,11 +12,12 @@ export const references = [
     name: 'Naman Mahendra',
     title: 'SDE 3',
     org: 'Blinkit',
-    relationship: 'Built Orion together in college',
+    // Verifiable on the repo: 101 of Orion's commits are his, 73 are Prateek's.
+    relationship: 'Co-built Orion over final year · Aug 2020 – Jul 2021',
     // TODO(Prateek): Naman already left a recommendation on your LinkedIn —
     // paste that text here verbatim and it becomes the first real quote.
     quote: '',
-    url: '',
+    url: 'https://github.com/namanmahendra01',
   },
   {
     id: 'sarvesh-viraktamath',
@@ -31,8 +32,8 @@ export const references = [
     id: 'harsh-mishra',
     name: 'Harsh Mishra',
     title: '',
-    org: '',
-    relationship: '',
+    org: 'KIET Group of Institutions',
+    relationship: 'ERP team together, three years · I owned mobile, he owned web',
     quote: '',
     url: 'https://www.linkedin.com/in/harsh-mishra-060911/',
   },
