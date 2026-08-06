@@ -143,36 +143,32 @@ export default function Sidebar({ onNavigate }) {
         <Identity />
         <SectionNav onNavigate={onNavigate} />
 
-        <div>
-          <MonoLabel className="mb-3">Elsewhere</MonoLabel>
-          <ul>
-            {site.socials.map((s) => (
-              <li key={s.label}>
-                <a
-                  href={s.href}
-                  target={s.href.startsWith('mailto:') ? undefined : '_blank'}
-                  rel="noreferrer"
-                  className="group flex items-center gap-2 py-[5px] text-[13px] text-text-muted transition-colors duration-200 hover:text-accent"
-                >
-                  <span
-                    className="text-text-faint transition-colors duration-200 group-hover:text-accent"
-                    aria-hidden="true"
-                  >
-                    →
-                  </span>
-                  {s.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
 
-      <div className="flex items-center justify-between pt-8">
-        <MonoLabel>
-          © {new Date().getFullYear()} {site.lastName}
-        </MonoLabel>
-        <ThemeToggle />
+      <div className="pt-8">
+        {/* Two-letter codes rather than full names — the row has to stay on one
+            line at the narrowest sidebar width. */}
+        <ul className="mb-5 flex flex-wrap items-center gap-1">
+          {site.socials.map((s) => (
+            <li key={s.label}>
+              <a
+                href={s.href}
+                target={s.href.startsWith('mailto:') ? undefined : '_blank'}
+                rel="noreferrer"
+                title={s.label}
+                aria-label={s.label}
+                className="block border border-transparent px-1.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-text-faint transition-colors duration-200 hover:border-text hover:text-text"
+              >
+                {s.short}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex items-center justify-between">
+          <MonoLabel>© {new Date().getFullYear()}</MonoLabel>
+          <ThemeToggle withLabel />
+        </div>
       </div>
     </div>
   )

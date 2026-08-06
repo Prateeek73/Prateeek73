@@ -8,7 +8,7 @@ function currentTheme() {
   return document.documentElement.getAttribute('data-theme') || 'dark'
 }
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ withLabel = false }) {
   const [theme, setTheme] = useState(currentTheme)
 
   useEffect(() => {
@@ -29,8 +29,14 @@ export default function ThemeToggle() {
       onClick={() => setTheme(next)}
       aria-label={`Switch to ${next} theme`}
       title={`Switch to ${next} theme`}
-      className="grid h-8 w-8 place-items-center rounded-full border border-rule text-text-faint transition-colors duration-200 hover:border-accent hover:text-accent"
+      className={
+        withLabel
+          ? 'flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-text-faint transition-colors duration-200 hover:text-accent'
+          : 'grid h-8 w-8 place-items-center rounded-full border border-rule text-text-faint transition-colors duration-200 hover:border-accent hover:text-accent'
+      }
     >
+      {/* Names the theme you would switch to, matching the icon beside it. */}
+      {withLabel && <span>{next}</span>}
       {theme === 'dark' ? (
         <svg
           viewBox="0 0 24 24"

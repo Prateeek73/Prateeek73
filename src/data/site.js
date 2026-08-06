@@ -33,17 +33,30 @@ export const site = {
   // first, so an unset link is omitted rather than shipped broken.
   resumeUrl: '',
 
+  // `short` is the two-letter code used in the sidebar footer row.
   socials: [
-    { label: 'GitHub', handle: 'Prateeek73', href: 'https://github.com/Prateeek73' },
+    {
+      label: 'GitHub',
+      short: 'GH',
+      handle: 'Prateeek73',
+      href: 'https://github.com/Prateeek73',
+    },
     {
       label: 'LinkedIn',
+      short: 'LI',
       handle: 'pra73ek-singh',
       href: 'https://www.linkedin.com/in/pra73ek-singh/',
     },
     // Note: the LeetCode handle has one fewer 'e' than the GitHub one.
-    { label: 'LeetCode', handle: 'Prateek73', href: 'https://leetcode.com/u/Prateek73/' },
+    {
+      label: 'LeetCode',
+      short: 'LC',
+      handle: 'Prateek73',
+      href: 'https://leetcode.com/u/Prateek73/',
+    },
     {
       label: 'Email',
+      short: 'EM',
       handle: 'pra73ek.singh@gmail.com',
       href: 'mailto:pra73ek.singh@gmail.com',
     },

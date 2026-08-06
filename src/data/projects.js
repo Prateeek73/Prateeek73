@@ -32,7 +32,7 @@ export const projects = [
   },
   {
     id: 'lmforge-rag',
-    kind: 'Personal',
+    kind: 'Professional',
     title: 'RAG Document Q&A',
     group: 'Data Engineering',
     blurb:
@@ -53,7 +53,7 @@ export const projects = [
   },
   {
     id: 'multi-agent-refactor',
-    kind: 'Personal',
+    kind: 'Professional',
     title: 'Multi-Agent LLM Refactoring Pipeline',
     group: 'Data Engineering',
     blurb:
@@ -87,7 +87,7 @@ export const projects = [
   },
   {
     id: 'fibroblast-unet',
-    kind: 'Personal',
+    kind: 'Professional',
     title: 'U-Net vs. Lightweight CNN',
     group: 'Research',
     blurb:
