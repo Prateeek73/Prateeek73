@@ -5,7 +5,7 @@ import { countForTag, isFilterable, skills } from '../data'
 
 function Skill({ name }) {
   if (!isFilterable(name)) {
-    return <li className="text-[14px] text-text-muted">{name}</li>
+    return <li className="text-[13.5px] text-text-muted">{name}</li>
   }
 
   const count = countForTag(name)
@@ -14,13 +14,13 @@ function Skill({ name }) {
     <li>
       <Link
         to={`/projects?tag=${encodeURIComponent(name)}`}
-        className="group inline-flex items-baseline gap-1.5 text-[14px] text-text transition-colors duration-200 hover:text-accent"
+        className="group inline-flex items-baseline gap-1 text-[13.5px] text-text transition-colors duration-200 hover:text-accent"
         title={`Show ${count} project${count === 1 ? '' : 's'} using ${name}`}
       >
         <span className="underline decoration-rule-strong underline-offset-4 transition-colors duration-200 group-hover:decoration-accent">
           {name}
         </span>
-        <span className="font-mono text-[10px] text-text-faint transition-colors duration-200 group-hover:text-accent">
+        <span className="font-mono text-[9px] text-text-faint transition-colors duration-200 group-hover:text-accent">
           {count}
         </span>
       </Link>
@@ -32,21 +32,22 @@ export default function Skills() {
   return (
     <Section
       title="Skills"
-      description="Languages, frameworks, and platforms I work with. Underlined ones link to the projects I have used them on — the number is how many."
+      wide
+      description="Underlined ones link to the projects I used them on."
     >
-      <div className="space-y-10">
+      <div className="border-t border-rule">
         {skills.map((group) => (
-          <section key={group.category}>
-            <div className="mb-4 flex items-center gap-4">
-              <MonoLabel className="shrink-0">{group.category}</MonoLabel>
-              <span className="h-px flex-1 bg-rule" aria-hidden="true" />
-            </div>
-            <ul className="flex flex-wrap gap-x-6 gap-y-2.5">
+          <div
+            key={group.category}
+            className="grid gap-x-8 gap-y-2 border-b border-rule py-4 sm:grid-cols-[150px_1fr]"
+          >
+            <MonoLabel className="pt-[3px]">{group.category}</MonoLabel>
+            <ul className="flex flex-wrap gap-x-5 gap-y-1.5">
               {group.items.map((name) => (
                 <Skill key={name} name={name} />
               ))}
             </ul>
-          </section>
+          </div>
         ))}
       </div>
     </Section>

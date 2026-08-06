@@ -1,40 +1,56 @@
-// Taxonomy carried over from the previous site's skills section. Names that also
-// appear in a project's `tags` become filter links automatically — see
-// isFilterable() in src/data/index.js, so the two lists can't drift apart.
+// Five buckets rather than nine — the finer split ran the section long without
+// telling anyone anything extra.
+//
+// Names that also appear in a project's `tags` become filter links
+// automatically (see isFilterable in src/data/index.js), so spelling has to
+// match the tags exactly: "Apache Spark", "HPC Deployment", "Hugging Face".
 export const skills = [
   {
     category: 'Languages',
-    items: ['Java', 'Python', 'TypeScript', 'JavaScript', 'SQL', 'C', 'R', 'Ruby'],
+    items: ['Java', 'Python', 'TypeScript', 'JavaScript', 'SQL', 'C++', 'R', 'Ruby', 'HTML/CSS'],
   },
   {
-    category: 'Backend & APIs',
+    category: 'Frameworks',
     items: [
+      'Spring Framework',
       'Spring Boot',
+      'Hibernate',
       'FastAPI',
+      'Flask',
       'Node.js',
       'Express.js',
-      'Flask',
-      'REST',
-      'GraphQL',
-      'WebSockets',
-      'Microservices',
-      'Event-Driven Architecture',
-    ],
-  },
-  {
-    category: 'ML & Data',
-    items: [
+      'React',
+      'Angular',
       'PyTorch',
       'TensorFlow',
       'Transformers',
-      'LLMs',
+      'Streamlit',
+    ],
+  },
+  {
+    category: 'Data & ML',
+    items: [
+      'PostgreSQL',
+      'MySQL',
+      'MongoDB',
+      'Redis',
+      'DynamoDB',
+      'Apache Kafka',
+      'Amazon SQS',
+      'Apache Spark',
+      'Distributed Systems',
       'RAG',
+      'LLMs',
+      'Agentic AI',
       'Hugging Face',
       'Scikit-learn',
       'Computer Vision',
       'Deep Learning',
-      'Batch Inference',
-      'HPC Deployment',
+      'Time Series',
+      'Bayesian Statistics',
+      'Plotly',
+      'Data Visualization',
+      'JAGS',
     ],
   },
   {
@@ -44,6 +60,7 @@ export const skills = [
       'AWS Lambda',
       'Amazon S3',
       'Azure',
+      'Google Cloud',
       'Docker',
       'Kubernetes',
       'Terraform',
@@ -51,53 +68,28 @@ export const skills = [
       'GitHub Actions',
       'CI/CD',
       'Nginx',
+      'Gunicorn',
+      'cPanel',
+      'HPC Deployment',
     ],
   },
   {
-    category: 'Databases & Caching',
+    category: 'Tools',
     items: [
-      'PostgreSQL',
-      'MySQL',
-      'MongoDB',
-      'Redis',
-      'DynamoDB',
-      'Firebase',
-      'Query Optimization',
-    ],
-  },
-  {
-    category: 'Messaging & Streaming',
-    items: [
-      'Kafka',
-      'Amazon SQS',
-      'Apache Spark',
-      'Async Pipelines',
-      'Parallel Workers',
-      'Real-Time Processing',
-    ],
-  },
-  {
-    category: 'Observability',
-    items: [
+      'Git',
+      'Maven',
+      'Gradle',
+      'NPM',
+      'JIRA',
       'Prometheus',
       'Grafana',
-      'Structured Logging',
-      'Incident Response',
-      'Production Debugging',
-    ],
-  },
-  {
-    category: 'Frontend',
-    items: ['React', 'Angular', 'Vue.js', 'Streamlit', 'Plotly', 'Responsive Design'],
-  },
-  {
-    category: 'Ways of Working',
-    items: [
-      'Team Mentoring',
-      'Stakeholder Communication',
-      'Technical Documentation',
-      'Code Review',
-      'Cross-functional Coordination',
+      'JUnit',
+      'Mockito',
+      'Pytest',
+      'Jest',
+      'Static Analysis',
+      'GitHub Copilot',
+      'Claude Code',
     ],
   },
 ]

@@ -146,7 +146,6 @@ export default function Experience() {
   return (
     <Section
       title="Experience"
-      description="Michigan Tech and Capgemini — embedded with the people who use what I build, from fintech at scale to research put behind real services."
     >
       {experience.map((company) => (
         <Employer key={company.id} company={company} />
