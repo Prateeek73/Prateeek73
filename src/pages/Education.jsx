@@ -4,44 +4,50 @@ import { education } from '../data'
 
 export default function Education() {
   return (
-    <Section
-      title="Education"
-      description="Formal education and academic background."
-    >
-      {education.map((item) => (
-        <article key={item.id} className="border-b border-rule py-8 first:pt-0">
-          {item.period && <MonoLabel>{item.period}</MonoLabel>}
+    <Section title="Education">
+      <div className="border-t border-rule">
+        {education.map((item) => (
+          <article key={item.id} className="border-b border-rule py-5">
+            {item.period && <MonoLabel>{item.period}</MonoLabel>}
 
-          <h2 className="mt-2 text-[19px] font-medium tracking-tight text-text">
-            {item.degree}
-          </h2>
+            <h3 className="mt-1.5 text-[16px] font-medium tracking-tight text-text">
+              {item.degree}
+            </h3>
 
-          <p className="mt-1 text-[14px] text-text-muted">
-            <a
-              href={item.schoolUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-text underline decoration-rule-strong underline-offset-4 transition-colors duration-200 hover:text-accent hover:decoration-accent"
-            >
-              {item.school}
-            </a>
-            {item.location && ` · ${item.location}`}
-            {item.detail && ` · ${item.detail}`}
-          </p>
+            {/* School results have no institution to name, so this whole line
+                drops rather than rendering an empty separator. */}
+            {(item.school || item.detail) && (
+              <p className="mt-1 text-[13.5px] text-text-muted">
+                {item.school && (
+                  <a
+                    href={item.schoolUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-text underline decoration-rule-strong underline-offset-4 transition-colors duration-200 hover:text-accent hover:decoration-accent"
+                  >
+                    {item.school}
+                  </a>
+                )}
+                {item.school && item.location && ` · ${item.location}`}
+                {item.detail && `${item.school ? ' · ' : ''}${item.detail}`}
+              </p>
+            )}
 
-          {item.note && (
-            <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-text-muted">
-              {item.note}
-            </p>
-          )}
-
-          {item.incomplete && (
-            <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.14em] text-text-faint">
-              Details pending
-            </p>
-          )}
-        </article>
-      ))}
+            {item.coursework && (
+              <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
+                {item.coursework.map((course) => (
+                  <li
+                    key={course}
+                    className="font-mono text-[10px] uppercase tracking-[0.12em] text-text-faint"
+                  >
+                    {course}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </article>
+        ))}
+      </div>
     </Section>
   )
 }
