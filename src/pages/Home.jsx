@@ -58,11 +58,14 @@ export default function Home() {
         <p>
           I started on ERP systems at{' '}
           <InlineLink href="https://www.kiet.edu/">KIET</InlineLink> while still an
-          undergrad, then spent close to three years at{' '}
-          <InlineLink href="https://www.capgemini.com/">Capgemini</InlineLink> in
-          Bangalore — an internal attendance platform for the NA and EU workforce, then
-          the fintech microservices behind offer delivery, personalized recommendations
-          and automated payment, scaled to{' '}
+          undergrad — access provisioning, grade modules, the unglamorous kind where
+          being wrong means somebody else cannot do their job. I leveraged that straight
+          into <InlineLink href="https://www.capgemini.com/">Capgemini</InlineLink> in
+          Bangalore, where three projects filled close to three years: an internal
+          attendance platform for the NA and EU workforce, EMS microservices for a
+          Mercedes in-car system, and a fintech platform that had run on a mainframe for
+          the better part of two decades — there I owned the offer delivery
+          microservices, personalized recommendations and automated payment, scaled to{' '}
           <strong className="font-mono text-[12.5px] font-medium text-accent">
             1M+ requests/min at 99.99% uptime
           </strong>
