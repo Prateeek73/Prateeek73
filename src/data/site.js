@@ -1,0 +1,84 @@
+export const site = {
+  name: 'Prateek Singh',
+  firstName: 'Prateek',
+  lastName: 'Singh',
+  role: 'Forward-Deployed Engineer',
+  tagline:
+    'I sit with the people who need the system and ship it end-to-end — 1M+ requests/min in fintech, research models put in front of real users.',
+  location: 'Michigan',
+  summary:
+    'Forward-deployed engineer taking systems from prototype to production. Michigan.',
+  email: 'pra73ek.singh@gmail.com',
+
+  // Shown next to the pulsing tx/rx dots on the home page.
+  availability: {
+    status: 'Open to work',
+    detail: 'Forward-deployed engineering roles — available April 2026',
+  },
+
+  // TODO(Prateek): paste the shareable resume URL (Drive / Dropbox / Overleaf).
+  // Left empty on purpose — every surface that renders it checks for a value
+  // first, so an unset link is omitted rather than shipped broken.
+  resumeUrl: '',
+
+  socials: [
+    { label: 'GitHub', handle: 'Prateeek73', href: 'https://github.com/Prateeek73' },
+    {
+      label: 'LinkedIn',
+      handle: 'pra73ek-singh',
+      href: 'https://www.linkedin.com/in/pra73ek-singh/',
+    },
+    // Note: the LeetCode handle has one fewer 'e' than the GitHub one.
+    { label: 'LeetCode', handle: 'Prateek73', href: 'https://leetcode.com/u/Prateek73/' },
+    {
+      label: 'Email',
+      handle: 'pra73ek.singh@gmail.com',
+      href: 'mailto:pra73ek.singh@gmail.com',
+    },
+  ],
+}
+
+export const sections = [
+  {
+    to: '/experience',
+    name: 'Experience',
+    blurb: 'Michigan Tech, Capgemini, KIET. Spring Boot at scale, ML on HPC.',
+  },
+  {
+    to: '/projects',
+    name: 'Projects',
+    blurb: 'Applied ML, infrastructure, and research — thirteen of them.',
+  },
+  {
+    to: '/skills',
+    name: 'Skills',
+    blurb: 'Languages, frameworks, and platforms. Tap one to filter projects.',
+  },
+  {
+    to: '/education',
+    name: 'Education',
+    blurb: 'M.S. Data Science at Michigan Tech, April 2026.',
+  },
+  {
+    to: '/certifications',
+    name: 'Certifications',
+    blurb: 'Cloud and platform credentials.',
+  },
+  {
+    to: '/testimonials',
+    name: 'Testimonials',
+    blurb: 'What people I have worked with have said.',
+  },
+  {
+    to: '/contact',
+    name: 'Contact',
+    blurb: 'Email, LinkedIn, GitHub. The inbox is open.',
+  },
+]
+
+export const colophon = {
+  text: 'Geist',
+  display: 'Instrument Serif',
+  mono: 'JetBrains Mono',
+  note: 'Built with React, Vite, and Tailwind. Served from GitHub Pages.',
+}

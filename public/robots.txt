@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prateeek73.github.io/Prateeek73/sitemap.xml
