@@ -1,39 +1,26 @@
-// The four credential documents attached to the internship roles on LinkedIn.
-// They are hosted there rather than on a public verification endpoint, so each
-// links to the profile instead of a credential URL.
-const LINKEDIN = 'https://www.linkedin.com/in/pra73ek-singh/details/certifications/'
-
+// The four cloud certifications listed on the resume. No credential IDs or
+// verification URLs were supplied — add `credentialId` and `url` per entry and
+// the page will render a verify link automatically.
 export const certifications = [
   {
-    id: 'ibm-internship',
-    name: 'Internship Certificate',
-    issuer: 'IBM',
-    context: 'Data Analyst',
-    issued: 'Aug 2021',
-    url: LINKEDIN,
+    id: 'aws-cloudops',
+    name: 'AWS CloudOps Administrator',
+    issuer: 'Amazon Web Services',
   },
   {
-    id: 'twowaits-internship',
-    name: 'Internship Certificate',
-    issuer: 'TwoWaits',
-    context: 'Data Science and ML Intern',
-    issued: 'Jul 2021',
-    url: LINKEDIN,
+    id: 'aws-ml-associate',
+    name: 'AWS Machine Learning Associate',
+    issuer: 'Amazon Web Services',
   },
   {
-    id: 'cureeya-internship',
-    name: 'Internship Certificate',
-    issuer: 'CUREEYA',
-    context: 'Data Analyst',
-    issued: 'Jul 2021',
-    url: LINKEDIN,
+    id: 'aws-cloud-practitioner',
+    name: 'AWS Cloud Practitioner',
+    issuer: 'Amazon Web Services',
   },
   {
-    id: 'cureeya-lor',
-    name: 'Letter of Recommendation',
-    issuer: 'CUREEYA',
-    context: 'Data Analyst',
-    issued: 'Jul 2021',
-    url: LINKEDIN,
+    id: 'azure-fundamentals',
+    name: 'Azure Fundamentals',
+    issuer: 'Microsoft',
+    context: 'AZ-900',
   },
 ]

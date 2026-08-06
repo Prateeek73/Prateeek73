@@ -92,7 +92,7 @@ export const sections = [
     to: '/certifications',
     id: 'certifications',
     name: 'Certifications',
-    blurb: 'Certificates and letters of recommendation.',
+    blurb: 'AWS and Azure cloud certifications.',
   },
   {
     to: '/testimonials',

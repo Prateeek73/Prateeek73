@@ -25,6 +25,7 @@ export default function Education() {
             >
               {item.school}
             </a>
+            {item.location && ` · ${item.location}`}
             {item.detail && ` · ${item.detail}`}
           </p>
 
