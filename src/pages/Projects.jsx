@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import Section from '../components/Section'
 import MonoLabel from '../components/MonoLabel'
 import ProjectCard from '../components/ProjectCard'
 import { projectKinds, projects } from '../data'
+
+const PAGE = 5
 
 function KindFilter({ activeKind, tag, count }) {
   return (
@@ -39,6 +42,7 @@ function KindFilter({ activeKind, tag, count }) {
 
 export default function Projects() {
   const [searchParams] = useSearchParams()
+  const [expanded, setExpanded] = useState(false)
   const tag = searchParams.get('tag')
   const kindParam = searchParams.get('kind')
   const activeKind = projectKinds.includes(kindParam) ? kindParam : 'All'
@@ -49,6 +53,15 @@ export default function Projects() {
     (p) =>
       (activeKind === 'All' || p.kind === activeKind) && (!tag || p.tags.includes(tag))
   )
+
+  // Changing the filter should start from the top of a fresh list rather than
+  // leaving it expanded from the previous one.
+  useEffect(() => {
+    setExpanded(false)
+  }, [activeKind, tag])
+
+  const shown = expanded ? visible : visible.slice(0, PAGE)
+  const hidden = visible.length - shown.length
 
   return (
     <Section
@@ -79,11 +92,30 @@ export default function Projects() {
           .
         </p>
       ) : (
-        <div className="border-t border-rule">
-          {visible.map((project) => (
-            <ProjectCard key={project.id} project={project} activeTag={tag} />
-          ))}
-        </div>
+        <>
+          <div className="border-t border-rule">
+            {shown.map((project) => (
+              <ProjectCard key={project.id} project={project} activeTag={tag} />
+            ))}
+          </div>
+
+          {visible.length > PAGE && (
+            <div className="mt-5 flex items-center justify-between gap-4">
+              <button
+                type="button"
+                onClick={() => setExpanded((v) => !v)}
+                className="border border-rule-strong px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted transition-colors duration-200 hover:border-accent hover:text-accent"
+              >
+                {expanded ? `Collapse · show first ${PAGE}` : `Show all · +${hidden} more`}
+              </button>
+
+              <MonoLabel className="tabular-nums">
+                {String(shown.length).padStart(2, '0')} /{' '}
+                {String(visible.length).padStart(2, '0')}
+              </MonoLabel>
+            </div>
+          )}
+        </>
       )}
 
       <p className="mt-8 text-[14px] text-text-muted">

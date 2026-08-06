@@ -3,11 +3,13 @@ import { Link, Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import ThemeToggle from './ThemeToggle'
 import useActiveSection from '../hooks/useActiveSection'
+import useSectionKeys from '../hooks/useSectionKeys'
 import { site } from '../data'
 
 export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false)
   const active = useActiveSection()
+  useSectionKeys(active)
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''

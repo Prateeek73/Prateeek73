@@ -58,6 +58,21 @@ html {
    behaviour has to be declared on it too or nav clicks would jump. */
 #main {
   scroll-behavior: smooth;
+  /* `proximity`, not `mandatory`: sections like Projects are taller than the
+     viewport, and mandatory snapping would fight anyone trying to read the
+     middle of one. Proximity snaps when you come to rest near a boundary. */
+  scroll-snap-type: y proximity;
+}
+
+/* Below lg the window is the scroll container instead of #main. */
+@media (max-width: 1023px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+}
+
+[data-section] {
+  scroll-snap-align: start;
 }
 
 body {
@@ -202,6 +217,7 @@ body {
   html,
   #main {
     scroll-behavior: auto;
+    scroll-snap-type: none;
   }
   .accent-cursor::after,
   .txrx-dot.tx,
