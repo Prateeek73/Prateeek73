@@ -36,7 +36,7 @@ export const experience = [
             termAfter: ' on the university HPC cluster — the full stack around each model, not just the model.',
           },
           {
-            text: "Migrated the lab's public site off Google Sites onto a React SPA, coordinating the DNS migration with university IT, improving load speed and giving the lab full content ownership.",
+            text: "Migrated the lab's public site off Google Sites onto a React SPA hosted on cPanel, coordinating the DNS migration with university IT, improving load speed and giving the lab full content ownership.",
           },
           {
             text: 'Trained undergraduate and graduate students to take the role over.',
@@ -50,6 +50,7 @@ export const experience = [
           'Flask',
           'Gunicorn',
           'Nginx',
+          'cPanel',
           'HPC',
         ],
       },
