@@ -7,24 +7,35 @@ import { sections } from '../data'
  * title, so the number and the NN/NN counter can never drift out of sync with
  * the nav.
  *
+ * `hideTitle` drops the serif heading for sections that supply their own — About
+ * leads with the name itself, so a "About" heading above it would be a second
+ * heading saying less.
+ *
  * scroll-mt keeps the header clear of the sticky mobile bar when a nav click
  * scrolls a section to the top.
  */
-export default function Section({ title, description, wide = false, children }) {
+export default function Section({
+  title,
+  description,
+  wide = false,
+  hideTitle = false,
+  children,
+}) {
   const index = sections.findIndex((s) => s.name === title)
   const meta = sections[index]
   const number = index + 1
   const total = sections.length
+  const headingId = `${meta?.id}-heading`
 
   return (
     <section
       id={meta?.id}
       data-section={meta?.to}
-      aria-labelledby={`${meta?.id}-heading`}
+      {...(hideTitle ? { 'aria-label': title } : { 'aria-labelledby': headingId })}
       className={[
         'scroll-mt-20 border-t border-rule pb-24 pt-16 first:border-t-0 first:pt-0 lg:scroll-mt-8',
         'mx-auto lg:mx-0',
-        wide ? 'max-w-[1040px]' : 'max-w-[840px]',
+        wide ? 'max-w-[1040px]' : 'max-w-[760px]',
       ].join(' ')}
     >
       <div className="flex items-baseline justify-between gap-4">
@@ -38,14 +49,16 @@ export default function Section({ title, description, wide = false, children }) 
         </MonoLabel>
       </div>
 
-      <h2
-        id={`${meta?.id}-heading`}
-        className="mt-3 font-display text-[44px] italic leading-[1.02] tracking-tight text-text sm:text-[52px]"
-      >
-        {title}
-      </h2>
+      {!hideTitle && (
+        <h2
+          id={headingId}
+          className="mt-3 font-display text-[44px] italic leading-[1.02] tracking-tight text-text sm:text-[52px]"
+        >
+          {title}
+        </h2>
+      )}
 
-      <div className="mt-6 h-px w-full bg-rule" aria-hidden="true" />
+      <div className={`${hideTitle ? 'mt-4' : 'mt-6'} h-px w-full bg-rule`} aria-hidden="true" />
 
       {description && (
         <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-text-muted">

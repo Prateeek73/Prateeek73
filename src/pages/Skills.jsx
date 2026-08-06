@@ -33,7 +33,6 @@ export default function Skills() {
     <Section
       title="Skills"
       wide
-      description="Underlined ones link to the projects I used them on."
     >
       <div className="border-t border-rule">
         {skills.map((group) => (

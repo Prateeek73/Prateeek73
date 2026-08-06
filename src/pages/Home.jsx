@@ -33,22 +33,25 @@ function JumpLink({ to, children }) {
 
 export default function Home() {
   return (
-    <Section title="About">
-      <h2 className="font-display text-[40px] leading-[0.95] tracking-tight text-text sm:text-[54px]">
+    // hideTitle: the name below is the heading — an "About" serif title above it
+    // would be a second, weaker one saying the same thing.
+    <Section title="About" hideTitle>
+      <h2
+        id="about-heading"
+        className="font-display text-[52px] leading-[0.94] tracking-tight text-text sm:text-[66px]"
+      >
         <span className="italic">{site.firstName}</span>
         <br />
         <span className="accent-cursor">{site.lastName}</span>
       </h2>
 
-      <p className="mt-5 text-[14.5px] leading-relaxed text-text-muted">
+      <p className="mt-6 text-[14.5px] leading-relaxed text-text-muted">
         {site.role}.
         <br />
         {site.location}.
       </p>
 
-      {/* Four paragraphs, deliberately. The section has to fit a laptop screen
-          without scrolling past its own heading. */}
-      <div className="mt-7 space-y-4 text-[14.5px] leading-relaxed text-text-muted">
+      <div className="mt-8 space-y-4 text-[14.5px] leading-relaxed text-text-muted">
         <p>
           Most people meet AI as a demo. I meet it as a deployment — the requirements
           nobody wrote down, the client call where the real problem shows up, and the
@@ -58,14 +61,14 @@ export default function Home() {
         <p>
           I started on ERP systems at{' '}
           <InlineLink href="https://www.kiet.edu/">KIET</InlineLink> while still an
-          undergrad — access provisioning, grade modules, the unglamorous kind where
-          being wrong means somebody else cannot do their job. I leveraged that straight
-          into <InlineLink href="https://www.capgemini.com/">Capgemini</InlineLink> in
+          undergrad — access provisioning, grade modules, the unglamorous kind where being
+          wrong means somebody else cannot do their job. I leveraged that straight into{' '}
+          <InlineLink href="https://www.capgemini.com/">Capgemini</InlineLink> in
           Bangalore, where three projects filled close to three years: an internal
           attendance platform for the NA and EU workforce, EMS microservices for a
           Mercedes in-car system, and a fintech platform that had run on a mainframe for
-          the better part of two decades — there I owned the offer delivery
-          microservices, personalized recommendations and automated payment, scaled to{' '}
+          the better part of two decades — there I owned the offer delivery microservices,
+          personalized recommendations and automated payment, scaled to{' '}
           <strong className="font-mono text-[12.5px] font-medium text-accent">
             1M+ requests/min at 99.99% uptime
           </strong>
@@ -76,9 +79,15 @@ export default function Home() {
           I kept getting pulled toward the ML side of those systems, so I went and did a
           Master's in Data Science at{' '}
           <InlineLink href="https://www.mtu.edu/">Michigan Tech</InlineLink>, finishing in
-          April 2026. Alongside it I ran the engineering for a research lab there — BERT
-          and GAN models owned end to end, deployed onto the university HPC cluster, and a
-          couple of students trained to take the role over.
+          April 2026. Alongside it I ran the engineering for a research lab there —{' '}
+          <InlineLink href="https://kaushallab.mtu.edu/fragberta/">FragBERTa</InlineLink>,
+          a fine-tuned BERT model for molecular property prediction that researchers could
+          finally query themselves, and{' '}
+          <InlineLink href="https://kaushallab.mtu.edu/nugan/">nuGAN</InlineLink>, a
+          cosmological simulator that had only ever existed as research code. Both owned
+          end to end — the service, the frontend, and the deployment onto the university
+          HPC cluster — and a couple of undergrad and grad students trained to take it
+          over before I left.
         </p>
 
         <p>
@@ -92,7 +101,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="mt-7 flex flex-wrap items-center gap-x-10 gap-y-3 border-t border-rule pt-5">
+      <div className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-3 border-t border-rule pt-5">
         <JumpLink to="contact">Get in touch</JumpLink>
         <JumpLink to="projects">See the work</JumpLink>
       </div>
