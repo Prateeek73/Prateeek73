@@ -34,71 +34,58 @@ function JumpLink({ to, children }) {
 export default function Home() {
   return (
     <Section title="About">
-      <h2 className="font-display text-[44px] leading-[0.95] tracking-tight text-text sm:text-[64px]">
+      <h2 className="font-display text-[40px] leading-[0.95] tracking-tight text-text sm:text-[54px]">
         <span className="italic">{site.firstName}</span>
         <br />
         <span className="accent-cursor">{site.lastName}</span>
       </h2>
 
-      <p className="mt-6 text-[15px] leading-relaxed text-text-muted">
+      <p className="mt-5 text-[14.5px] leading-relaxed text-text-muted">
         {site.role}.
         <br />
         {site.location}.
       </p>
 
-      <div className="mt-10 space-y-5 text-[15px] leading-relaxed text-text-muted">
+      {/* Four paragraphs, deliberately. The section has to fit a laptop screen
+          without scrolling past its own heading. */}
+      <div className="mt-7 space-y-4 text-[14.5px] leading-relaxed text-text-muted">
         <p>
           Most people meet AI as a demo. I meet it as a deployment — the requirements
-          nobody wrote down, the client call where the real problem finally shows up, and
-          the service that still has to be up at 2am. I'd rather understand why something
-          is being built before I argue about how.
+          nobody wrote down, the client call where the real problem shows up, and the
+          service that still has to be up at 2am.
         </p>
 
         <p>
-          I started with ERP systems at{' '}
-          <InlineLink href="https://www.kiet.edu/">KIET</InlineLink>, provisioning access
-          for 1,500+ students and 50+ faculty while I was still an undergrad. Unglamorous
-          work, but it was the first time being wrong meant somebody else could not do
-          their job.
-        </p>
-
-        <p>
-          That took me to <InlineLink href="https://www.capgemini.com/">Capgemini</InlineLink>{' '}
-          in Bangalore. I built an internal attendance portal off the back of that ERP
-          experience, then moved onto a banking platform where I sat with the client to
-          pull requirements out of ambiguity and turn them around fast — personalized
-          recommendations, automated billing and subscription management. We scaled it to{' '}
-          <strong className="font-mono text-[13px] font-medium text-accent">
+          I started on ERP systems at{' '}
+          <InlineLink href="https://www.kiet.edu/">KIET</InlineLink> while still an
+          undergrad, then spent close to three years at{' '}
+          <InlineLink href="https://www.capgemini.com/">Capgemini</InlineLink> in
+          Bangalore — an internal attendance platform for the NA and EU workforce, then
+          the fintech microservices behind offer delivery, personalized recommendations
+          and automated payment, scaled to{' '}
+          <strong className="font-mono text-[12.5px] font-medium text-accent">
             1M+ requests/min at 99.99% uptime
           </strong>
           .
         </p>
 
         <p>
-          I kept getting pulled toward the ML side of those systems, so I stopped hedging
-          and went to do a Master's in Data Science at{' '}
-          <InlineLink href="https://www.mtu.edu/">Michigan Tech</InlineLink>.
+          I kept getting pulled toward the ML side of those systems, so I went and did a
+          Master's in Data Science at{' '}
+          <InlineLink href="https://www.mtu.edu/">Michigan Tech</InlineLink>, finishing in
+          April 2026. Alongside it I ran the engineering for a research lab there — BERT
+          and GAN models owned end to end, deployed onto the university HPC cluster, and a
+          couple of students trained to take the role over.
         </p>
 
         <p>
-          Now I run the engineering for a research lab there. BERT and GAN models for
-          actual research, owned end to end — the full stack around them and deployment
-          onto the university HPC cluster, by me. I have also trained a couple of
-          undergrad and grad students to take the role over when I leave.
-        </p>
-
-        <p>
-          Currently architecting a multi-agent code-refactoring system with a professor as
-          a research project, with a paper to come out of it.
-        </p>
-
-        <p>
-          When I am not deep in a deployment, I am playing chess in the park with the
-          uncles — losing more often than I would like.
+          Right now I am architecting a multi-agent code-refactoring system with a
+          professor, with a paper to come out of it. When I am not deep in a deployment, I
+          am playing chess in the park with the uncles.
         </p>
       </div>
 
-      <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-3 border-t border-rule pt-6">
+      <div className="mt-7 flex flex-wrap items-center gap-x-10 gap-y-3 border-t border-rule pt-5">
         <JumpLink to="contact">Get in touch</JumpLink>
         <JumpLink to="projects">See the work</JumpLink>
       </div>

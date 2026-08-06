@@ -69,6 +69,12 @@ function Role({ role }) {
                 <span>{role.mode}</span>
               </>
             )}
+            {role.client && (
+              <>
+                <span>·</span>
+                <span>{role.client}</span>
+              </>
+            )}
             {role.current && (
               <>
                 <span>·</span>

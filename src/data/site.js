@@ -14,7 +14,7 @@ export const site = {
   locationCode: 'MI',
 
   // The mono status line under the name, next to the tx/rx dots.
-  statusLine: 'Grad Research Engineer · Michigan Tech',
+  statusLine: 'Forward-Deployed Engineer',
 
   // TODO(Prateek): drop the photo into public/ as avatar.jpg (or .png/.jpeg/.webp
   // — each is tried in turn). Until one exists the sidebar shows the monogram,

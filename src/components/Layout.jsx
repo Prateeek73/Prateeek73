@@ -72,11 +72,11 @@ export default function Layout() {
       </aside>
 
       {/* The scroll container on desktop; below lg the window scrolls instead.
-          The right padding mirrors the sidebar width so the column centres on the
-          viewport rather than on the space left over beside the sidebar — without
-          it the text sits visibly right of centre. */}
-      <main id="main" className="flex-1 lg:overflow-y-auto lg:pr-[300px] xl:pr-[330px]">
-        <div className="mx-auto max-w-[760px] px-5 py-10 sm:px-10 lg:py-14">
+          On desktop the column sits just past the sidebar rather than centring in
+          the space beside it — centring let it drift right as the viewport grew.
+          Below lg there is no sidebar, so it centres normally. */}
+      <main id="main" className="flex-1 lg:overflow-y-auto">
+        <div className="mx-auto max-w-[840px] px-5 py-10 sm:px-10 lg:mx-0 lg:py-14 lg:pl-12">
           <Outlet />
         </div>
       </main>

@@ -9,14 +9,13 @@ export const experience = [
     org: 'Michigan Technological University',
     orgUrl: 'https://www.mtu.edu/',
     location: 'Michigan, USA',
-    period: 'May 2025 — Present',
+    period: 'May 2025 — Apr 2026',
     roles: [
       {
         id: 'mtu-gre',
         title: 'Graduate Research Engineer',
-        period: 'May 2025 — Present',
+        period: 'May 2025 — Apr 2026',
         mode: 'On-site',
-        current: true,
         defaultOpen: true,
         highlights: [
           {
@@ -31,7 +30,7 @@ export const experience = [
             text: ' — a GAN-based cosmological simulator existed only as research code. Shipped it as a full-stack web application on the HPC cluster via Flask, Gunicorn and Nginx with SSL termination and rate limiting, enabling real-time 512×512 map generation.',
           },
           {
-            text: 'Own hosting and deployment for every product in the ',
+            text: 'Owned hosting and deployment for every product in the ',
             term: 'lab',
             termUrl: 'https://www.kaushallab.mtu.edu/home',
             termAfter: ' on the university HPC cluster — the full stack around each model, not just the model.',
@@ -68,31 +67,37 @@ export const experience = [
         title: 'Senior Software Engineer',
         period: 'Sep 2022 — Jul 2024',
         mode: 'On-site',
+        client: 'Fintech client',
         defaultOpen: false,
         highlights: [
           {
-            text: 'Owned the core Spring Boot microservices behind personalized recommendations for a fintech client — offer creation, validation and distribution — the system their revenue workflows depended on daily.',
+            text: 'Owned the critical Spring Boot microservices behind offer delivery to millions of users — creation, validation and distribution, plus personalized recommendations and automated payment and subscription management.',
           },
           {
-            text: 'Built automated payment and subscription management on the same platform.',
-          },
-          {
-            text: 'Peak campaign windows threatened availability; scaled the platform to',
+            text: 'Scaled the platform to',
             metric: '1M+ requests/min at 99.99% uptime',
-            after: 'with horizontal autoscaling and graceful degradation.',
+            after: 'with horizontal autoscaling and graceful degradation through peak campaign windows.',
           },
           {
-            text: 'Synchronous processing was the scaling bottleneck; asynchronous pipelines on Amazon SQS, Kafka and parallel workers cut it by',
+            text: 'Asynchronous pipelines on Amazon SQS and Kafka cut synchronous load by',
             metric: '45%',
             after: 'and enabled near-linear horizontal scalability.',
           },
           {
-            text: 'Read pressure drove latency spikes under load; multi-layer caching across Redis and DynamoDB/RDS cut read load by',
+            text: 'Multi-layer caching across Redis and DynamoDB/RDS cut database read load by',
             metric: '75%',
             after: 'and stabilised response times at peak.',
           },
           {
-            text: 'Incidents were being caught hours after impact; Prometheus metrics and Grafana dashboards tracking p95/p99 latency, error rates and throughput pulled mean time to detect down to minutes.',
+            text: 'Prometheus and Grafana instrumentation tracking p95/p99 latency, error rates and throughput pulled',
+            metric: 'mean time to detect from hours to minutes',
+          },
+          {
+            text: 'Containerized services onto AWS ECS/EKS, reaching zero-downtime rolling deployments across staging and production.',
+          },
+          {
+            text: 'WebSocket real-time updates replaced 30-second client polling, cutting redundant API calls by',
+            metric: '60%',
           },
         ],
         stack: [
@@ -102,6 +107,8 @@ export const experience = [
           'Amazon SQS',
           'Redis',
           'DynamoDB',
+          'AWS ECS/EKS',
+          'WebSockets',
           'Prometheus',
           'Grafana',
         ],
@@ -110,35 +117,37 @@ export const experience = [
         id: 'capgemini-swe',
         title: 'Software Engineer',
         period: 'Dec 2021 — Aug 2022',
-        mode: 'On-site',
+        mode: 'Hybrid',
+        client: 'EMS client · internal platform',
         defaultOpen: false,
         highlights: [
           {
             text: 'Built the EMS microservices for a Mercedes in-car system.',
           },
           {
-            text: "Built the organisation's internal attendance portal.",
+            text: 'Built the internal attendance management platform for the global workforce across the NA and EU servers, increasing compliance by',
+            metric: '87%',
           },
           {
-            text: 'Releases needed manual coordination and risked downtime; containerized services onto AWS ECS/EKS with Lambda for event-driven processing and S3 for assets, reaching zero-downtime rolling deployments across staging and production.',
+            text: 'Integrated geolocation APIs to capture precise employee coordinates through browser-based tracking.',
           },
           {
-            text: 'Clients polled every 30 seconds for offer status; WebSocket-based real-time updates cut redundant API calls by roughly',
-            metric: '60%',
-            after: 'at peak.',
+            text: 'Implemented secure image capture with Base64 encoding, stored in PostgreSQL.',
           },
           {
-            text: 'Partnered with stakeholders to turn ambiguous business objectives into structured technical requirements, and ran root cause analysis on data inconsistencies across services.',
+            text: 'Designed centralized exception handling and logging for system observability.',
+          },
+          {
+            text: 'Built Angular dashboards and the API communication layers behind them, visualising productivity data in real time.',
           },
         ],
         stack: [
           'Java',
-          'Spring Boot',
-          'AWS ECS/EKS',
-          'Lambda',
-          'Amazon S3',
-          'WebSockets',
-          'Docker',
+          'Spring Framework',
+          'Angular',
+          'PostgreSQL',
+          'REST APIs',
+          'Geolocation APIs',
         ],
       },
     ],
