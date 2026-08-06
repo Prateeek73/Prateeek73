@@ -10,6 +10,17 @@ export const site = {
     'Forward-deployed engineer taking systems from prototype to production. Michigan.',
   email: 'pra73ek.singh@gmail.com',
 
+  // Short code shown top-right of the sidebar identity block.
+  locationCode: 'MI',
+
+  // The mono status line under the name, next to the tx/rx dots.
+  statusLine: 'Grad Research Engineer · Michigan Tech',
+
+  // TODO(Prateek): drop the photo in at public/avatar.jpg. Until it exists the
+  // sidebar falls back to a monogram, so nothing renders broken either way.
+  avatar: '/avatar.jpg',
+  monogram: 'PS',
+
   // Shown next to the pulsing tx/rx dots on the home page.
   availability: {
     status: 'Open to work',
@@ -39,6 +50,11 @@ export const site = {
 }
 
 export const sections = [
+  {
+    to: '/',
+    name: 'About',
+    blurb: 'Who I am and how I work.',
+  },
   {
     to: '/experience',
     name: 'Experience',

@@ -88,3 +88,43 @@ export const experience = [
     stack: ['SQL', 'ERP Administration'],
   },
 ]
+
+// Early internships. Deliberately compact: LinkedIn records the role, org, dates
+// and skills but no description, and inventing accomplishments for them would be
+// making things up. Org links are omitted where there is no obvious official site.
+export const internships = [
+  {
+    id: 'ibm',
+    role: 'Data Analyst',
+    org: 'IBM',
+    orgUrl: 'https://www.ibm.com/',
+    period: 'Jun 2021 — Aug 2021',
+    duration: '3 mos',
+    location: 'Remote',
+    stack: ['Python', 'SQL'],
+  },
+  {
+    id: 'twowaits',
+    role: 'Data Science and ML Intern',
+    org: 'TwoWaits',
+    period: 'Jul 2021',
+    duration: '1 mo',
+    stack: ['Machine Learning', 'Python'],
+  },
+  {
+    id: 'cureeya',
+    role: 'Data Analyst',
+    org: 'CUREEYA',
+    period: 'Jun 2021 — Jul 2021',
+    duration: '2 mos',
+    stack: ['Python', 'REST APIs'],
+  },
+  {
+    id: 'spaceboat',
+    role: 'Web Developer',
+    org: 'SpaceBoat',
+    period: 'Jun 2019 — Aug 2019',
+    duration: '3 mos',
+    stack: ['React', 'JavaScript'],
+  },
+]

@@ -1,12 +1,13 @@
-// Ported from the old /projects/ page, plus the STM32 bootloader from the profile
-// README. `url: null` means there is no public repo yet — those render with a
-// status chip and are deliberately not clickable.
+// Ported from the old /projects/ page. `url: null` means there is no public repo
+// to point at — those render with a status chip and are deliberately not
+// clickable.
 //
 // Two repo names carry upstream typos ("Energey", "Predection"). They are correct
 // as written; fixing the spelling here would break the links.
 export const projects = [
   {
     id: 'fragberta',
+    kind: 'Professional',
     title: 'FragBERTa',
     group: 'Applied ML',
     blurb:
@@ -19,6 +20,7 @@ export const projects = [
   },
   {
     id: 'nugan',
+    kind: 'Professional',
     title: 'nuGAN',
     group: 'Applied ML',
     blurb:
@@ -30,8 +32,9 @@ export const projects = [
   },
   {
     id: 'lmforge-rag',
+    kind: 'Personal',
     title: 'RAG Document Q&A',
-    group: 'Applied ML',
+    group: 'Data Engineering',
     blurb:
       'Retrieval-augmented question answering over FastAPI and pgVector, with every answer grounded in the source material.',
     tags: ['Python', 'FastAPI', 'RAG', 'LLMs', 'PostgreSQL'],
@@ -39,8 +42,9 @@ export const projects = [
   },
   {
     id: 'spark-gpu',
+    kind: 'Personal',
     title: 'GPU-Accelerated Spark Pipeline',
-    group: 'Infrastructure',
+    group: 'Data Engineering',
     blurb:
       'Distributed image classification across a GPU Spark cluster using data parallelism.',
     metric: '97.37% accuracy on 20k+ COCO images in six minutes',
@@ -49,8 +53,9 @@ export const projects = [
   },
   {
     id: 'multi-agent-refactor',
+    kind: 'Personal',
     title: 'Multi-Agent LLM Refactoring Pipeline',
-    group: 'Infrastructure',
+    group: 'Data Engineering',
     blurb:
       'Runs Designite and RefactoringMiner across Apache repositories and verifies that every proposed change still compiles. The speculative one.',
     tags: ['Python', 'LLMs', 'Agentic AI', 'Java', 'Static Analysis'],
@@ -58,16 +63,8 @@ export const projects = [
     status: 'In progress',
   },
   {
-    id: 'stm32-bootloader',
-    title: 'STM32 Custom Bootloader',
-    group: 'Infrastructure',
-    blurb:
-      'A firmware update system for microcontrollers with over-the-air update capability. Low-level systems programming.',
-    tags: ['C', 'Embedded Systems', 'STM32'],
-    url: 'https://github.com/Prateeek73/STM32-Custom-Bootloader',
-  },
-  {
     id: 'mormon-nlt',
+    kind: 'Personal',
     title: 'Mormon-NLT',
     group: 'Research',
     blurb:
@@ -78,16 +75,19 @@ export const projects = [
   },
   {
     id: 'blt-chess',
+    kind: 'Personal',
     title: 'Byte Latent Transformer Chess Engine',
     group: 'Research',
     blurb:
       'A chess engine with no hand-crafted evaluation function — the position understanding has to come from the model.',
     tags: ['Python', 'PyTorch', 'Transformers'],
+    // TODO(Prateek): repo URL. No longer marked in progress, but no link was
+    // supplied — renders unlinked until this is filled in.
     url: null,
-    status: 'In progress',
   },
   {
     id: 'fibroblast-unet',
+    kind: 'Personal',
     title: 'U-Net vs. Lightweight CNN',
     group: 'Research',
     blurb:
@@ -98,8 +98,9 @@ export const projects = [
   },
   {
     id: 'pjme-sarima',
+    kind: 'Personal',
     title: 'PJM Energy Forecasting',
-    group: 'Statistical',
+    group: 'Data Analysis',
     blurb: 'SARIMA forecasting on PJM hourly energy consumption across 140K+ records.',
     metric: '77.8% R², 4.45% MAPE',
     tags: ['Python', 'Time Series', 'Scikit-learn'],
@@ -107,8 +108,9 @@ export const projects = [
   },
   {
     id: 'housing-price',
+    kind: 'Personal',
     title: 'Housing Price Prediction',
-    group: 'Statistical',
+    group: 'Data Analysis',
     blurb: 'Regression modelling on housing market data.',
     metric: 'R² 0.7357',
     tags: ['Python', 'Scikit-learn', 'SQL'],
@@ -116,16 +118,18 @@ export const projects = [
   },
   {
     id: 'surface-temp',
+    kind: 'Personal',
     title: 'Surface Temperature Analysis',
-    group: 'Statistical',
+    group: 'Data Analysis',
     blurb: 'Plotly visualizations of global temperature trends over time.',
     tags: ['Python', 'Plotly', 'Data Visualization'],
     url: 'https://github.com/Prateeek73/Surface-Temperature-Analysis',
   },
   {
     id: 'glucose-bayesian',
+    kind: 'Personal',
     title: 'Bayesian Glucose Mixture Model',
-    group: 'Statistical',
+    group: 'Data Analysis',
     blurb:
       'A mixture model of plasma glucose fitted with Gibbs sampling in JAGS.',
     tags: ['R', 'Bayesian Statistics', 'JAGS'],
@@ -133,4 +137,6 @@ export const projects = [
   },
 ]
 
-export const projectGroups = ['Applied ML', 'Infrastructure', 'Research', 'Statistical']
+export const projectKinds = ['All', 'Personal', 'Professional']
+
+export const projectGroups = ['Applied ML', 'Data Engineering', 'Research', 'Data Analysis']

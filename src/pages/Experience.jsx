@@ -1,6 +1,6 @@
 import Page from '../components/Page'
-import MonoLabel from '../components/MonoLabel'
-import { experience } from '../data'
+import MonoLabel, { RuledLabel } from '../components/MonoLabel'
+import { experience, internships } from '../data'
 
 function Highlight({ item }) {
   return (
@@ -86,6 +86,45 @@ export default function Experience() {
       {experience.map((job) => (
         <Role key={job.id} job={job} />
       ))}
+
+      <section className="mt-14">
+        <RuledLabel>Internships</RuledLabel>
+        <ul className="mt-2">
+          {internships.map((job) => (
+            <li
+              key={job.id}
+              className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-rule py-4"
+            >
+              <span className="min-w-0">
+                <span className="text-[15px] text-text">{job.role}</span>
+                <span className="text-[14px] text-text-muted">
+                  {' · '}
+                  {job.orgUrl ? (
+                    <a
+                      href={job.orgUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline decoration-rule-strong underline-offset-4 transition-colors duration-200 hover:text-accent hover:decoration-accent"
+                    >
+                      {job.org}
+                    </a>
+                  ) : (
+                    job.org
+                  )}
+                  {job.location && ` · ${job.location}`}
+                </span>
+                <span className="mt-1 block font-mono text-[10px] uppercase tracking-[0.12em] text-text-faint">
+                  {job.stack.join(' · ')}
+                </span>
+              </span>
+              <MonoLabel className="shrink-0">
+                {job.period}
+                {job.duration && ` · ${job.duration}`}
+              </MonoLabel>
+            </li>
+          ))}
+        </ul>
+      </section>
     </Page>
   )
 }

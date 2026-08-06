@@ -1,8 +1,9 @@
 import { projects } from './projects'
 
 export { site, sections, colophon } from './site'
-export { experience } from './experience'
-export { projects, projectGroups } from './projects'
+export { experience, internships } from './experience'
+export { projects, projectGroups, projectKinds } from './projects'
+export { reading, dailyTools } from './rail'
 export { skills } from './skills'
 export { education } from './education'
 export { certifications } from './certifications'
