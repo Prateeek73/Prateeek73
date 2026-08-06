@@ -1,6 +1,6 @@
 import { projects } from './projects'
 
-export { site, sections, colophon } from './site'
+export { site, sections, pages, colophon } from './site'
 export { experience } from './experience'
 export { projects, projectKinds } from './projects'
 export { skills } from './skills'
@@ -25,3 +25,4 @@ export function projectsByTag(tag) {
 export function countForTag(tag) {
   return projects.filter((p) => p.tags.includes(tag)).length
 }
+export { gallery } from './gallery'

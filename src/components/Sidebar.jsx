@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 import MonoLabel from './MonoLabel'
-import { sections, site } from '../data'
+import { pages, sections, site } from '../data'
 
 /** Counts up from page load, as HH:MM:SS. */
 function useUptime() {
@@ -89,11 +89,21 @@ function Identity() {
 }
 
 function SectionNav({ active, onNavigate }) {
-  // Scrolls rather than navigates: the whole site is one page, so a nav click is
-  // the same gesture as scrolling there, just faster.
+  const navigate = useNavigate()
+
+  // On the single page a nav click is the same gesture as scrolling there, just
+  // faster. From a standalone route the sections are not mounted, so scrolling
+  // would silently do nothing — route home first and scroll once they exist.
   const go = (e, section) => {
     e.preventDefault()
-    document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const target = document.getElementById(section.id)
+
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      navigate(section.to)
+    }
+
     onNavigate?.()
   }
 
@@ -152,6 +162,38 @@ export default function Sidebar({ active, onNavigate }) {
       </div>
 
       <div className="pt-8">
+        <nav className="mb-6" aria-label="Pages">
+          <MonoLabel className="mb-3">Pages</MonoLabel>
+          <ul>
+            {pages.map((p) => (
+              <li key={p.to}>
+                <NavLink
+                  to={p.to}
+                  onClick={onNavigate}
+                  className={({ isActive }) =>
+                    [
+                      'group flex items-center gap-2.5 py-[5px] text-[13.5px] transition-colors duration-200',
+                      isActive ? 'text-accent' : 'text-text-muted hover:text-text',
+                    ].join(' ')
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      <span
+                        className={isActive ? 'text-accent' : 'text-text-faint'}
+                        aria-hidden="true"
+                      >
+                        →
+                      </span>
+                      {p.name}
+                    </>
+                  )}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         {/* Two-letter codes rather than full names — the row has to stay on one
             line at the narrowest sidebar width. */}
         <ul className="mb-5 flex flex-wrap items-center gap-1">

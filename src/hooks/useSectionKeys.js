@@ -10,8 +10,10 @@ const TYPING = new Set(['INPUT', 'TEXTAREA', 'SELECT'])
  * stay native, so a section taller than the viewport — Projects, Experience —
  * can still be read through at your own pace rather than jumped past.
  */
-export default function useSectionKeys(active) {
+export default function useSectionKeys(active, enabled = true) {
   useEffect(() => {
+    if (!enabled) return
+
     const onKey = (e) => {
       if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return
       if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return
@@ -33,5 +35,5 @@ export default function useSectionKeys(active) {
 
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [active])
+  }, [active, enabled])
 }

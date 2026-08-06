@@ -10,11 +10,16 @@ const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
  * Reads positions on scroll rather than holding IntersectionObserver handles:
  * the node list is re-queried every frame, so a re-render that replaces the
  * section elements can't leave this watching detached nodes.
+ *
+ * `enabled` must be false on routes that are not the single page. Otherwise
+ * `active` stays at its initial '/' — there are no sections to measure — and
+ * the replaceState below would quietly rewrite e.g. /gallery back to /.
  */
-export default function useActiveSection() {
+export default function useActiveSection(enabled = true) {
   const [active, setActive] = useState(sections[0].to)
 
   useEffect(() => {
+    if (!enabled) return
     let last = 0
 
     const scroller = () => {
@@ -66,9 +71,10 @@ export default function useActiveSection() {
       target.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
     }
-  }, [])
+  }, [enabled])
 
   useEffect(() => {
+    if (!enabled) return
     const meta = sections.find((s) => s.to === active)
     if (!meta) return
 
@@ -80,7 +86,7 @@ export default function useActiveSection() {
       meta.to === '/'
         ? 'Prateek Singh — Forward-Deployed Engineer'
         : `${meta.name} — Prateek Singh`
-  }, [active])
+  }, [active, enabled])
 
   return active
 }

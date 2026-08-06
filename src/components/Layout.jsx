@@ -1,15 +1,23 @@
 import { useEffect, useState } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import ThemeToggle from './ThemeToggle'
 import useActiveSection from '../hooks/useActiveSection'
 import useSectionKeys from '../hooks/useSectionKeys'
 import { site } from '../data'
 
+// Routes that are their own page rather than part of the scrolling index.
+const STANDALONE = ['/gallery']
+
 export default function Layout() {
+  const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
-  const active = useActiveSection()
-  useSectionKeys(active)
+
+  // Off the single page there are no sections to track, and leaving the spy
+  // running would rewrite the URL back to '/'.
+  const onSinglePage = !STANDALONE.includes(pathname)
+  const active = useActiveSection(onSinglePage)
+  useSectionKeys(active, onSinglePage)
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -65,12 +73,12 @@ export default function Layout() {
 
       {menuOpen && (
         <div className="fixed inset-0 top-14 z-30 overflow-y-auto bg-bg lg:hidden">
-          <Sidebar active={active} onNavigate={() => setMenuOpen(false)} />
+          <Sidebar active={onSinglePage ? active : null} onNavigate={() => setMenuOpen(false)} />
         </div>
       )}
 
       <aside className="hidden w-[300px] shrink-0 overflow-y-auto border-r border-rule lg:block xl:w-[330px]">
-        <Sidebar active={active} />
+        <Sidebar active={onSinglePage ? active : null} />
       </aside>
 
       {/* The scroll container on desktop; below lg the window scrolls instead.

@@ -4,3 +4,8 @@ dist
 *.local
 .vite
 .claude/
+
+# Gallery originals. 8.6MB of full-size photos that never need to ship —
+# scripts/build-gallery.mjs compresses them into public/gallery/, and only
+# those derivatives are committed. Keep the originals here locally.
+assets/gallery-src/
