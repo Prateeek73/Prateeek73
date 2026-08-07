@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=70A5FD&center=true&vCenter=true&width=940&lines=Hey%2C+I'm+Prateek+%F0%9F%91%8B;Data+Engineer+%7C+Building+Production+Systems;3%2B+Years+%40+Capgemini+%7C+AWS+Certified;Python+%7C+SQL+%7C+Docker+%7C+Cloud+Architecture" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=70A5FD&center=true&vCenter=true&width=940&lines=Hey%2C+I'm+Prateek+%F0%9F%91%8B;Forward-Deployed+Engineer+%7C+AI%2FML+Infra;3+Years+%40+Capgemini+%7C+AWS+Certified;PyTorch+%7C+FastAPI+%7C+Kafka+%7C+Kubernetes" alt="Typing SVG" />
 </div>
 
 <div align="center">
@@ -10,13 +10,13 @@
 
 ## 👨‍💻 About Me
 
-I'm a data engineer who builds systems that actually work in production.
+I'm a **Forward-Deployed Engineer** who bridges the gap between complex machine learning models and high-throughput production systems.
 
-Currently finishing my MS in Data Science at Michigan Tech (April 2026) after spending 3 years at Capgemini building cloud infrastructure and ETL pipelines that processed 500GB+ daily data across AWS and Azure.
+Currently finishing my MS in Data Science at Michigan Tech (April 2026). Previously, I spent nearly 3 years as a Software Engineer at Capgemini, where I architected real-time ML inference pipelines and microservices that scaled to **4M+ users** on AWS.
 
-**What I do:** Design and build data pipelines, deploy ML models to production, architect cloud-native systems that scale.
+**What I do:** Architect high-concurrency microservices, design real-time ML feature pipelines, and deploy GPU-accelerated models (TensorRT/EKS) into zero-downtime production environments.
 
-**What I'm good at:** Python, SQL, AWS, Docker, Terraform. I can take a messy data problem and turn it into clean, automated infrastructure.
+**What I'm good at:** PyTorch, FastAPI, Kafka, Kubernetes, AWS. I can take complex AI/ML research and turn it into scalable, automated, and reliable infrastructure.
 
 ---
 
@@ -24,24 +24,24 @@ Currently finishing my MS in Data Science at Michigan Tech (April 2026) after sp
 
 <div align="center">
 
-### Data & Cloud
+### Backend & ML Infrastructure
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 
-### Data Engineering
+### Data Engineering & Streaming
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=for-the-badge&logo=apache-kafka&logoColor=white)
 ![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=for-the-badge&logo=apache-kafka&logoColor=white)
-![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
+![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
-### ML & AI
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge&logoColor=black)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+### Cloud & DevOps
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 
 </div>
 
@@ -49,35 +49,31 @@ Currently finishing my MS in Data Science at Michigan Tech (April 2026) after sp
 
 ## 🚀 Featured Projects
 
-### 📊 [Real-Time Energy Demand Forecasting](https://github.com/Prateeek73/PJME_Energey_Consumption_Analysis)
-Automated SARIMA-based forecasting system built on AWS. Takes messy historical grid data, cleans it, models it, deploys predictions.
-
-**Stack:** Python, Pandas, Statsmodels, AWS S3/Lambda  
-**Impact:** 77.8% R² accuracy, 4.45% MAPE on 140K+ records
-
----
-
-### 🎭 [Mormon-NLT: Neural Style Transfer](https://github.com/Prateeek73/Mormon-NLT)
-Research project on parameter-efficient LLM fine-tuning. Achieved 100× parameter reduction using LoRA adapters.
-
-**Stack:** PyTorch, Hugging Face, LoRA/PEFT  
-**Impact:** 0.84 BERTScore F1, matching full fine-tuning performance
+### 🤖 [Multi-Agent LLM Code Refactoring Pipeline](https://github.com/Prateeek73)
+An automated pipeline that detects code smells and refactoring opportunities across massive Java codebases. 
+**Stack:** Python, LLM Agents, Java (Designite/RefactoringMiner)  
+**Impact:** Orchestrates AI agents to propose and validate refactorings with compile-pass verification.
 
 ---
 
-### 🧬 [Biomedical Image Processing Pipeline](https://github.com/Prateeek73/Investigating-Fibroblast-Migration-Using-Deep-Learning)
-End-to-end deep learning system for cell segmentation in microscopy images. U-Net architecture with automated evaluation pipeline.
-
-**Stack:** PyTorch, TensorFlow, OpenCV  
-**Impact:** 90%+ Dice coefficient on 2,000+ microscopy images
+### 🧠 [RAG IDP Q&A System](https://github.com/Prateeek73)
+Intelligent document processing system with custom knowledge ingestion, solving the context-limit problem of base LLMs.
+**Stack:** FastAPI, pgVector, RAG Architecture  
+**Impact:** Enables lightning-fast, context-aware semantic search and grounded answers via vector retrieval.
 
 ---
 
-### 💾 [STM32 Custom Bootloader](https://github.com/Prateeek73/STM32-Custom-Bootloader)
-Firmware update system for microcontrollers with over-the-air update capabilities. Low-level systems programming.
+### ⚡ [Distributed Deep Learning with Spark](https://github.com/Prateeek73)
+A GPU-accelerated distributed processing pipeline for high-volume image data.
+**Stack:** Apache Spark, PyTorch, Python  
+**Impact:** Achieved data parallelism for 20k images, driving 97.37% accuracy in just 6 minutes.
 
-**Stack:** C, Embedded Systems, STM32  
-**Why it matters:** Shows I can work at any layer of the stack when needed
+---
+
+### 🧬 [FragBERTa: Molecular Property Inference](https://github.com/Prateeek73)
+End-to-end productionization of a fine-tuned 110M-parameter BERT model for the university HPC cluster.
+**Stack:** FastAPI, React, PyTorch, Hugging Face  
+**Impact:** Built the full-stack architecture to deliver batch inference for 1K+ compounds in under 90 seconds.
 
 ---
 
@@ -100,20 +96,20 @@ Firmware update system for microcontrollers with over-the-air update capabilitie
 
 ## 📫 Let's Connect
 
-I'm looking for **remote data engineering roles** starting summer 2026. I want to work on systems where good infrastructure decisions matter - high-volume data, production ML, distributed systems.
+I'm looking for **Forward-Deployed Engineering, ML Infrastructure, or Backend roles** starting Summer 2026. I want to work on systems where latency and scale matter—high-throughput microservices, real-time RecSys, and distributed AI deployments.
 
 <div align="center">
 
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pra73ek.singh@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/prateek-singh-7392041a0/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/Prateek73/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pra73ek-singh)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/pra73ek)
 
-**📍 Michigan** | **🗓️ Available April 2026** | **💼 Open to Remote**
+**📍 Houston, TX / Michigan** | **🗓️ Available April 2026** | **💼 Open to Remote/Hybrid**
 
 </div>
 
 ---
 
 <div align="center">
-  <i>From embedded bootloaders to petabyte-scale data pipelines - I build systems that work.</i>
+  <i>From backend microservices to GPU-accelerated ML inference — I build scalable systems that work in production.</i>
 </div>
