@@ -7,7 +7,7 @@ export const education = [
     school: 'Michigan Technological University',
     schoolUrl: 'https://www.mtu.edu/',
     location: 'Michigan, USA',
-    period: 'Apr 2024 — Apr 2026',
+    period: 'Aug 2024 — Apr 2026',
     detail: '3.85 GPA · Minor in Statistics',
     coursework: [
       'Time-Series Analysis',
@@ -24,7 +24,7 @@ export const education = [
     schoolUrl: 'https://www.kiet.edu/',
     location: 'India',
     period: 'Aug 2018 — Aug 2022',
-    detail: '8.67/10',
+    detail: '8.77/10',
   },
   {
     id: 'senior-secondary',

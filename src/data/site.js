@@ -4,14 +4,14 @@ export const site = {
   lastName: 'Singh',
   role: 'Forward-Deployed Engineer',
   tagline:
-    'I sit with the people who need the system and ship it end-to-end — 1M+ requests/min in fintech, research models put in front of real users.',
-  location: 'Michigan',
+    'I sit with the people who need the system and ship it end-to-end — payments for 4M users in fintech, research models put in front of real users.',
+  location: 'Houston, TX',
   summary:
-    'Forward-deployed engineer taking systems from prototype to production. Michigan.',
+    'Forward-deployed engineer taking systems from prototype to production. Houston, TX.',
   email: 'pra73ek.singh@gmail.com',
 
   // Short code shown top-right of the sidebar identity block.
-  locationCode: 'MI',
+  locationCode: 'TX',
 
   // The mono status line under the name, next to the tx/rx dots.
   statusLine: 'Forward-Deployed Engineer',

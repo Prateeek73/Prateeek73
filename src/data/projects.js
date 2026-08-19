@@ -31,10 +31,11 @@ export const projects = [
   {
     id: 'lmforge-rag',
     kind: 'Professional',
-    title: 'RAG Document Q&A',
+    title: 'LMForge — RAG Financial Q&A',
     blurb:
-      'Retrieval-augmented question answering over FastAPI and pgVector, with every answer grounded in the source material.',
-    tags: ['Python', 'FastAPI', 'RAG', 'LLMs', 'PostgreSQL'],
+      'An end-to-end RAG chatbot over 3,000+ pages of financial books, SEC filings and research, with structure-aware PDF segmentation by chapter, section and topic.',
+    metric: '85% chunking accuracy',
+    tags: ['Python', 'Django', 'RAG', 'LLMs', 'Qdrant'],
     url: 'https://github.com/Prateeek73/LMForge_RAG',
   },
   {
@@ -42,17 +43,18 @@ export const projects = [
     kind: 'Personal',
     title: 'GPU-Accelerated Spark Pipeline',
     blurb:
-      'Distributed image classification across a GPU Spark cluster using data parallelism.',
-    metric: '97.37% accuracy on 20k+ COCO images in six minutes',
-    tags: ['Apache Spark', 'Python', 'PyTorch', 'Distributed Systems'],
+      'A distributed deep-learning pipeline on HDFS and Spark 3.5.0 training a VGG-style CNN over 20,000+ COCO images, using chunk-based RDD loading and disk-serialized batching to eliminate out-of-memory failures.',
+    metric: '97.37% train / 56.26% val in under 19 minutes',
+    tags: ['Apache Spark', 'Python', 'TensorFlow', 'HDFS', 'Distributed Systems'],
     url: 'https://github.com/Prateeek73/SP4',
   },
   {
     id: 'multi-agent-refactor',
     kind: 'Professional',
-    title: 'Multi-Agent LLM Refactoring Pipeline',
+    title: 'RefAgent Evaluation Study',
     blurb:
-      'Runs Designite and RefactoringMiner across Apache repositories and verifies that every proposed change still compiles. The speculative one.',
+      'An independent evaluation of RefAgent, a multi-agent LLM framework for software refactoring — replicating and extending the original study across model variations on open-source Java repositories.',
+    metric: 'Median 52.5% code-smell reduction · 90% unit-test pass rate',
     tags: ['Python', 'LLMs', 'Agentic AI', 'Java', 'Static Analysis'],
     url: null,
     status: 'In progress',
@@ -62,20 +64,20 @@ export const projects = [
     kind: 'Personal',
     title: 'Mormon-NLT',
     blurb:
-      'Compares LoRA adapters against full fine-tuning on Qwen2.5 for Shakespearean style transfer, at roughly a 100× parameter reduction.',
-    metric: '0.84 BERTScore F1',
-    tags: ['Python', 'PyTorch', 'Transformers', 'LLMs', 'Hugging Face'],
+      'Modern English to Shakespearean style transfer on Qwen2.5-3B-Instruct — six experiments across training direction, LoRA rank and learning rate over a 27K+ pair dataset, showing LoRA matches full fine-tuning at 100× fewer parameters (26M vs 1.54B).',
+    metric: '0.8405 LoRA vs 0.8415 full fine-tune BERTScore',
+    tags: ['Python', 'PyTorch', 'Transformers', 'LLMs', 'Hugging Face', 'PEFT', 'LoRA'],
     url: 'https://github.com/Prateeek73/Mormon-NLT',
   },
   {
     id: 'blt-chess',
     kind: 'Personal',
     title: 'MessBot — Byte Latent Transformer Chess Engine',
-    // Blurb follows the repo's own description: the model is paired with an
-    // alpha-beta search, not used in place of search.
+    // Follows the resume, which is newer than the repo description. The two
+    // disagree: the repo still says "AB search via depth and Heuristics".
     blurb:
-      'A Byte Latent Transformer chess bot, pairing the learned model with alpha-beta search over depth and heuristic objectives.',
-    tags: ['C++', 'Transformers'],
+      'A character-level Byte Latent Transformer that predicts PGN characters instead of searching bitboards, with constrained decoding via python-chess masking illegal moves at generation time. Distributed STaR self-play pipeline on Docker Swarm, and Lichess API play against humans.',
+    tags: ['C++', 'Python', 'PyTorch', 'Transformers', 'Reinforcement Learning'],
     url: 'https://github.com/Prateeek73/MessBot',
   },
   {

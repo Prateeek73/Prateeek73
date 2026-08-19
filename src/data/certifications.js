@@ -41,4 +41,12 @@ export const certifications = [
     credentialId: '6QWE3R82XM1QQTGJ',
     url: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/6QWE3R82XM1QQTGJ',
   },
+  {
+    // On the resume but not in the LinkedIn certifications list, so there is no
+    // credential ID or date to show and no verify link to build.
+    id: 'azure-fundamentals',
+    name: 'Azure Fundamentals',
+    issuer: 'Microsoft',
+    context: 'AZ-900',
+  },
 ]

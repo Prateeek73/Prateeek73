@@ -59,20 +59,17 @@ export default function Home() {
         </p>
         <br />
         <p>
-          I started on ERP systems at{' '}
+          I started at{' '}
           <InlineLink href="https://www.kiet.edu/">KIET</InlineLink> while still an
-          undergrad — access provisioning, grade modules, the unglamorous kind where being
-          wrong means somebody else cannot do their job. I leveraged that straight into{' '}
+          undergrad, shipping MobiKIET — a mobile ERP that ended up with 10K+ daily active
+          users. I leveraged that straight into{' '}
           <InlineLink href="https://www.capgemini.com/">Capgemini</InlineLink> in
-          Bangalore, where three projects filled close to three years: an internal
-          attendance platform for the NA and EU workforce, EMS microservices for a
-          Mercedes in-car system, and a fintech platform that had run on a mainframe for
-          the better part of two decades — there I owned the offer delivery microservices,
-          personalized recommendations and automated payment, scaled to{' '}
+          Bangalore, on the payment and subscription microservices behind a core banking
+          integration serving{' '}
           <strong className="font-mono text-[12.5px] font-medium text-accent">
-            1M+ requests/min at 99.99% uptime
+            4M users at 99.99% availability
           </strong>
-          .
+          , plus the internal attendance platform that lifted compliance by 87%.
         </p>
 
         <p>
@@ -91,8 +88,9 @@ export default function Home() {
         </p>
         <br />
         <p>
-          Right now I am architecting a multi-agent code-refactoring system with a
-          professor, with a paper to come out of it.
+          Right now I am evaluating RefAgent, a multi-agent LLM framework for
+          refactoring, with a professor at Michigan Tech — replicating and extending the
+          original study across open-source Java repositories.
         </p>
 
         <p>
