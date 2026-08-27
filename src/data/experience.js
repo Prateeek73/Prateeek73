@@ -67,17 +67,13 @@ export const experience = [
     period: 'Dec 2021 — Jul 2024',
     roles: [
       {
-        id: 'capgemini-swe',
-        title: 'Software Engineer',
-        period: 'Dec 2021 — Jul 2024',
+        id: 'capgemini-senior',
+        title: 'Senior Software Engineer',
+        period: 'Jan 2024 — Jul 2024',
         mode: 'On-site',
         client: 'Fintech client',
         defaultOpen: false,
         highlights: [
-          {
-            text: 'Engineered a Spring Boot microservice for payment and subscription management with core banking integration and SCA flows, serving',
-            metric: '4M users at 99.99% availability',
-          },
           {
             text: 'Architected async data pipelines on Kafka (MSK) and Amazon SQS, offloading',
             metric: '2,250 req/s',
@@ -88,7 +84,30 @@ export const experience = [
             metric: '97.2% hit rate under 5ms p95',
           },
           {
-            text: 'Deployed a Prometheus and Grafana observability stack with custom alerting, cutting mean time to detect.',
+            text: 'Deployed a Prometheus and Grafana observability stack with custom alerting, cutting mean time to detect, and templated the dashboards per service so new services inherited them instead of starting blank.',
+          },
+        ],
+        stack: [
+          'Java',
+          'Spring Framework',
+          'Apache Kafka',
+          'Amazon SQS',
+          'Redis',
+          'DynamoDB',
+          'Prometheus',
+          'Grafana',
+        ],
+      },
+      {
+        id: 'capgemini-swe',
+        title: 'Software Engineer',
+        period: 'Dec 2021 — Dec 2023',
+        mode: 'On-site',
+        defaultOpen: false,
+        highlights: [
+          {
+            text: 'Engineered a Spring Boot microservice for payment and subscription management with core banking integration and SCA flows, serving',
+            metric: '4M users at 99.99% availability',
           },
           {
             text: 'Containerized 12+ microservices on AWS EKS with',
@@ -104,14 +123,9 @@ export const experience = [
           'Java',
           'Spring Boot',
           'Microservices',
-          'Apache Kafka',
-          'Amazon SQS',
-          'Redis',
-          'DynamoDB',
           'AWS EKS',
           'Docker',
-          'Prometheus',
-          'Grafana',
+          'REST APIs',
         ],
       },
     ],
