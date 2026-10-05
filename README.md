@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=70A5FD&center=true&vCenter=true&width=940&lines=Hey%2C+I'm+Prateek+%F0%9F%91%8B;Forward-Deployed+Engineer+%7C+AI%2FML+Infra;3+Years+%40+Capgemini+%7C+AWS+Certified;PyTorch+%7C+FastAPI+%7C+Kafka+%7C+Kubernetes" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=70A5FD&center=true&vCenter=true&width=940&lines=Hey%2C+I'm+Prateek+%F0%9F%91%8B;AI%2FML+Engineer+%7C+LLM+Inference+%26+Infra;Founding+ML+Researcher+Intern+%40+Pareto+Labs;PyTorch+%7C+FastAPI+%7C+vLLM+%7C+AWS" alt="Typing SVG" />
 </div>
 
 <div align="center">
@@ -10,13 +10,15 @@
 
 ## 👨‍💻 About Me
 
-I'm a **Forward-Deployed Engineer** who bridges the gap between complex machine learning models and high-throughput production systems.
+I'm an AI/ML engineer who cares about what happens after the demo: getting models served, monitored and kept up in production.
 
-Currently finishing my MS in Data Science at Michigan Tech (April 2026). Previously, I spent nearly 3 years as a Software Engineer at Capgemini, where I architected real-time ML inference pipelines and microservices that scaled to **4M+ users** on AWS.
+I finished my MS in Data Science at Michigan Tech in April 2026. Before that I spent nearly 3 years at Capgemini building backend microservices on AWS, including a payments platform serving 4M+ users at 99.99% availability. That background is why I tend to look at ML as a systems problem as much as a modeling one.
 
-**What I do:** Architect high-concurrency microservices, design real-time ML feature pipelines, and deploy GPU-accelerated models (TensorRT/EKS) into zero-downtime production environments.
+**Right now:** I'm a founding ML researcher intern at Pareto Labs, designing the infrastructure for a data center that will serve LLM inference endpoints to clients: provisioning, a control plane, a vLLM-based inference core and per-tenant metering. I'm also replicating and extending RefAgent, a multi-agent LLM framework for Java refactoring, with a professor at Michigan Tech.
 
-**What I'm good at:** PyTorch, FastAPI, Kafka, Kubernetes, AWS. I can take complex AI/ML research and turn it into scalable, automated, and reliable infrastructure.
+**What I do:** Deploy and serve ML models behind real APIs, build the pipelines and infrastructure around them, and take research code to something other people can use without touching the model.
+
+**What I'm good at:** PyTorch, Hugging Face, FastAPI, LLM inference, Kafka, Kubernetes, AWS.
 
 ---
 
@@ -24,16 +26,20 @@ Currently finishing my MS in Data Science at Michigan Tech (April 2026). Previou
 
 <div align="center">
 
-### Backend & ML Infrastructure
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+### ML & LLMs
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-
-### Data Engineering & Streaming
-![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=for-the-badge&logo=apache-kafka&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![vLLM](https://img.shields.io/badge/vLLM-30A2FF?style=for-the-badge&logoColor=white)
 ![Apache Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
+
+### Backend & Serving
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+
+### Data & Streaming
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-000000?style=for-the-badge&logo=apache-kafka&logoColor=white)
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
@@ -49,40 +55,45 @@ Currently finishing my MS in Data Science at Michigan Tech (April 2026). Previou
 
 ## 🚀 Featured Projects
 
-### 🤖 [Multi-Agent LLM Code Refactoring Pipeline](https://github.com/Prateeek73)
-An automated pipeline that detects code smells and refactoring opportunities across massive Java codebases. 
-**Stack:** Python, LLM Agents, Java (Designite/RefactoringMiner)  
-**Impact:** Orchestrates AI agents to propose and validate refactorings with compile-pass verification.
-
----
-
-### 🧠 [RAG IDP Q&A System](https://github.com/Prateeek73)
-Intelligent document processing system with custom knowledge ingestion, solving the context-limit problem of base LLMs.
-**Stack:** FastAPI, pgVector, RAG Architecture  
-**Impact:** Enables lightning-fast, context-aware semantic search and grounded answers via vector retrieval.
-
----
-
-### ⚡ [Distributed Deep Learning with Spark](https://github.com/Prateeek73)
-A GPU-accelerated distributed processing pipeline for high-volume image data.
-**Stack:** Apache Spark, PyTorch, Python  
-**Impact:** Achieved data parallelism for 20k images, driving 97.37% accuracy in just 6 minutes.
+### 🤖 [RefAgent: Multi-Agent LLM Code Refactoring](https://github.com/Prateeek73)
+Replicating and extending a multi-agent pipeline that detects code smells and refactoring opportunities across large open-source Java codebases, with ongoing work toward a paper submission.
+**Stack:** Python, LLM agents, Java (Designite, RefactoringMiner)
+**What it does:** Agents propose refactorings and validate each one with compile and test checks before it counts.
 
 ---
 
 ### 🧬 [FragBERTa: Molecular Property Inference](https://github.com/Prateeek73)
-End-to-end productionization of a fine-tuned 110M-parameter BERT model for the university HPC cluster.
-**Stack:** FastAPI, React, PyTorch, Hugging Face  
-**Impact:** Built the full-stack architecture to deliver batch inference for 1K+ compounds in under 90 seconds.
+A production inference tool for a fragment-aware, fine-tuned BERT model, deployed on the university HPC cluster.
+**Stack:** FastAPI, React, PyTorch, Hugging Face
+**Impact:** Researchers query molecules in batch or interactively across MoleculeNet benchmarks (ESOL, FreeSolv, HIV, Tox21) without touching the model. Scores 1K+ compounds in under 90 seconds.
 
 ---
+
+### 🌌 [nuGAN: Cosmological Simulator Platform](https://github.com/Prateeek73)
+A deep-learning cosmological simulator turned into a full-stack platform, so researchers can generate cosmic web maps without writing scripts.
+**Stack:** Flask, Gunicorn, Nginx, PyTorch
+**Impact:** Generates and stores 512x512 maps conditioned on neutrino masses, with async job queuing, checkpoint management and a live visualization pipeline.
+
+---
+
+### 🧠 [RAG IDP Q&A System](https://github.com/Prateeek73)
+Document processing system with custom knowledge ingestion, built to get around the context limits of base LLMs.
+**Stack:** FastAPI, pgvector, RAG
+**Impact:** Context-aware semantic search with answers grounded in retrieved passages.
+
+---
+
+### ⚡ [Distributed Deep Learning with Spark](https://github.com/Prateeek73)
+A GPU-accelerated distributed pipeline for high-volume image data.
+**Stack:** Apache Spark, PyTorch, Python
+**Impact:** Data parallelism across 20K images, reaching 97.37% accuracy in 6 minutes.
 
 ---
 
 ## 📊 GitHub Activity
 
 <div align="center">
-  
+
 ![GitHub Stats](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Prateeek73&theme=tokyonight)
 
 </div>
@@ -96,7 +107,7 @@ End-to-end productionization of a fine-tuned 110M-parameter BERT model for the u
 
 ## 📫 Let's Connect
 
-I'm looking for **Forward-Deployed Engineering, ML Infrastructure, or Backend roles** starting Summer 2026. I want to work on systems where latency and scale matter—high-throughput microservices, real-time RecSys, and distributed AI deployments.
+I'm looking for full-time **AI/ML Engineer, ML Infrastructure or Backend roles**, and I'm available now. I want to work on systems where latency and scale matter: LLM inference, model serving, real-time pipelines and distributed AI deployments.
 
 <div align="center">
 
@@ -104,12 +115,12 @@ I'm looking for **Forward-Deployed Engineering, ML Infrastructure, or Backend ro
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pra73ek-singh)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/pra73ek)
 
-**📍 Houston, TX / Michigan** | **🗓️ Available April 2026** | **💼 Open to Remote/Hybrid**
+**📍 Houston, TX** | **💼 Open to Remote/Hybrid**
 
 </div>
 
 ---
 
 <div align="center">
-  <i>From backend microservices to GPU-accelerated ML inference — I build scalable systems that work in production.</i>
+  <i>From backend microservices to LLM inference, I build ML systems that keep running in production.</i>
 </div>
