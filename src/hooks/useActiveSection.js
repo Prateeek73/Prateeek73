@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { sections } from '../data'
+import { sections, site } from '../data'
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
 
@@ -83,9 +83,7 @@ export default function useActiveSection(enabled = true) {
       window.history.replaceState(null, '', path + window.location.search)
     }
     document.title =
-      meta.to === '/'
-        ? 'Prateek Singh — Forward-Deployed Engineer'
-        : `${meta.name} — Prateek Singh`
+      meta.to === '/' ? `${site.name} — ${site.role}` : `${meta.name} — ${site.name}`
   }, [active, enabled])
 
   return active

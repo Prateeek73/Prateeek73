@@ -6,13 +6,14 @@ import Projects from './Projects'
 import Skills from './Skills'
 import Education from './Education'
 import Certifications from './Certifications'
-import Testimonials from './Testimonials'
+import References from './References'
 import Contact from './Contact'
 import NotFound from './NotFound'
 import { sections } from '../data'
 
-// /workexp was the old URL for what is now the Experience section.
-const ALIASES = { '/workexp': '/experience' }
+// Old URLs for sections that have since been renamed: /workexp is now
+// Experience, /testimonials is now References.
+const ALIASES = { '/workexp': '/experience', '/testimonials': '/references' }
 
 /**
  * All eight sections on one scrolling page. The per-section paths still resolve —
@@ -46,7 +47,7 @@ export default function SinglePage() {
       <Projects />
       <Skills />
       <Certifications />
-      <Testimonials />
+      <References />
       <Education />
       <Contact />
     </>

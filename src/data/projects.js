@@ -2,9 +2,33 @@
 // to point at — those render unlinked, with a hollow marker rather than a code
 // link.
 //
+// Order is display order, and only the first five show before "Show all" — so
+// the work worth seeing first goes at the top.
+//
 // Two repo names carry upstream typos ("Energey", "Predection"). They are correct
 // as written; fixing the spelling here would break the links.
 export const projects = [
+  {
+    id: 'pareto-platform',
+    kind: 'Professional',
+    title: 'Pareto Cloud Platform',
+    blurb:
+      'A cloud platform built from scratch, where teams deploy apps on Firecracker microVMs, run GPU workloads and use managed Postgres, key-value, object storage and vector search from one console. I wrote every layer: the Rust control plane, node and guest agents, HTTPS ingress, observability and the React console.',
+    metric: 'Pooled Postgres 8.8k → 38.8k TPS (4.4×) after a 20-hour stress test',
+    tags: [
+      'Rust',
+      'Firecracker',
+      'PostgreSQL',
+      'pgvector',
+      'Docker',
+      'React',
+      'Prometheus',
+      'Grafana',
+      'Distributed Systems',
+    ],
+    // Company code — private, so there is nothing public to link to.
+    url: null,
+  },
   {
     id: 'fragberta',
     kind: 'Professional',
@@ -29,6 +53,40 @@ export const projects = [
     url: 'https://kaushallab.mtu.edu/nugan/',
   },
   {
+    id: 'blt-chess',
+    kind: 'Personal',
+    title: 'MessBot — Byte Latent Transformer Chess Engine',
+    // Follows the repo README. GitHub's one-line repo description still says
+    // "AB search via depth and Heuristics"; in the README, search survives only
+    // as a shallow minimax choosing among sampled candidates during self-play.
+    blurb:
+      'A character-level Byte Latent Transformer that plays chess by predicting the next PGN characters instead of searching bitboards, with constrained decoding that masks illegal moves against python-chess at generation time. It trains through STaR self-play on a Docker Swarm, where a shallow minimax picks among sampled candidate moves, and plays humans live through the Lichess API.',
+    tags: ['C++', 'Python', 'PyTorch', 'Transformers', 'Reinforcement Learning', 'Docker Swarm'],
+    url: 'https://github.com/Prateeek73/MessBot',
+  },
+  {
+    id: 'sql-practice',
+    kind: 'Personal',
+    // The repo is named SQL-Cheat-Sheet; the title follows its README.
+    title: 'SQL Practice — 113 Queries on Real Data',
+    blurb:
+      'An interview-prep environment: five real Kaggle datasets loaded whole into five SQLite databases, with 113 progressively harder queries — revenue and RFM, churn risk, pay equity, fraud thresholds — and a Python pipeline that rebuilds the questions site from the SQL that actually runs.',
+    metric: '113/113 queries execute · 0 errors · 0 empty results',
+    tags: ['SQL', 'SQLite', 'Python'],
+    url: 'https://github.com/Prateeek73/SQL-Cheat-Sheet',
+  },
+  {
+    id: 'multi-agent-refactor',
+    kind: 'Professional',
+    title: 'RefAgent Evaluation Study',
+    blurb:
+      'An independent evaluation of RefAgent, a multi-agent LLM framework for software refactoring — replicating and extending the original study across model variations on open-source Java repositories.',
+    metric: 'Median 52.5% code-smell reduction · 90% unit-test pass rate',
+    tags: ['Python', 'LLMs', 'Agentic AI', 'Java', 'Static Analysis'],
+    url: null,
+    status: 'In progress',
+  },
+  {
     id: 'lmforge-rag',
     kind: 'Professional',
     title: 'LMForge — RAG Financial Q&A',
@@ -49,17 +107,6 @@ export const projects = [
     url: 'https://github.com/Prateeek73/SP4',
   },
   {
-    id: 'multi-agent-refactor',
-    kind: 'Professional',
-    title: 'RefAgent Evaluation Study',
-    blurb:
-      'An independent evaluation of RefAgent, a multi-agent LLM framework for software refactoring — replicating and extending the original study across model variations on open-source Java repositories.',
-    metric: 'Median 52.5% code-smell reduction · 90% unit-test pass rate',
-    tags: ['Python', 'LLMs', 'Agentic AI', 'Java', 'Static Analysis'],
-    url: null,
-    status: 'In progress',
-  },
-  {
     id: 'mormon-nlt',
     kind: 'Personal',
     title: 'Mormon-NLT',
@@ -68,17 +115,6 @@ export const projects = [
     metric: '0.8405 LoRA vs 0.8415 full fine-tune BERTScore',
     tags: ['Python', 'PyTorch', 'Transformers', 'LLMs', 'Hugging Face', 'PEFT', 'LoRA'],
     url: 'https://github.com/Prateeek73/Mormon-NLT',
-  },
-  {
-    id: 'blt-chess',
-    kind: 'Personal',
-    title: 'MessBot — Byte Latent Transformer Chess Engine',
-    // Follows the resume, which is newer than the repo description. The two
-    // disagree: the repo still says "AB search via depth and Heuristics".
-    blurb:
-      'A character-level Byte Latent Transformer that predicts PGN characters instead of searching bitboards, with constrained decoding via python-chess masking illegal moves at generation time. Distributed STaR self-play pipeline on Docker Swarm, and Lichess API play against humans.',
-    tags: ['C++', 'Python', 'PyTorch', 'Transformers', 'Reinforcement Learning'],
-    url: 'https://github.com/Prateeek73/MessBot',
   },
   {
     id: 'fibroblast-unet',

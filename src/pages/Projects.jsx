@@ -118,8 +118,9 @@ export default function Projects() {
         </>
       )}
 
+      {/* No count: a number here goes stale the moment a repository is added. */}
       <p className="mt-8 text-[14px] text-text-muted">
-        Another thirty-odd repositories are{' '}
+        The rest of my repositories are{' '}
         <a
           href="https://github.com/Prateeek73"
           target="_blank"

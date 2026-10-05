@@ -1,10 +1,11 @@
 // Real, named people who can speak to Prateek's work. Everything below is fact
-// he supplied or that is verifiable on the linked profile.
+// he supplied or that is verifiable on the linked profile. The References
+// section lists every person here; a quote appears under someone only once it
+// is in `quote`.
 //
-// `quote` is what renders. `draftQuote` does not render — it is a starting point
-// written from the real shared history, meant to be sent to that person to edit
-// and approve. Once they have signed off, move the text into `quote` and the page
-// picks it up.
+// `draftQuote` never renders — it is a starting point written from the real
+// shared history, meant to be sent to that person to edit and approve. Once
+// they have signed off, move the text into `quote` and the page picks it up.
 //
 // The split exists because these are identifiable people linked from the page:
 // until someone has actually approved the words, publishing them under their
@@ -19,7 +20,6 @@ export const references = [
     quote: '',
     draftQuote:
       "Prateek and I built Orion together across three years of undergrad, second year through to final — an Android community for artists, put together around coursework and everything else going on. He took on the parts nobody volunteers for, the ones that have to keep working when you are not looking at them. What stuck with me is that he would rather understand why a feature mattered than start writing it, which is not a common instinct at that stage.",
-    url: '',
   },
   {
     id: 'sarvesh-viraktamath',
@@ -35,7 +35,6 @@ export const references = [
   {
     id: 'harsh-mishra',
     name: 'Harsh Mishra',
-    title: '',
     org: 'KIET Group of Institutions',
     relationship: 'ERP team together, three years · I owned mobile, he owned web',
     quote: '',

@@ -52,10 +52,6 @@ export default function Contact() {
         <ContactRow key={s.label} label={s.label} href={s.href} handle={s.handle} />
       ))}
 
-      {site.resumeUrl && (
-        <ContactRow label="Résumé" href={site.resumeUrl} handle="Download (PDF)" />
-      )}
-
       <a
         href={`mailto:${site.email}`}
         className="mt-10 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-text-muted transition-colors duration-200 hover:text-accent"

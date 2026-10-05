@@ -53,9 +53,8 @@ export default function Home() {
       <br />
       <div className="mt-8 space-y-4 text-[14.5px] leading-relaxed text-text-muted">
         <p>
-          Most people meet AI as a demo. I meet it as a deployment — the requirements
-          nobody wrote down, the client call where the real problem shows up, and the
-          service that still has to be up at 2am.
+          Most people meet AI as a demo. I care about what happens after it — getting
+          models served behind real APIs, monitored, and still up at 2am.
         </p>
         <br />
         <p>
@@ -88,9 +87,15 @@ export default function Home() {
         </p>
         <br />
         <p>
-          Right now I am evaluating RefAgent, a multi-agent LLM framework for
-          refactoring, with a professor at Michigan Tech — replicating and extending the
-          original study across open-source Java repositories.
+          Right now I am a founding ML researcher intern at{' '}
+          {/* No public site to link to yet, so plain text in the link colour. */}
+          <span className="text-text">Pareto Labs</span>, designing the infrastructure
+          for a data center that will serve LLM inference endpoints to clients — and I
+          have built the cloud platform under it from scratch: a Rust control plane over
+          Firecracker microVMs, GPU workloads, and managed Postgres, key-value, object
+          storage and vector search behind one console. Alongside it I am replicating
+          and extending RefAgent, a multi-agent LLM framework for Java refactoring, with
+          a professor at Michigan Tech.
         </p>
 
         <p>

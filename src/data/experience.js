@@ -1,10 +1,79 @@
 // Grouped by employer, with roles nested underneath. `defaultOpen` decides which
 // role is expanded on load — the most recent one, so the page opens on what
-// matters.
+// matters. An employer with no public site leaves out `orgUrl` and its name
+// renders as plain text.
 //
 // A highlight may lead with a linked `term`; everything else is plain text with
 // an optional `metric` rendered in the accent colour.
 export const experience = [
+  {
+    id: 'pareto',
+    org: 'Pareto Labs',
+    location: 'Remote',
+    period: 'Aug 2026 — Present',
+    roles: [
+      {
+        id: 'pareto-founding-ml',
+        title: 'Founding ML Researcher Intern',
+        period: 'Aug 2026 — Present',
+        current: true,
+        defaultOpen: true,
+        // Built and verified features only — planned work that does not run yet
+        // stays off until it does.
+        highlights: [
+          {
+            text: 'Designing the infrastructure for a data center that will serve LLM inference endpoints to clients: provisioning, the control plane, a vLLM-based inference core and per-tenant metering. Built the platform under it from scratch and wrote every layer — a Rust control plane with a Firecracker microVM runtime, node and guest agents, an HTTPS ingress, the databases, observability and the React console.',
+          },
+          {
+            text: 'Apps on Firecracker microVMs from any registry image, with rolling deploys, health checks, autoscaling and private .internal service names; GPU apps in hardened containers with a CPU fallback when no GPU is free; and compose-style stacks that put a full-stack deploy behind one address with path routing.',
+          },
+          {
+            text: 'VS Code in the browser inside running app replicas, on any image including Alpine and distroless, because the editor carries its own runtime libraries — plus an SSH gateway into VMs, jobs, sandboxes and a SLURM-style GPU batch queue.',
+          },
+          {
+            text: 'Managed Postgres with a SQL console, data browser, backups and restore, public access over TLS with IP allowlists, and a Supabase-style data API (PostgREST + JWT) so apps hosted elsewhere, such as on Vercel, can use the databases directly. Alongside it, key-value stores each on their own Valkey instance, S3-compatible object storage on Garage with per-bucket keys, and pgvector stores.',
+          },
+          {
+            text: 'A data-ingestion product that loads CSV, XLSX, JSON, ZIP and API sources into Postgres on schedules, chains pipelines one after another, and skips sources that have not changed.',
+          },
+          {
+            text: "A Rust HTTPS ingress with automatic Let's Encrypt certificates and custom domains, a Postgres TLS proxy, strict tenant isolation enforced in SQL, audit logs, step-up authentication for sensitive actions and secrets encrypted at rest. A Prometheus exporter covers every tenant resource, with Grafana dashboards embedded in the console and scoped per user and project.",
+          },
+          {
+            text: 'Ran a 20-hour stress test of the whole platform (16 findings) and fixed the bottlenecks it exposed — direct connections 20.2k → 51.6k TPS, app throughput 1.6–3.5 → 12.7 req/s, API memory 149 → 22 MiB by switching to jemalloc, and pooled Postgres throughput',
+            metric: '8.8k → 38.8k TPS (4.4×)',
+          },
+          {
+            text: 'Prototyped VM pause and resume through Firecracker snapshots, cutting resume time from 15 s to',
+            metric: 'about 2 s',
+          },
+          {
+            text: 'About 120k lines of Rust (API 77k, node agent 19k, guest 4k, tests 19k) and 46k of React, across',
+            metric: '196 API routes, 40 migrations and ~1,250 automated tests',
+          },
+        ],
+        stack: [
+          'Rust',
+          'Axum',
+          'Tokio',
+          'SQLx',
+          'Firecracker',
+          'KVM',
+          'PostgreSQL',
+          'PgBouncer',
+          'PostgREST',
+          'pgvector',
+          'Valkey',
+          'Garage (S3)',
+          'Docker',
+          'TLS/ACME',
+          'Prometheus',
+          'Grafana',
+          'React',
+        ],
+      },
+    ],
+  },
   {
     id: 'mtu',
     org: 'Michigan Technological University',
@@ -17,7 +86,7 @@ export const experience = [
         title: 'Graduate Research Engineer',
         period: 'May 2025 — Apr 2026',
         mode: 'On-site',
-        defaultOpen: true,
+        defaultOpen: false,
         highlights: [
           {
             term: 'FragBERTa',

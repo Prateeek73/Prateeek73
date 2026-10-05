@@ -2,36 +2,32 @@ export const site = {
   name: 'Prateek Singh',
   firstName: 'Prateek',
   lastName: 'Singh',
-  role: 'Forward-Deployed Engineer',
+  role: 'AI/ML Engineer',
   tagline:
-    'I sit with the people who need the system and ship it end-to-end — payments for 4M users in fintech, research models put in front of real users.',
+    'I care about what happens after the demo — getting models served, monitored and kept up in production.',
   location: 'Houston, TX',
   summary:
-    'Forward-deployed engineer taking systems from prototype to production. Houston, TX.',
+    'AI/ML engineer working on LLM inference and the infrastructure under it. Houston, TX.',
   email: 'pra73ek.singh@gmail.com',
 
   // Short code shown top-right of the sidebar identity block.
   locationCode: 'TX',
 
-  // The mono status line under the name, next to the tx/rx dots.
-  statusLine: 'Forward-Deployed Engineer',
+  // The mono status line under the name, next to the tx/rx dots. Keep it to
+  // about 25 characters — any longer wraps at the narrowest sidebar width.
+  statusLine: 'LLM Inference & Infra',
 
-  // TODO(Prateek): drop the photo into public/ as avatar.jpg (or .png/.jpeg/.webp
-  // — each is tried in turn). Until one exists the sidebar shows the monogram,
-  // so nothing renders broken either way.
+  // The photo lives at public/avatar.jpg. Each candidate is tried in turn and
+  // the sidebar falls back to the monogram, so a missing file never renders
+  // broken.
   avatarCandidates: ['avatar.jpg', 'avatar.jpeg', 'avatar.png', 'avatar.webp'],
   monogram: 'PS',
 
   // Shown next to the pulsing tx/rx dots on the home page.
   availability: {
     status: 'Open to work',
-    detail: 'Forward-deployed engineering roles',
+    detail: 'Full-time AI/ML, ML infrastructure and backend roles',
   },
-
-  // TODO(Prateek): paste the shareable resume URL (Drive / Dropbox / Overleaf).
-  // Left empty on purpose — every surface that renders it checks for a value
-  // first, so an unset link is omitted rather than shipped broken.
-  resumeUrl: '',
 
   // `short` is the two-letter code used in the sidebar footer row.
   socials: [
@@ -74,13 +70,14 @@ export const sections = [
     to: '/experience',
     id: 'experience',
     name: 'Experience',
-    blurb: 'Michigan Tech, Capgemini, KIET. Spring Boot at scale, ML on HPC.',
+    blurb:
+      'Pareto Labs, Michigan Tech, Capgemini, KIET. LLM infrastructure, ML on HPC, Spring Boot at scale.',
   },
   {
     to: '/projects',
     id: 'projects',
     name: 'Projects',
-    blurb: 'Applied ML, infrastructure, and research — thirteen of them.',
+    blurb: 'Applied ML, infrastructure, and research.',
   },
   {
     to: '/skills',
@@ -95,9 +92,9 @@ export const sections = [
     blurb: 'AWS and Azure cloud certifications.',
   },
   {
-    to: '/testimonials',
-    id: 'testimonials',
-    name: 'Testimonials',
+    to: '/references',
+    id: 'references',
+    name: 'References',
     blurb: 'People who can speak to the work.',
   },
   {

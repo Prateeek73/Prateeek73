@@ -121,14 +121,20 @@ function Employer({ company }) {
     <section className="border-b border-rule pb-6 pt-8 first:pt-0">
       <div className="mb-1 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h3 className="text-[20px] font-medium tracking-tight text-text">
-          <a
-            href={company.orgUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="transition-colors duration-200 hover:text-accent"
-          >
-            {company.org}
-          </a>
+          {company.orgUrl ? (
+            <a
+              href={company.orgUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors duration-200 hover:text-accent"
+            >
+              {company.org}
+            </a>
+          ) : (
+            // No public site to point at — an anchor without an href is not a
+            // link, so the name renders as text instead.
+            company.org
+          )}
         </h3>
         <MonoLabel className="shrink-0">{company.period}</MonoLabel>
       </div>
