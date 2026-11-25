@@ -133,9 +133,10 @@ A GPU-accelerated distributed pipeline for high-volume image data.
 </div>
 
 <div align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Prateeek73&theme=tokyonight" width="48%" />
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Prateeek73&theme=tokyonight" width="48%" />
+  <img src="graphs/languages_recent.svg" width="48%" alt="Languages at Pareto Labs, private repository, by lines changed in my commits" />
 </div>
+
+<sub>The contribution count above includes private work. The language card is generated from my own commits in the private Pareto Labs repository; third-party language cards only see public repos.</sub>
 
 ---
 
