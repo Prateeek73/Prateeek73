@@ -5,8 +5,7 @@
 //
 // Names that also appear in a project's `tags` become filter links
 // automatically (see isFilterable in src/data/index.js), so spelling has to
-// match the tags exactly: "Apache Spark", "HPC Deployment", "Hugging Face",
-// "pgvector".
+// match the tags exactly: "Apache Spark", "HPC Deployment", "Hugging Face".
 export const skills = [
   {
     category: 'Languages',
@@ -19,7 +18,6 @@ export const skills = [
       'SQL',
       'C++',
       'R',
-      'Ruby',
       'HTML/CSS',
     ],
   },
@@ -73,15 +71,11 @@ export const skills = [
     category: 'Databases',
     items: [
       'PostgreSQL',
-      'pgvector',
-      'PgBouncer',
-      'PostgREST',
       'Qdrant',
       'MySQL',
       'SQLite',
       'MongoDB',
       'Redis',
-      'Valkey',
       'DynamoDB',
       'Firebase',
       'AWS RDS',
@@ -94,15 +88,11 @@ export const skills = [
       'AWS ECS/EKS',
       'AWS Lambda',
       'Amazon S3',
-      'Garage (S3)',
       'Azure',
       'Google Cloud',
       'Docker',
       'Docker Swarm',
       'Kubernetes',
-      'Firecracker',
-      'KVM',
-      'Terraform',
       'Jenkins',
       'GitHub Actions',
       'CI/CD',
@@ -115,7 +105,6 @@ export const skills = [
       'Platform Engineering',
       'Performance Engineering',
       'Linux Networking',
-      'TLS/ACME',
       'Nginx',
       'Gunicorn',
       'cPanel',

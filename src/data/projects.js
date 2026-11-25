@@ -9,25 +9,20 @@
 // as written; fixing the spelling here would break the links.
 export const projects = [
   {
-    id: 'pareto-platform',
+    id: 'multi-agent-refactor',
     kind: 'Professional',
-    title: 'Pareto Cloud Platform',
+    title: 'RefAgent — Multi-Agent LLM Code Refactoring',
+    // Figures are the ones in the public repo README: per-project compile rate,
+    // and smell reduction measured on the classes that compiled. openmeetings
+    // (2.3%) is left out of the range, as it is there — its baseline build was
+    // broken.
     blurb:
-      'A cloud platform built from scratch, where teams deploy apps on Firecracker microVMs, run GPU workloads and use managed Postgres, key-value, object storage and vector search from one console. I wrote every layer: the Rust control plane, node and guest agents, HTTPS ingress, observability and the React console.',
-    metric: 'Pooled Postgres 8.8k → 38.8k TPS (4.4×) after a 20-hour stress test',
-    tags: [
-      'Rust',
-      'Firecracker',
-      'PostgreSQL',
-      'pgvector',
-      'Docker',
-      'React',
-      'Prometheus',
-      'Grafana',
-      'Distributed Systems',
-    ],
-    // Company code — private, so there is nothing public to link to.
-    url: null,
+      'LLM agents that refactor real open-source Java projects, replicating and extending the original RefAgent study with a professor at Michigan Tech. Each refactored class is checked by compiling it and running the project\'s tests, and smells are counted with DesigniteJava. The agents run on Qwen2.5-Coder-7B, which I served with vLLM.',
+    metric:
+      'Highest compile rate (jclouds): 44% of refactored classes compile, with 64% fewer code smells in the classes that compile · 8–44% across the six projects with a working baseline',
+    tags: ['Python', 'LLMs', 'Agentic AI', 'LangGraph', 'vLLM', 'Java', 'Static Analysis'],
+    url: 'https://github.com/Prateeek73/java-refactoring-llm-benchmark',
+    status: 'Active research',
   },
   {
     id: 'fragberta',
@@ -39,6 +34,7 @@ export const projects = [
     tags: ['Python', 'FastAPI', 'PyTorch', 'Transformers', 'React', 'HPC Deployment'],
     // Lab research — the code is not public, so there is nothing to link to.
     url: null,
+    status: 'University tool · code not public',
   },
   {
     id: 'nugan',
@@ -51,6 +47,16 @@ export const projects = [
       "A web applet over Neerav Kaushal's cosmic-web emulator — pick a neutrino mass, get the matching 2D density map back. I built the Flask, Gunicorn and Nginx service and the frontend on the HPC cluster.",
     tags: ['Python', 'Flask', 'Nginx', 'HPC Deployment'],
     url: 'https://kaushallab.mtu.edu/nugan/',
+  },
+  {
+    id: 'lmforge-rag',
+    kind: 'Professional',
+    title: 'LMForge — RAG Financial Q&A',
+    blurb:
+      'An end-to-end RAG chatbot over 3,000+ pages of financial books, SEC filings and research, with structure-aware PDF segmentation by chapter, section and topic.',
+    metric: '85% chunking accuracy',
+    tags: ['Python', 'Django', 'RAG', 'LangChain', 'LlamaIndex', 'LLMs', 'Qdrant'],
+    url: 'https://github.com/Prateeek73/LMForge_RAG',
   },
   {
     id: 'blt-chess',
@@ -76,32 +82,11 @@ export const projects = [
     url: 'https://github.com/Prateeek73/SQL-Cheat-Sheet',
   },
   {
-    id: 'multi-agent-refactor',
-    kind: 'Professional',
-    title: 'RefAgent Evaluation Study',
-    blurb:
-      'An independent evaluation of RefAgent, a multi-agent LLM framework for software refactoring — replicating and extending the original study across model variations on open-source Java repositories.',
-    metric: 'Median 52.5% code-smell reduction · 90% unit-test pass rate',
-    tags: ['Python', 'LLMs', 'Agentic AI', 'Java', 'Static Analysis'],
-    url: null,
-    status: 'In progress',
-  },
-  {
-    id: 'lmforge-rag',
-    kind: 'Professional',
-    title: 'LMForge — RAG Financial Q&A',
-    blurb:
-      'An end-to-end RAG chatbot over 3,000+ pages of financial books, SEC filings and research, with structure-aware PDF segmentation by chapter, section and topic.',
-    metric: '85% chunking accuracy',
-    tags: ['Python', 'Django', 'RAG', 'LLMs', 'Qdrant'],
-    url: 'https://github.com/Prateeek73/LMForge_RAG',
-  },
-  {
     id: 'spark-gpu',
     kind: 'Personal',
     title: 'GPU-Accelerated Spark Pipeline',
     blurb:
-      'A distributed deep-learning pipeline on HDFS and Spark 3.5.0 training a VGG-style CNN over 20,000+ COCO images, using chunk-based RDD loading and disk-serialized batching to eliminate out-of-memory failures.',
+      'A distributed deep-learning pipeline on HDFS and Spark 3.5.0 training a VGG-style CNN over 20,000+ COCO images, using chunk-based RDD loading and disk-serialized batching to avoid out-of-memory failures.',
     metric: '97.37% train / 56.26% val in under 19 minutes',
     tags: ['Apache Spark', 'Python', 'TensorFlow', 'HDFS', 'Distributed Systems'],
     url: 'https://github.com/Prateeek73/SP4',
@@ -111,8 +96,8 @@ export const projects = [
     kind: 'Personal',
     title: 'Mormon-NLT',
     blurb:
-      'Modern English to Shakespearean style transfer on Qwen2.5-3B-Instruct — six experiments across training direction, LoRA rank and learning rate over a 27K+ pair dataset, showing LoRA matches full fine-tuning at 100× fewer parameters (26M vs 1.54B).',
-    metric: '0.8405 LoRA vs 0.8415 full fine-tune BERTScore',
+      'Translates modern English to Shakespearean and back. Two setups — LoRA on Qwen2.5-3B and a full fine-tune of Qwen2.5-1.5B — trained over a 27K+ pair dataset, each raising BERTScore by 21–23% over its own base model.',
+    metric: 'BERTScore 0.695 → 0.8405 (LoRA) · 0.6831 → 0.8415 (full fine-tune)',
     tags: ['Python', 'PyTorch', 'Transformers', 'LLMs', 'Hugging Face', 'PEFT', 'LoRA'],
     url: 'https://github.com/Prateeek73/Mormon-NLT',
   },

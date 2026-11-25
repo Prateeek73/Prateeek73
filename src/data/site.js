@@ -2,12 +2,12 @@ export const site = {
   name: 'Prateek Singh',
   firstName: 'Prateek',
   lastName: 'Singh',
-  role: 'AI/ML Engineer',
+  role: 'ML Engineer',
   tagline:
     'I care about what happens after the demo — getting models served, monitored and kept up in production.',
   location: 'Houston, TX',
   summary:
-    'AI/ML engineer working on LLM inference and the infrastructure under it. Houston, TX.',
+    'ML engineer working on LLM inference and the infrastructure under it. Houston, TX.',
   email: 'pra73ek.singh@gmail.com',
 
   // Short code shown top-right of the sidebar identity block.
@@ -26,7 +26,9 @@ export const site = {
   // Shown next to the pulsing tx/rx dots on the home page.
   availability: {
     status: 'Open to work',
-    detail: 'Full-time AI/ML, ML infrastructure and backend roles',
+    detail: 'Full-time ML Engineer, ML infrastructure and backend roles, remote or hybrid',
+    // The one-line version under the location in the hero.
+    hero: 'Open to full-time ML Engineer, ML infrastructure and backend roles, remote or hybrid.',
   },
 
   // `short` is the two-letter code used in the sidebar footer row.
@@ -74,6 +76,12 @@ export const sections = [
       'Pareto Labs, Michigan Tech, Capgemini, KIET. LLM infrastructure, ML on HPC, Spring Boot at scale.',
   },
   {
+    to: '/path',
+    id: 'path',
+    name: 'Path',
+    blurb: 'The career so far in four charts and a languages breakdown.',
+  },
+  {
     to: '/projects',
     id: 'projects',
     name: 'Projects',
@@ -111,8 +119,8 @@ export const sections = [
   },
 ]
 
-// Standalone routes, kept out of the numbered sections so the eight-section
-// scroll — its NN/08 counters, arrow-key stepping and scroll-spy — stays intact.
+// Standalone routes, kept out of the numbered sections so the nine-section
+// scroll — its NN/09 counters, arrow-key stepping and scroll-spy — stays intact.
 export const pages = [{ to: '/gallery', name: 'Photography' }]
 
 export const colophon = {

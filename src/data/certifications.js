@@ -33,15 +33,6 @@ export const certifications = [
     url: 'https://www.credly.com/earner/earned/badge/49598c28-080d-4082-8723-2cbc0966daff',
   },
   {
-    id: 'aws-cloud-practitioner',
-    name: 'AWS Certified Cloud Practitioner',
-    issuer: 'Amazon Web Services',
-    issued: 'Nov 2023',
-    expires: 'Nov 2026',
-    credentialId: '6QWE3R82XM1QQTGJ',
-    url: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/6QWE3R82XM1QQTGJ',
-  },
-  {
     // On the resume but not in the LinkedIn certifications list, so there is no
     // credential ID or date to show and no verify link to build.
     id: 'azure-fundamentals',

@@ -1,5 +1,6 @@
 import Section from '../components/Section'
 import { site } from '../data'
+import { scrollBehavior } from '../lib/scroll'
 
 function InlineLink({ href, children }) {
   return (
@@ -17,7 +18,7 @@ function InlineLink({ href, children }) {
 function JumpLink({ to, children }) {
   const go = (e) => {
     e.preventDefault()
-    document.getElementById(to)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    document.getElementById(to)?.scrollIntoView({ behavior: scrollBehavior(), block: 'start' })
   }
 
   return (
@@ -36,34 +37,34 @@ export default function Home() {
     // hideTitle: the name below is the heading — an "About" serif title above it
     // would be a second, weaker one saying the same thing.
     <Section title="About" hideTitle>
-      <h2
+      <h1
         id="about-heading"
         className="font-display text-[52px] leading-[0.94] tracking-tight text-text sm:text-[66px]"
       >
         <span className="italic">{site.firstName}</span>
         <br />
         <span className="accent-cursor">{site.lastName}</span>
-      </h2>
+      </h1>
 
       <p className="mt-6 text-[14.5px] leading-relaxed text-text-muted">
         {site.role}.
         <br />
         {site.location}.
+        <br />
+        {site.availability.hero}
       </p>
-      <br />
       <div className="mt-8 space-y-4 text-[14.5px] leading-relaxed text-text-muted">
         <p>
           Most people meet AI as a demo. I care about what happens after it — getting
-          models served behind real APIs, monitored, and still up at 2am.
+          models served behind real APIs, monitored and kept up in production.
         </p>
-        <br />
         <p>
           I started at{' '}
           <InlineLink href="https://www.kiet.edu/">KIET</InlineLink> while still an
           undergrad, shipping MobiKIET — a mobile ERP that ended up with 10K+ daily active
-          users. I leveraged that straight into{' '}
+          users. I joined{' '}
           <InlineLink href="https://www.capgemini.com/">Capgemini</InlineLink> in
-          Bangalore, on the payment and subscription microservices behind a core banking
+          Bangalore in December 2021, before finishing my degree, on the payment and subscription microservices behind a core banking
           integration serving{' '}
           <strong className="font-mono text-[12.5px] font-medium text-accent">
             4M users at 99.99% availability
@@ -80,20 +81,18 @@ export default function Home() {
           a fine-tuned BERT model for molecular property prediction that researchers could
           finally query themselves, and{' '}
           <InlineLink href="https://kaushallab.mtu.edu/nugan/">nuGAN</InlineLink>, a
-          cosmological simulator that had only ever existed as research code. Both owned
+          cosmic-web emulator that had only ever existed as research code. Both owned
           end to end — the service, the frontend, and the deployment onto the university
           HPC cluster — and a couple of undergrad and grad students trained to take it
           over before I left.
         </p>
-        <br />
+
         <p>
           Right now I am a founding ML researcher intern at{' '}
           {/* No public site to link to yet, so plain text in the link colour. */}
-          <span className="text-text">Pareto Labs</span>, designing the infrastructure
-          for a data center that will serve LLM inference endpoints to clients — and I
-          have built the cloud platform under it from scratch: a Rust control plane over
-          Firecracker microVMs, GPU workloads, and managed Postgres, key-value, object
-          storage and vector search behind one console. Alongside it I am replicating
+          <span className="text-text">Pareto Labs</span>, an LLM inference startup,
+          working on serving open-source LLMs behind an OpenAI-compatible API: the
+          serving infrastructure and its observability. Alongside it I am replicating
           and extending RefAgent, a multi-agent LLM framework for Java refactoring, with
           a professor at Michigan Tech.
         </p>

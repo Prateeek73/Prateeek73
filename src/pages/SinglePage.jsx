@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import About from './Home'
+import Path from './Path'
 import Experience from './Experience'
 import Projects from './Projects'
 import Skills from './Skills'
@@ -16,7 +17,7 @@ import { sections } from '../data'
 const ALIASES = { '/workexp': '/experience', '/testimonials': '/references' }
 
 /**
- * All eight sections on one scrolling page. The per-section paths still resolve —
+ * All nine sections on one scrolling page. The per-section paths still resolve —
  * arriving at /projects jumps straight to that section — but once you are here,
  * moving between sections is scrolling, not navigation.
  */
@@ -44,6 +45,7 @@ export default function SinglePage() {
     <>
       <About />
       <Experience />
+      <Path />
       <Projects />
       <Skills />
       <Certifications />
