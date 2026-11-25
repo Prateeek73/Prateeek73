@@ -91,8 +91,11 @@ export default function Home() {
           Right now I am a founding ML researcher intern at{' '}
           {/* No public site to link to yet, so plain text in the link colour. */}
           <span className="text-text">Pareto Labs</span>, an LLM inference startup,
-          working on serving open-source LLMs behind an OpenAI-compatible API: the
-          serving infrastructure and its observability. Alongside it I am replicating
+          designing the infrastructure for a data center that will serve LLM inference
+          endpoints to clients — and I have built the cloud platform under it from
+          scratch: a Rust control plane over Firecracker microVMs, GPU workloads, and
+          managed Postgres, key-value, object storage and vector search behind one
+          console. Alongside it I am replicating
           and extending RefAgent, a multi-agent LLM framework for Java refactoring, with
           a professor at Michigan Tech.
         </p>

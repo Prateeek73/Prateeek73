@@ -9,6 +9,27 @@
 // as written; fixing the spelling here would break the links.
 export const projects = [
   {
+    id: 'pareto-platform',
+    kind: 'Professional',
+    title: 'Pareto Cloud Platform',
+    blurb:
+      'A cloud platform built from scratch, where teams deploy apps on Firecracker microVMs, run GPU workloads and use managed Postgres, key-value, object storage and vector search from one console. I wrote every layer: the Rust control plane, node and guest agents, HTTPS ingress, observability and the React console.',
+    metric: 'Pooled Postgres 8.8k → 38.8k TPS (4.4×) after a 20-hour stress test',
+    tags: [
+      'Rust',
+      'Firecracker',
+      'PostgreSQL',
+      'pgvector',
+      'Docker',
+      'React',
+      'Prometheus',
+      'Grafana',
+      'Distributed Systems',
+    ],
+    // Company code — private, so there is nothing public to link to.
+    url: null,
+  },
+  {
     id: 'multi-agent-refactor',
     kind: 'Professional',
     title: 'RefAgent — Multi-Agent LLM Code Refactoring',

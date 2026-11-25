@@ -18,22 +18,61 @@ export const experience = [
         period: 'Aug 2026 — Present',
         current: true,
         defaultOpen: true,
-        // Employer work is private. Only the role's scope is described here: no
-        // component names and no internal numbers (latency, throughput, cost,
-        // customers, team size). Counts of my own commits are fine — those are
-        // what the charts in the Path section show.
+        // Built and verified features only — planned work that does not run yet
+        // stays off until it does. The owner has chosen to publish the platform's
+        // components and figures on the site; the profile README stays at the
+        // shorter public wording.
         highlights: [
           {
-            text: 'Serving open-source LLMs behind an OpenAI-compatible API at an LLM inference startup: the serving infrastructure and its observability.',
+            text: 'Designing the infrastructure for a data center that will serve LLM inference endpoints to clients: provisioning, the control plane, a vLLM-based inference core and per-tenant metering. Built the platform under it from scratch and wrote every layer — a Rust control plane with a Firecracker microVM runtime, node and guest agents, an HTTPS ingress, the databases, observability and the React console.',
           },
           {
-            text: 'Working across the GPU-node side, releases and observability, with tests going in alongside the code changes.',
+            text: 'Apps on Firecracker microVMs from any registry image, with rolling deploys, health checks, autoscaling and private .internal service names; GPU apps in hardened containers with a CPU fallback when no GPU is free; and compose-style stacks that put a full-stack deploy behind one address with path routing.',
           },
           {
-            text: 'Serving figures are withheld; the Path section shows how I work there.',
+            text: 'VS Code in the browser inside running app replicas, on any image including Alpine and distroless, because the editor carries its own runtime libraries — plus an SSH gateway into VMs, jobs, sandboxes and a SLURM-style GPU batch queue.',
+          },
+          {
+            text: 'Managed Postgres with a SQL console, data browser, backups and restore, public access over TLS with IP allowlists, and a Supabase-style data API (PostgREST + JWT) so apps hosted elsewhere, such as on Vercel, can use the databases directly. Alongside it, key-value stores each on their own Valkey instance, S3-compatible object storage on Garage with per-bucket keys, and pgvector stores.',
+          },
+          {
+            text: 'A data-ingestion product that loads CSV, XLSX, JSON, ZIP and API sources into Postgres on schedules, chains pipelines one after another, and skips sources that have not changed.',
+          },
+          {
+            text: "A Rust HTTPS ingress with automatic Let's Encrypt certificates and custom domains, a Postgres TLS proxy, strict tenant isolation enforced in SQL, audit logs, step-up authentication for sensitive actions and secrets encrypted at rest. A Prometheus exporter covers every tenant resource, with Grafana dashboards embedded in the console and scoped per user and project.",
+          },
+          {
+            text: 'Ran a 20-hour stress test of the whole platform (16 findings) and fixed the bottlenecks it exposed — direct connections 20.2k → 51.6k TPS, app throughput 1.6–3.5 → 12.7 req/s, API memory 149 → 22 MiB by switching to jemalloc, and pooled Postgres throughput',
+            metric: '8.8k → 38.8k TPS (4.4×)',
+          },
+          {
+            text: 'Prototyped VM pause and resume through Firecracker snapshots, cutting resume time from 15 s to',
+            metric: 'about 2 s',
+          },
+          {
+            text: 'About 120k lines of Rust (API 77k, node agent 19k, guest 4k, tests 19k) and 46k of React, across',
+            metric: '196 API routes, 40 migrations and ~1,250 automated tests',
           },
         ],
-        stack: ['Rust', 'Python', 'vLLM', 'React', 'Observability'],
+        stack: [
+          'Rust',
+          'Axum',
+          'Tokio',
+          'SQLx',
+          'Firecracker',
+          'KVM',
+          'PostgreSQL',
+          'PgBouncer',
+          'PostgREST',
+          'pgvector',
+          'Valkey',
+          'Garage (S3)',
+          'Docker',
+          'TLS/ACME',
+          'Prometheus',
+          'Grafana',
+          'React',
+        ],
       },
     ],
   },

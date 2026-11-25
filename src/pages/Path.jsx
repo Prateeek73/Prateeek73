@@ -142,7 +142,7 @@ export default function Path() {
     <Section
       title="Path"
       wide
-      description="The career so far, and how I work, in four charts and a languages breakdown. Two charts count only my own commits in the private Pareto Labs repository and show no serving numbers."
+      description="The career so far, and how I work, in four charts and a languages breakdown. Two charts count only my own commits in the private Pareto Labs repository."
     >
       <div className="border-t border-rule pt-8">
         {charts.map((chart) => (
