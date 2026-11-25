@@ -22,7 +22,7 @@ Public proof: [RefAgent](https://github.com/Prateeek73/java-refactoring-llm-benc
 
 ---
 
-## The path, in five charts
+## The path, in four charts
 
 _Where a chart uses the private Pareto repository, it counts only my own commits._
 
@@ -46,13 +46,6 @@ Share of my code changes by part of the platform. The backend bucket (36%) inclu
 </picture></p>
 
 For every 100 lines of application code changes in a week, how many lines of tests went in with them. A zero is a week of code changes with no new tests.
-
-<p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/15_numbers.svg?v=5">
-  <img src="graphs/light/15_numbers.svg?v=5" width="940" alt="Tickets linked to my commits">
-</picture></p>
-
-Tickets linked to my commits, September to November 2026.
 
 <p align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="graphs/20_research_to_production.svg?v=5">
