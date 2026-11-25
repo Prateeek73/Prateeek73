@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="200" viewBox="0 0 940 200" font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif">
+<rect width="940" height="200" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+<text x="24" y="34" font-size="17" font-weight="700" fill="#0969da">Tickets linked to my commits</text>
+<text x="24" y="54" font-size="11.5" fill="#57606a">Pareto Labs · private repository · counted from my own commits, September to November 2026</text>
+<rect x="24.0" y="75.0" width="892.0" height="90.0" rx="8" fill="#f6f8fa" opacity="1" />
+<text x="38.0" y="115.0" font-size="26" fill="#1b7c83" text-anchor="start" font-weight="700" >110</text>
+<text x="38.0" y="135.0" font-size="10.5" fill="#57606a" text-anchor="start" font-weight="normal" >tickets referenced by my commits</text>
+</svg>

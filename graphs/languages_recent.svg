@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="235" viewBox="0 0 400 235" font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif">
-<rect width="400" height="235" rx="6" fill="#1a1b26"/>
-<text x="20" y="42" font-size="24" fill="#70a5fd">Languages at Pareto Labs</text>
-<text x="20" y="62" font-size="11" fill="#565f89">Private repository · by lines changed in my own commits, Sep–Nov 2026</text>
-<path d="M300.0,65.0 A70,70 0 1 1 274.7,200.3 L284.8,174.2 A42,42 0 1 0 300.0,93.0 Z" fill="#dea584" stroke="#1a1b26" stroke-width="2"/>
-<rect x="20" y="77" width="13" height="13" rx="2" fill="#dea584"/><text x="40" y="88" font-size="14" fill="#38bdae">Rust</text><text x="200" y="88" font-size="13" fill="#565f89" text-anchor="end">56%</text>
-<path d="M274.7,200.3 A70,70 0 0 1 238.5,101.6 L263.1,114.9 A42,42 0 0 0 284.8,174.2 Z" fill="#f1e05a" stroke="#1a1b26" stroke-width="2"/>
-<rect x="20" y="101" width="13" height="13" rx="2" fill="#f1e05a"/><text x="40" y="112" font-size="14" fill="#38bdae">JavaScript</text><text x="200" y="112" font-size="13" fill="#565f89" text-anchor="end">27%</text>
-<path d="M238.5,101.6 A70,70 0 0 1 273.5,70.2 L284.1,96.1 A42,42 0 0 0 263.1,114.9 Z" fill="#083fa1" stroke="#1a1b26" stroke-width="2"/>
-<rect x="20" y="125" width="13" height="13" rx="2" fill="#083fa1"/><text x="40" y="136" font-size="14" fill="#38bdae">Markdown</text><text x="200" y="136" font-size="13" fill="#565f89" text-anchor="end">11%</text>
-<path d="M273.5,70.2 A70,70 0 0 1 284.0,66.8 L290.4,94.1 A42,42 0 0 0 284.1,96.1 Z" fill="#aaa" stroke="#1a1b26" stroke-width="2"/>
-<rect x="20" y="149" width="13" height="13" rx="2" fill="#aaa"/><text x="40" y="160" font-size="14" fill="#38bdae">JSON</text><text x="200" y="160" font-size="13" fill="#565f89" text-anchor="end">3%</text>
-<path d="M284.0,66.8 A70,70 0 0 1 289.8,65.7 L293.9,93.4 A42,42 0 0 0 290.4,94.1 Z" fill="#cb171e" stroke="#1a1b26" stroke-width="2"/>
-<rect x="20" y="173" width="13" height="13" rx="2" fill="#cb171e"/><text x="40" y="184" font-size="14" fill="#38bdae">YAML</text><text x="200" y="184" font-size="13" fill="#565f89" text-anchor="end">1%</text>
-<path d="M289.8,65.7 A70,70 0 0 1 293.6,65.3 L296.2,93.2 A42,42 0 0 0 293.9,93.4 Z" fill="#89e051" stroke="#1a1b26" stroke-width="2"/>
-<rect x="20" y="197" width="13" height="13" rx="2" fill="#89e051"/><text x="40" y="208" font-size="14" fill="#38bdae">Shell</text><text x="200" y="208" font-size="13" fill="#565f89" text-anchor="end">1%</text>
+<rect width="400" height="235" rx="6" fill="#0d1117"/>
+<text x="20" y="42" font-size="24" fill="#58a6ff">Languages at Pareto Labs</text>
+<text x="20" y="62" font-size="11" fill="#8b949e">Private repository · by lines changed in my own commits, Sep–Nov 2026</text>
+<path d="M300.0,65.0 A70,70 0 1 1 274.7,200.3 L284.8,174.2 A42,42 0 1 0 300.0,93.0 Z" fill="#dea584" stroke="#0d1117" stroke-width="2"/>
+<rect x="20" y="77" width="13" height="13" rx="2" fill="#dea584"/><text x="40" y="88" font-size="14" fill="#c9d1d9">Rust</text><text x="200" y="88" font-size="13" fill="#8b949e" text-anchor="end">56%</text>
+<path d="M274.7,200.3 A70,70 0 0 1 238.5,101.6 L263.1,114.9 A42,42 0 0 0 284.8,174.2 Z" fill="#f1e05a" stroke="#0d1117" stroke-width="2"/>
+<rect x="20" y="101" width="13" height="13" rx="2" fill="#f1e05a"/><text x="40" y="112" font-size="14" fill="#c9d1d9">JavaScript</text><text x="200" y="112" font-size="13" fill="#8b949e" text-anchor="end">27%</text>
+<path d="M238.5,101.6 A70,70 0 0 1 273.5,70.2 L284.1,96.1 A42,42 0 0 0 263.1,114.9 Z" fill="#083fa1" stroke="#0d1117" stroke-width="2"/>
+<rect x="20" y="125" width="13" height="13" rx="2" fill="#083fa1"/><text x="40" y="136" font-size="14" fill="#c9d1d9">Markdown</text><text x="200" y="136" font-size="13" fill="#8b949e" text-anchor="end">11%</text>
+<path d="M273.5,70.2 A70,70 0 0 1 284.0,66.8 L290.4,94.1 A42,42 0 0 0 284.1,96.1 Z" fill="#aaa" stroke="#0d1117" stroke-width="2"/>
+<rect x="20" y="149" width="13" height="13" rx="2" fill="#aaa"/><text x="40" y="160" font-size="14" fill="#c9d1d9">JSON</text><text x="200" y="160" font-size="13" fill="#8b949e" text-anchor="end">3%</text>
+<path d="M284.0,66.8 A70,70 0 0 1 289.8,65.7 L293.9,93.4 A42,42 0 0 0 290.4,94.1 Z" fill="#cb171e" stroke="#0d1117" stroke-width="2"/>
+<rect x="20" y="173" width="13" height="13" rx="2" fill="#cb171e"/><text x="40" y="184" font-size="14" fill="#c9d1d9">YAML</text><text x="200" y="184" font-size="13" fill="#8b949e" text-anchor="end">1%</text>
+<path d="M289.8,65.7 A70,70 0 0 1 293.6,65.3 L296.2,93.2 A42,42 0 0 0 293.9,93.4 Z" fill="#89e051" stroke="#0d1117" stroke-width="2"/>
+<rect x="20" y="197" width="13" height="13" rx="2" fill="#89e051"/><text x="40" y="208" font-size="14" fill="#c9d1d9">Shell</text><text x="200" y="208" font-size="13" fill="#8b949e" text-anchor="end">1%</text>
 </svg>
