@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=70A5FD&center=true&vCenter=true&width=940&lines=Hey%2C+I'm+Prateek+%F0%9F%91%8B;ML+Engineer+%7C+LLM+Inference+%26+Infra;Founding+ML+Researcher+Intern+%40+Pareto+Labs;PyTorch+%7C+vLLM+%7C+Rust+%7C+GCP" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=70A5FD&center=true&vCenter=true&width=940&lines=Hey%2C+I'm+Prateek+%F0%9F%91%8B;LLM+Inference+%26+Infra;Founding+ML+Researcher+Intern+%40+Pareto+Labs;PyTorch+%7C+vLLM+%7C+Rust+%7C+GCP" alt="Typing SVG" />
 </div>
 
 <div align="center">
@@ -12,7 +12,7 @@
 
 I take models from research code to served endpoints, and I care about what happens after the demo: getting them served, monitored and kept up in production.
 
-Public proof: [RefAgent](https://github.com/Prateeek73/java-refactoring-llm-benchmark), which refactored real Java codebases with 90% of its changes still passing their test suites (LLM agents I served with vLLM).
+Public proof: [RefAgent](https://github.com/Prateeek73/java-refactoring-llm-benchmark), LLM agents I served with vLLM that refactor real Java codebases. Highest compile rate (jclouds): 44% of refactored classes compile, with 64% fewer code smells in the classes that compile.
 
 **Right now:** I'm a founding ML researcher intern at Pareto Labs, an LLM inference startup, working on serving open-source LLMs behind an OpenAI-compatible API: the serving infrastructure and its observability. Serving numbers from that work are the company's, not mine to publish, so the charts below show *how* I work there, counted from my own commits only. I'm also replicating and extending RefAgent with a professor at Michigan Tech.
 
@@ -27,32 +27,32 @@ Public proof: [RefAgent](https://github.com/Prateeek73/java-refactoring-llm-benc
 _Where a chart uses the private Pareto repository, it counts only my own commits._
 
 <p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/01_career_timeline.svg?v=10">
-  <img src="graphs/light/01_career_timeline.svg?v=10" width="940" alt="Career timeline, 2018 to today">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/01_career_timeline.svg?v=12">
+  <img src="graphs/light/01_career_timeline.svg?v=12" width="940" alt="Career timeline, 2018 to today">
 </picture></p>
 
 College projects and internships; backend services kept running at scale at Capgemini; research models turned into tools at Michigan Tech; open LLMs served in production at Pareto Labs.
 
 <p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/05_area_share.svg?v=10">
-  <img src="graphs/light/05_area_share.svg?v=10" width="940" alt="Share of my code changes by part of the platform">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/05_area_share.svg?v=11">
+  <img src="graphs/light/05_area_share.svg?v=11" width="940" alt="Share of my code changes by part of the platform">
 </picture></p>
 
-Share of my code changes by part of the platform. The backend bucket (36%) includes the serving work; the others are product UI, tests, hosting and build, and docs.
+Share of my code changes by part of the platform. The backend bucket (36%) includes the serving work; the others are product UI, tests, hosting and build, docs and other.
 
 <p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/14_test_ratio.svg?v=10">
-  <img src="graphs/light/14_test_ratio.svg?v=10" width="940" alt="Test lines per 100 lines of code changes, per week">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/14_test_ratio.svg?v=11">
+  <img src="graphs/light/14_test_ratio.svg?v=11" width="940" alt="Test lines per 100 lines of code changes, per week">
 </picture></p>
 
 For every 100 lines of application code changes in a week, how many lines of tests went in with them. A zero is a week of code changes with no new tests.
 
 <p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/20_research_to_production.svg?v=10">
-  <img src="graphs/light/20_research_to_production.svg?v=10" width="940" alt="From research code to a production platform">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/20_research_to_production.svg?v=11">
+  <img src="graphs/light/20_research_to_production.svg?v=11" width="940" alt="From research code to a production platform">
 </picture></p>
 
-What each chapter fed into the next: production habits from Capgemini, research-to-tool work at Michigan Tech, and the Pareto platform.
+What each chapter fed into the next: production habits from Capgemini, research-to-tool work at Michigan Tech, and LLM serving at Pareto Labs.
 
 ---
 
@@ -70,14 +70,14 @@ What each chapter fed into the next: production habits from Capgemini, research-
 ## Featured Projects
 
 ### [RefAgent: Multi-Agent LLM Code Refactoring](https://github.com/Prateeek73/java-refactoring-llm-benchmark)
-LLM agents that refactor real open-source Java projects. In our runs they removed about half the detected code problems (52.5%) and 90% of their changes still passed the projects' test suites; a change only counts if it compiles and passes tests.  
+LLM agents that refactor real open-source Java projects. Each refactored class is checked by compiling it and running the project's tests, and smells are counted with DesigniteJava. Highest compile rate (jclouds): 44% of refactored classes compile, with 64% fewer code smells in the classes that compile; 8–44% across the six projects with a working baseline.  
 **Stack:** Python, LLM agents, Qwen2.5-Coder-7B served with vLLM on A30 GPUs, Java (Designite, RefactoringMiner)
 
 
 ---
 
 ### [Mormon-NLT: Shakespearean Style Transfer](https://github.com/Prateeek73/Mormon-NLT)
-Translates modern English to Shakespearean and back, improving output quality by 20–23% over its own base model in each setup.  
+Translates modern English to Shakespearean and back, raising BERTScore by 21–23% over its own base model in each setup.  
 **Stack:** PyTorch, PEFT, Flash Attention 2 (LoRA on Qwen2.5-3B and a full fine-tune of Qwen2.5-1.5B, scored by BERTScore)
 
 
@@ -93,8 +93,8 @@ Translates modern English to Shakespearean and back, improving output quality by
 
 <div align="center">
   <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/languages_recent.svg?v=10">
-  <img src="graphs/light/languages_recent.svg?v=10" width="48%" alt="Languages across my GitHub, private work included">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/languages_recent.svg?v=11">
+  <img src="graphs/light/languages_recent.svg?v=11" width="48%" alt="Languages across my GitHub, private work included">
 </picture>
 </div>
 
@@ -110,7 +110,7 @@ I'm looking for full-time **ML Engineer, ML Infrastructure or Backend roles**. I
 
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pra73ek.singh@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pra73ek-singh)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/pra73ek)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/Prateek73/)
 
 **📍 Houston, TX** | **💼 Open to Remote/Hybrid**
 

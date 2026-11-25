@@ -36,5 +36,5 @@
 <path d="M628,172.0 L638,179.0 L628,186.0" stroke="#4b5563" stroke-width="2" fill="none" opacity="0.9" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="615.2" y="153.0" font-size="12" fill="#4b5563" text-anchor="middle" font-weight="normal" >into</text>
 <text x="615.2" y="168.0" font-size="12" fill="#4b5563" text-anchor="middle" font-weight="normal" >production</text>
-<text x="24.0" y="284.0" font-size="13" fill="#4b5563" text-anchor="start" font-weight="normal" >Michigan Tech projects are public; Capgemini and Pareto Labs work is in private repositories.</text>
+<text x="24.0" y="284.0" font-size="13" fill="#4b5563" text-anchor="start" font-weight="normal" >Michigan Tech work is public where linked; Capgemini and Pareto Labs work is in private repositories.</text>
 </svg>
