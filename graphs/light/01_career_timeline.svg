@@ -1,8 +1,8 @@
-<svg role="img" aria-labelledby="t" xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480" font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif">
+<svg role="img" aria-label="" role="img" aria-labelledby="t" xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480" font-family="Segoe UI, Ubuntu, Helvetica, Arial, sans-serif">
 <title>Career timeline, 2018 to today</title><desc>Education: B.Tech IT at KIET 2018 to 2022; MS Data Science at Michigan Tech 2024 to 2026. Work: full-stack developer at KIET 2019 to 2022; software engineer then senior software engineer at Capgemini 2021 to 2024; graduate research engineer at Michigan Tech 2025 to 2026; ML engineer at Pareto Labs since August 2026. Internships: Spaceboat 2019; IBM, Cureya and TwoWaits in 2021.</desc>
 <rect width="940" height="480" rx="12" fill="#ffffff" stroke="#d0d7de"/>
 <text x="24" y="34" font-size="20" font-weight="700" fill="#24292f">The path so far</text>
-<text x="24" y="54" font-size="13" fill="#57606a">2018 to today</text>
+<text x="24" y="54" font-size="13" fill="#4b5563">2018 to today</text>
 <line x1="150.0" y1="96.0" x2="624.5" y2="96.0" stroke="#57606a" stroke-width="1" />
 <line x1="150.0" y1="96.0" x2="150.0" y2="100.0" stroke="#57606a" stroke-width="1" />
 <text x="150.0" y="88.0" font-size="13" fill="#24292f" text-anchor="middle" font-weight="normal" >2018</text>
@@ -24,32 +24,32 @@
 <text x="576.7" y="88.0" font-size="13" fill="#24292f" text-anchor="middle" font-weight="normal" >2026</text>
 <line x1="624.5" y1="92.0" x2="624.5" y2="100.0" stroke="#24292f" stroke-width="1.5" />
 <text x="624.5" y="88.0" font-size="13" fill="#24292f" text-anchor="start" font-weight="normal" >today</text>
-<text x="136.0" y="130.0" font-size="13" fill="#57606a" text-anchor="end" font-weight="600" >Education</text>
+<text x="136.0" y="130.0" font-size="13" fill="#4b5563" text-anchor="end" font-weight="600" >Education</text>
 <rect x="181.0" y="118.0" width="213.3" height="16.0" rx="4" fill="#9a6700" opacity="0.9" />
-<text x="404.3" y="130" font-size="13" fill="#24292f"><tspan font-weight="600">B.Tech IT</tspan><tspan fill="#57606a"> · KIET</tspan><tspan fill="#57606a" font-size="12">  2018–22</tspan></text>
+<text x="404.3" y="130" font-size="13" fill="#24292f"><tspan font-weight="600">B.Tech IT</tspan><tspan fill="#4b5563"> · KIET</tspan><tspan fill="#4b5563" font-size="12">  2018–22</tspan></text>
 <rect x="501.1" y="142.0" width="93.0" height="16.0" rx="4" fill="#9a6700" opacity="0.9" />
-<text x="604.1" y="154" font-size="13" fill="#24292f"><tspan font-weight="600">MS Data Science</tspan><tspan fill="#57606a"> · Michigan Tech</tspan><tspan fill="#57606a" font-size="12">  2024–26</tspan></text>
-<text x="136.0" y="200.0" font-size="13" fill="#57606a" text-anchor="end" font-weight="600" >Work</text>
+<text x="604.1" y="154" font-size="13" fill="#24292f"><tspan font-weight="600">MS Data Science</tspan><tspan fill="#4b5563"> · Michigan Tech</tspan><tspan fill="#4b5563" font-size="12">  2024–26</tspan></text>
+<text x="136.0" y="200.0" font-size="13" fill="#4b5563" text-anchor="end" font-weight="600" >Work</text>
 <rect x="225.4" y="188.0" width="160.0" height="16.0" rx="4" fill="#8250df" opacity="0.9" />
-<text x="395.4" y="200" font-size="13" fill="#24292f"><tspan font-weight="600">Full-stack developer (part-time)</tspan><tspan fill="#57606a"> · KIET</tspan><tspan fill="#57606a" font-size="12">  2019–22</tspan></text>
+<text x="395.4" y="200" font-size="13" fill="#24292f"><tspan font-weight="600">Full-stack developer (part-time)</tspan><tspan fill="#4b5563"> · KIET</tspan><tspan fill="#4b5563" font-size="12">  2019–22</tspan></text>
 <rect x="358.8" y="212.0" width="111.0" height="16.0" rx="4" fill="#8250df" opacity="0.9" />
-<text x="479.8" y="224" font-size="13" fill="#24292f"><tspan font-weight="600">Software engineer</tspan><tspan fill="#57606a"> · Capgemini</tspan><tspan fill="#57606a" font-size="12">  2021–23</tspan></text>
+<text x="479.8" y="224" font-size="13" fill="#24292f"><tspan font-weight="600">Software engineer</tspan><tspan fill="#4b5563"> · Capgemini</tspan><tspan fill="#4b5563" font-size="12">  2021–23</tspan></text>
 <rect x="470.0" y="236.0" width="31.0" height="16.0" rx="4" fill="#8250df" opacity="0.9" />
-<text x="510.9" y="248" font-size="13" fill="#24292f"><tspan font-weight="600">Senior software engineer</tspan><tspan fill="#57606a"> · Capgemini</tspan><tspan fill="#57606a" font-size="12">  2024</tspan></text>
+<text x="510.9" y="248" font-size="13" fill="#24292f"><tspan font-weight="600">Senior software engineer</tspan><tspan fill="#4b5563"> · Capgemini</tspan><tspan fill="#4b5563" font-size="12">  2024</tspan></text>
 <rect x="540.9" y="260.0" width="53.2" height="16.0" rx="4" fill="#8250df" opacity="0.9" />
-<text x="604.1" y="272" font-size="13" fill="#24292f"><tspan font-weight="600">Graduate research engineer</tspan><tspan fill="#57606a"> · Michigan Tech</tspan><tspan fill="#57606a" font-size="12">  2025–26</tspan></text>
+<text x="604.1" y="272" font-size="13" fill="#24292f"><tspan font-weight="600">Graduate research engineer</tspan><tspan fill="#4b5563"> · Michigan Tech</tspan><tspan fill="#4b5563" font-size="12">  2025–26</tspan></text>
 <rect x="596.5" y="284.0" width="28.0" height="16.0" rx="4" fill="#8250df" opacity="0.9" />
 <rect x="594.5" y="282" width="32.0" height="20" rx="6" fill="none" stroke="#24292f" stroke-width="2"/>
-<text x="634.5" y="296" font-size="13" fill="#24292f"><tspan font-weight="600">ML engineer</tspan><tspan fill="#57606a"> · Pareto Labs · now</tspan><tspan fill="#57606a" font-size="12">  </tspan></text>
-<text x="136.0" y="342.0" font-size="13" fill="#57606a" text-anchor="end" font-weight="600" >Internships</text>
+<text x="634.5" y="296" font-size="13" fill="#24292f"><tspan font-weight="600">ML engineer</tspan><tspan fill="#4b5563"> · Pareto Labs · now</tspan><tspan fill="#4b5563" font-size="12">  </tspan></text>
+<text x="136.0" y="342.0" font-size="13" fill="#4b5563" text-anchor="end" font-weight="600" >Internships</text>
 <rect x="225.4" y="330.0" width="28.0" height="16.0" rx="4" fill="#1b7c83" opacity="0.9" />
-<text x="263.4" y="342" font-size="13" fill="#24292f"><tspan font-weight="600">Web developer</tspan><tspan fill="#57606a"> · Spaceboat</tspan><tspan fill="#57606a" font-size="12">  2019</tspan></text>
+<text x="263.4" y="342" font-size="13" fill="#24292f"><tspan font-weight="600">Web developer</tspan><tspan fill="#4b5563"> · Spaceboat</tspan><tspan fill="#4b5563" font-size="12">  2019</tspan></text>
 <rect x="332.1" y="354.0" width="28.0" height="16.0" rx="4" fill="#1b7c83" opacity="0.9" />
-<text x="370.1" y="366" font-size="13" fill="#24292f"><tspan font-weight="600">Data analyst</tspan><tspan fill="#57606a"> · IBM</tspan><tspan fill="#57606a" font-size="12">  2021</tspan></text>
+<text x="370.1" y="366" font-size="13" fill="#24292f"><tspan font-weight="600">Data analyst</tspan><tspan fill="#4b5563"> · IBM</tspan><tspan fill="#4b5563" font-size="12">  2021</tspan></text>
 <rect x="332.1" y="378.0" width="28.0" height="16.0" rx="4" fill="#1b7c83" opacity="0.9" />
-<text x="370.1" y="390" font-size="13" fill="#24292f"><tspan font-weight="600">Data analyst</tspan><tspan fill="#57606a"> · Cureya</tspan><tspan fill="#57606a" font-size="12">  2021</tspan></text>
+<text x="370.1" y="390" font-size="13" fill="#24292f"><tspan font-weight="600">Data analyst</tspan><tspan fill="#4b5563"> · Cureya</tspan><tspan fill="#4b5563" font-size="12">  2021</tspan></text>
 <rect x="336.5" y="402.0" width="28.0" height="16.0" rx="4" fill="#1b7c83" opacity="0.9" />
-<text x="374.5" y="414" font-size="13" fill="#24292f"><tspan font-weight="600">Data science</tspan><tspan fill="#57606a"> · TwoWaits</tspan><tspan fill="#57606a" font-size="12">  2021</tspan></text>
+<text x="374.5" y="414" font-size="13" fill="#24292f"><tspan font-weight="600">Data science</tspan><tspan fill="#4b5563"> · TwoWaits</tspan><tspan fill="#4b5563" font-size="12">  2021</tspan></text>
 <line x1="24.0" y1="436.0" x2="916.0" y2="436.0" stroke="#d0d7de" stroke-width="1" />
-<text x="24.0" y="460.0" font-size="13" fill="#57606a" text-anchor="start" font-weight="normal" >Capgemini and Pareto Labs work is in private repositories; Michigan Tech projects are public.</text>
+<text x="24.0" y="460.0" font-size="13" fill="#4b5563" text-anchor="start" font-weight="normal" >Capgemini and Pareto Labs work is in private repositories; Michigan Tech projects are public.</text>
 </svg>
