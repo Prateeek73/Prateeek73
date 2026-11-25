@@ -103,19 +103,6 @@ What each chapter fed into the next: production habits from Capgemini, research-
 LLM agents that refactor real open-source Java projects. In our runs they removed about half the detected code problems (52.5%) and 90% of their changes still passed the projects' test suites; a change only counts if it compiles and passes tests.  
 **Stack:** Python, LLM agents, Qwen2.5-Coder-7B served with vLLM on A30 GPUs, Java (Designite, RefactoringMiner)
 
----
-
-### FragBERTa: Molecular Property Inference <sub>(university tool, code not public)</sub>
-Lets chemists score molecules with a fine-tuned, fragment-aware BERT model from a web page, in batch or one at a time, without touching the model. Deployed on the university HPC cluster.  
-**Stack:** FastAPI, React, PyTorch, Hugging Face  
-**Impact:** Batch and interactive querying across MoleculeNet benchmarks (ESOL, FreeSolv, HIV, Tox21); 1K+ compounds scored in under 90 seconds.
-
----
-
-### [nuGAN: Cosmological Simulator Platform](https://github.com/Prateeek73/nuGAN-webapplet)
-Turned a deep-learning cosmology simulator into a web platform so researchers generate sky maps without writing scripts.  
-**Stack:** Flask, Gunicorn, Nginx, PyTorch  
-**Impact:** Generates and stores 512×512 maps conditioned on neutrino mass, with async job queuing, checkpoint management and a live visualization pipeline.
 
 ---
 
@@ -123,19 +110,6 @@ Turned a deep-learning cosmology simulator into a web platform so researchers ge
 Translates modern English to Shakespearean and back, improving output quality by 20–23% over its own base model in each setup.  
 **Stack:** PyTorch, PEFT, Flash Attention 2 (LoRA on Qwen2.5-3B and a full fine-tune of Qwen2.5-1.5B, scored by BERTScore)
 
----
-
-### RAG IDP Q&A System
-Document processing system with custom knowledge ingestion, built to get around the context limits of base LLMs.  
-**Stack:** FastAPI, pgvector, RAG  
-**Impact:** Context-aware semantic search with answers grounded in retrieved passages.
-
----
-
-### Distributed Deep Learning with Spark
-A GPU-accelerated distributed pipeline for high-volume image data.  
-**Stack:** Apache Spark, PyTorch, Python  
-**Impact:** Data parallelism across 20K images, reaching 97.37% accuracy in 6 minutes.
 
 ---
 
