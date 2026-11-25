@@ -27,29 +27,29 @@ Public proof: [RefAgent](https://github.com/Prateeek73/java-refactoring-llm-benc
 _Where a chart uses the private Pareto repository, it counts only my own commits._
 
 <p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/01_career_timeline.svg?v=5">
-  <img src="graphs/light/01_career_timeline.svg?v=5" width="940" alt="Career timeline, December 2021 to today">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/01_career_timeline.svg?v=6">
+  <img src="graphs/light/01_career_timeline.svg?v=6" width="940" alt="Career timeline, 2018 to today">
 </picture></p>
 
-Backend services kept running at scale; research models turned into tools people could use; open LLMs served in production.
+College projects and internships; backend services kept running at scale at Capgemini; research models turned into tools at Michigan Tech; open LLMs served in production at Pareto Labs.
 
 <p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/05_area_share.svg?v=5">
-  <img src="graphs/light/05_area_share.svg?v=5" width="940" alt="Share of my code changes by part of the platform">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/05_area_share.svg?v=6">
+  <img src="graphs/light/05_area_share.svg?v=6" width="940" alt="Share of my code changes by part of the platform">
 </picture></p>
 
 Share of my code changes by part of the platform. The backend bucket (36%) includes the serving work; the others are product UI, tests, hosting and build, and docs.
 
 <p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/14_test_ratio.svg?v=5">
-  <img src="graphs/light/14_test_ratio.svg?v=5" width="940" alt="Test lines per 100 lines of code changes, per week">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/14_test_ratio.svg?v=6">
+  <img src="graphs/light/14_test_ratio.svg?v=6" width="940" alt="Test lines per 100 lines of code changes, per week">
 </picture></p>
 
 For every 100 lines of application code changes in a week, how many lines of tests went in with them. A zero is a week of code changes with no new tests.
 
 <p align="center"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/20_research_to_production.svg?v=5">
-  <img src="graphs/light/20_research_to_production.svg?v=5" width="940" alt="From research code to a production platform">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/20_research_to_production.svg?v=6">
+  <img src="graphs/light/20_research_to_production.svg?v=6" width="940" alt="From research code to a production platform">
 </picture></p>
 
 What each chapter fed into the next: production habits from Capgemini, research-to-tool work at Michigan Tech, and the Pareto platform.
@@ -58,27 +58,12 @@ What each chapter fed into the next: production habits from Capgemini, research-
 
 ## Core Stack
 
-<div align="center">
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![vLLM](https://img.shields.io/badge/vLLM-30A2FF?style=flat-square&logo=&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![Kafka](https://img.shields.io/badge/Kafka-000000?style=flat-square&logo=apachekafka&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
-
-</div>
+<table align="center">
+<tr><td align="right"><b>Languages</b></td><td><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"></td></tr>
+<tr><td align="right"><b>ML & serving</b></td><td><img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"> <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face"> <img src="https://img.shields.io/badge/vLLM-30A2FF?style=for-the-badge&logo=&logoColor=white" alt="vLLM"> <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"></td></tr>
+<tr><td align="right"><b>Backend & data</b></td><td><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot"> <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"> <img src="https://img.shields.io/badge/Kafka-000000?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Kafka"></td></tr>
+<tr><td align="right"><b>Cloud & ops</b></td><td><img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud"> <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"> <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana"></td></tr>
+</table>
 
 ---
 
@@ -108,8 +93,8 @@ Translates modern English to Shakespearean and back, improving output quality by
 
 <div align="center">
   <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="graphs/languages_recent.svg?v=5">
-  <img src="graphs/light/languages_recent.svg?v=5" width="48%" alt="Languages across my GitHub, private work included">
+  <source media="(prefers-color-scheme: dark)" srcset="graphs/languages_recent.svg?v=6">
+  <img src="graphs/light/languages_recent.svg?v=6" width="48%" alt="Languages across my GitHub, private work included">
 </picture>
 </div>
 
