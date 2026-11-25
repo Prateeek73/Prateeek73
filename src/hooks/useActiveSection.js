@@ -5,7 +5,7 @@ const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 /**
  * Tracks which section is in view and keeps the URL and document title in step,
- * via replaceState so scrolling never fills the back button with eight entries.
+ * via replaceState so scrolling never fills the back button with nine entries.
  *
  * Reads positions on scroll rather than holding IntersectionObserver handles:
  * the node list is re-queried every frame, so a re-render that replaces the
@@ -53,7 +53,7 @@ export default function useActiveSection(enabled = true) {
       setActive(current.dataset.section)
     }
 
-    // Time-based throttle rather than requestAnimationFrame: reading eight
+    // Time-based throttle rather than requestAnimationFrame: reading nine
     // bounding boxes is cheap, and rAF would tie this to frame production.
     const onScroll = () => {
       const now = Date.now()

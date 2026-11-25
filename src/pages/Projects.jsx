@@ -22,8 +22,9 @@ function KindFilter({ activeKind, tag, count }) {
             <Link
               key={kind}
               to={to}
+              aria-current={isActive ? 'true' : undefined}
               className={[
-                'border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors duration-200',
+                'border px-2 py-1 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors duration-200',
                 isActive
                   ? 'border-text text-text'
                   : 'border-transparent text-text-faint hover:text-text-muted',
@@ -76,7 +77,7 @@ export default function Projects() {
           <span className="font-mono text-[11px] text-accent">{tag}</span>
           <Link
             to={activeKind === 'All' ? '/projects' : `/projects?kind=${activeKind}`}
-            className="ml-auto font-mono text-[10px] uppercase tracking-[0.14em] text-text-faint transition-colors duration-200 hover:text-accent"
+            className="ml-auto font-mono text-[11px] uppercase tracking-[0.14em] text-text-faint transition-colors duration-200 hover:text-accent"
           >
             Clear
           </Link>
@@ -104,7 +105,8 @@ export default function Projects() {
               <button
                 type="button"
                 onClick={() => setExpanded((v) => !v)}
-                className="border border-rule-strong px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted transition-colors duration-200 hover:border-accent hover:text-accent"
+                aria-expanded={expanded}
+                className="border border-rule-strong px-2 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-text-muted transition-colors duration-200 hover:border-accent hover:text-accent"
               >
                 {expanded ? `Collapse · show first ${PAGE}` : `Show all · +${hidden} more`}
               </button>

@@ -20,7 +20,7 @@ function Skill({ name }) {
         <span className="underline decoration-rule-strong underline-offset-4 transition-colors duration-200 group-hover:decoration-accent">
           {name}
         </span>
-        <span className="font-mono text-[9px] text-text-faint transition-colors duration-200 group-hover:text-accent">
+        <span className="font-mono text-[11px] text-text-faint transition-colors duration-200 group-hover:text-accent">
           {count}
         </span>
       </Link>

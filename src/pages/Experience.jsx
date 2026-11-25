@@ -48,6 +48,19 @@ function Role({ role }) {
   const [open, setOpen] = useState(Boolean(role.defaultOpen))
   const panelId = `${role.id}-panel`
 
+  // Nothing to expand (the internships): a plain row, not a button that opens
+  // onto an empty panel.
+  if (!role.highlights?.length) {
+    return (
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-l border-rule py-2 pl-5">
+        <span className="text-[15px] text-text">{role.title}</span>
+        <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-text-faint">
+          {role.period}
+        </span>
+      </div>
+    )
+  }
+
   return (
     <div className="border-l border-rule pl-5">
       <button
@@ -61,7 +74,7 @@ function Role({ role }) {
           <span className="block text-[16px] font-medium tracking-tight text-text transition-colors duration-200 group-hover:text-accent">
             {role.title}
           </span>
-          <span className="mt-1 flex flex-wrap items-center gap-x-2 font-mono text-[10px] uppercase tracking-[0.12em] text-text-faint">
+          <span className="mt-1 flex flex-wrap items-center gap-x-2 font-mono text-[11px] uppercase tracking-[0.12em] text-text-faint">
             <span>{role.period}</span>
             {role.mode && (
               <>
@@ -92,8 +105,10 @@ function Role({ role }) {
         </span>
       </button>
 
-      {open && (
-        <div id={panelId} className="pb-6 pt-2">
+      {/* Always in the DOM, hidden when closed, so aria-controls on the button
+          never points at an element that does not exist. */}
+      {
+        <div id={panelId} hidden={!open} className="pb-6 pt-2">
           <ul className="space-y-2.5">
             {role.highlights.map((h, i) => (
               <Highlight key={i} item={h} />
@@ -104,14 +119,14 @@ function Role({ role }) {
             {role.stack.map((tech) => (
               <li
                 key={tech}
-                className="font-mono text-[10px] uppercase tracking-[0.1em] text-text-faint"
+                className="font-mono text-[11px] uppercase tracking-[0.1em] text-text-faint"
               >
                 {tech}
               </li>
             ))}
           </ul>
         </div>
-      )}
+      }
     </div>
   )
 }
@@ -139,7 +154,11 @@ function Employer({ company }) {
         <MonoLabel className="shrink-0">{company.period}</MonoLabel>
       </div>
 
-      <p className="mb-4 text-[13px] text-text-muted">{company.location}</p>
+      {company.location ? (
+        <p className="mb-4 text-[13px] text-text-muted">{company.location}</p>
+      ) : (
+        <div className="mb-3" />
+      )}
 
       {company.roles.map((role) => (
         <Role key={role.id} role={role} />

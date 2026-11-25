@@ -9,7 +9,7 @@
   --bg-elev: #111111;
   --text: #ededed;
   --text-muted: #8a8a8a;
-  --text-faint: #5a5a5a;
+  --text-faint: #808080;
   --rule: #1f1f1f;
   --rule-strong: #2a2a2a;
   --accent: #34d399;
@@ -22,7 +22,7 @@
   --bg-elev: #ffffff;
   --text: #1a1a1a;
   --text-muted: #5a5a5a;
-  --text-faint: #8a8a8a;
+  --text-faint: #6f6f6f;
   --rule: #e0dcd3;
   --rule-strong: #c9c4b8;
   --accent: #047857;
@@ -237,5 +237,29 @@ body {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Charts ship in a dark and a light render; show the one matching the theme.
+   Keyed on data-theme rather than prefers-color-scheme so the sidebar toggle
+   switches them too. */
+.chart-light {
+  display: none;
+}
+
+:root[data-theme='light'] .chart-dark {
+  display: none;
+}
+
+:root[data-theme='light'] .chart-light {
+  display: block;
+}
+
+/* Anchor jumps and nav clicks should not animate for people who asked for less
+   motion. The JS scroll calls check the same preference (see lib/scroll.js). */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  #main {
+    scroll-behavior: auto;
   }
 }

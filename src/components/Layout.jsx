@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import ThemeToggle from './ThemeToggle'
@@ -12,6 +12,9 @@ const STANDALONE = ['/gallery']
 export default function Layout() {
   const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
+  const menuRef = useRef(null)
+  const toggleRef = useRef(null)
+  const wasOpen = useRef(false)
 
   // Off the single page there are no sections to track, and leaving the spy
   // running would rewrite the URL back to '/'.
@@ -24,6 +27,18 @@ export default function Layout() {
     return () => {
       document.body.style.overflow = ''
     }
+  }, [menuOpen])
+
+  // Focus follows the menu: into its first link when it opens, back to the
+  // toggle when it closes — otherwise a keyboard user is left on a button whose
+  // menu they cannot reach, or dropped at the top of the page afterwards.
+  useEffect(() => {
+    if (menuOpen) {
+      menuRef.current?.querySelector('a[href], button')?.focus()
+    } else if (wasOpen.current) {
+      toggleRef.current?.focus()
+    }
+    wasOpen.current = menuOpen
   }, [menuOpen])
 
   useEffect(() => {
@@ -51,9 +66,11 @@ export default function Layout() {
           <ThemeToggle />
           <button
             type="button"
+            ref={toggleRef}
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
             className="grid h-8 w-8 place-items-center rounded-full border border-rule text-text-faint transition-colors duration-200 hover:border-accent hover:text-accent"
           >
             <svg
@@ -71,11 +88,18 @@ export default function Layout() {
         </div>
       </header>
 
-      {menuOpen && (
-        <div className="fixed inset-0 top-14 z-30 overflow-y-auto bg-bg lg:hidden">
+      {/* Always in the DOM, hidden when closed, so the toggle's aria-controls
+          never points at an element that does not exist. */}
+      {
+        <div
+          id="mobile-menu"
+          ref={menuRef}
+          hidden={!menuOpen}
+          className="fixed inset-0 top-14 z-30 overflow-y-auto bg-bg lg:hidden"
+        >
           <Sidebar active={onSinglePage ? active : null} onNavigate={() => setMenuOpen(false)} />
         </div>
-      )}
+      }
 
       <aside className="hidden w-[300px] shrink-0 overflow-y-auto border-r border-rule lg:block xl:w-[330px]">
         <Sidebar active={onSinglePage ? active : null} />
@@ -88,7 +112,9 @@ export default function Layout() {
       {/* Width lives on each Section rather than here, so a list-heavy section
           like Projects can run wider than a prose one without dragging the
           reading measure of About and Experience out with it. */}
-      <main id="main" className="flex-1 lg:overflow-y-auto">
+      {/* inert while the mobile menu covers it, so Tab cannot reach links
+          hidden behind the menu. */}
+      <main id="main" className="flex-1 lg:overflow-y-auto" inert={menuOpen ? '' : undefined}>
         <div className="px-5 py-10 sm:px-10 lg:py-14 lg:pl-12">
           <Outlet />
         </div>

@@ -54,7 +54,7 @@ export default function Contact() {
 
       <a
         href={`mailto:${site.email}`}
-        className="mt-10 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-text-muted transition-colors duration-200 hover:text-accent"
+        className="mt-10 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-text-muted transition-colors duration-200 hover:text-accent"
       >
         Send an email
         <span aria-hidden="true">→</span>

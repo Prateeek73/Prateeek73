@@ -16,7 +16,7 @@ export default function MonoLabel({
 }) {
   return (
     <Tag
-      className={`font-mono text-[10px] uppercase tracking-[0.14em] ${tones[tone]} ${className}`}
+      className={`font-mono text-[11px] uppercase tracking-[0.14em] ${tones[tone]} ${className}`}
     >
       {children}
     </Tag>

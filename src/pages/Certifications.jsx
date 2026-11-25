@@ -27,12 +27,12 @@ function Certification({ cert }) {
             )}
           </h3>
 
-          <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.12em] text-text-faint">
+          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em] text-text-faint">
             {meta.join(' · ')}
           </p>
 
           {cert.credentialId && (
-            <p className="mt-1 break-all font-mono text-[10px] text-text-faint">
+            <p className="mt-1 break-all font-mono text-[11px] text-text-faint">
               ID {cert.credentialId}
             </p>
           )}
@@ -44,7 +44,7 @@ function Certification({ cert }) {
             target="_blank"
             rel="noreferrer"
             aria-label={`Verify ${cert.name}`}
-            className="shrink-0 pt-1 font-mono text-[10px] uppercase tracking-[0.12em] text-text-faint transition-colors duration-200 hover:text-accent"
+            className="shrink-0 pt-1 font-mono text-[11px] uppercase tracking-[0.12em] text-text-faint transition-colors duration-200 hover:text-accent"
           >
             <span aria-hidden="true">↗</span> verify
           </a>

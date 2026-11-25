@@ -43,7 +43,7 @@ export default function Education() {
                 {item.coursework.map((course) => (
                   <li
                     key={course}
-                    className="font-mono text-[10px] uppercase tracking-[0.12em] text-text-faint"
+                    className="font-mono text-[11px] uppercase tracking-[0.12em] text-text-faint"
                   >
                     {course}
                   </li>

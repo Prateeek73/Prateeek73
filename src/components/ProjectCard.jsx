@@ -6,7 +6,7 @@ function CodeLink({ url }) {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="flex shrink-0 items-center gap-1 font-mono text-[10px] uppercase tracking-[0.12em] text-text-faint transition-colors duration-200 hover:text-accent"
+      className="flex shrink-0 items-center gap-1 font-mono text-[11px] uppercase tracking-[0.12em] text-text-faint transition-colors duration-200 hover:text-accent"
     >
       <span aria-hidden="true">↗</span>
       code
@@ -51,7 +51,7 @@ export default function ProjectCard({ project, activeTag }) {
           said nothing the chips had not already. `status` stays: it is the only
           thing explaining why a card has no code link. */}
       {status && (
-        <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-text-faint">
+        <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-text-faint">
           {status}
         </p>
       )}
@@ -66,7 +66,7 @@ export default function ProjectCard({ project, activeTag }) {
             <Link
               to={`/projects?tag=${encodeURIComponent(tag)}`}
               className={[
-                'font-mono text-[10px] tracking-[0.1em] transition-colors duration-200',
+                'font-mono text-[11px] tracking-[0.1em] transition-colors duration-200',
                 tag === activeTag ? 'text-accent' : 'text-text-faint hover:text-text-muted',
               ].join(' ')}
             >

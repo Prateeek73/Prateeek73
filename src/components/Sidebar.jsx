@@ -3,6 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 import MonoLabel from './MonoLabel'
 import { pages, sections, site } from '../data'
+import { scrollBehavior } from '../lib/scroll'
 
 /** Counts up from page load, as HH:MM:SS. */
 function useUptime() {
@@ -63,7 +64,7 @@ function Identity() {
           </Link>
         </div>
 
-        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.15em] text-text-faint">
+        <span className="shrink-0 font-mono text-[11px] uppercase tracking-[0.15em] text-text-faint">
           {site.locationCode}
         </span>
       </div>
@@ -73,16 +74,16 @@ function Identity() {
           <span className="txrx-dot tx" aria-hidden="true" />
           <span className="txrx-dot rx" aria-hidden="true" />
         </span>
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-muted">
+        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-muted">
           {site.statusLine}
         </span>
       </div>
 
       <div className="flex items-center gap-3 pl-[14px]">
-        <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-text-faint">
+        <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-text-faint">
           uptime
         </span>
-        <span className="font-mono text-[10px] tabular-nums text-text-faint">{uptime}</span>
+        <span className="font-mono text-[11px] tabular-nums text-text-faint">{uptime}</span>
       </div>
     </div>
   )
@@ -99,7 +100,7 @@ function SectionNav({ active, onNavigate }) {
     const target = document.getElementById(section.id)
 
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      target.scrollIntoView({ behavior: scrollBehavior(), block: 'start' })
     } else {
       navigate(section.to)
     }
@@ -128,7 +129,7 @@ function SectionNav({ active, onNavigate }) {
               >
                 <span
                   className={[
-                    'font-mono text-[10px] tabular-nums',
+                    'font-mono text-[11px] tabular-nums',
                     isActive ? 'text-accent' : 'text-text-faint',
                   ].join(' ')}
                 >
@@ -205,7 +206,7 @@ export default function Sidebar({ active, onNavigate }) {
                 rel="noreferrer"
                 title={s.label}
                 aria-label={s.label}
-                className="block border border-transparent px-1.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-text-faint transition-colors duration-200 hover:border-text hover:text-text"
+                className="block border border-transparent px-1.5 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-text-faint transition-colors duration-200 hover:border-text hover:text-text"
               >
                 {s.short}
               </a>

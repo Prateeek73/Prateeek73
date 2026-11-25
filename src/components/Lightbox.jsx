@@ -9,6 +9,7 @@ const BASE = import.meta.env.BASE_URL
  */
 export default function Lightbox({ photos, index, onClose, onStep }) {
   const closeRef = useRef(null)
+  const dialogRef = useRef(null)
   const photo = photos[index]
 
   useEffect(() => {
@@ -27,9 +28,16 @@ export default function Lightbox({ photos, index, onClose, onStep }) {
         e.preventDefault()
         onStep(-1)
       } else if (e.key === 'Tab') {
-        // Only two controls to cycle between, so trapping is just a matter of
-        // keeping Tab from leaving the dialog at all.
+        // Three controls — Close, Prev, Next. Tab and Shift+Tab cycle among
+        // them and wrap at the ends, so focus can reach every one but never
+        // leaves the dialog.
+        const controls = [...(dialogRef.current?.querySelectorAll('button') ?? [])]
+        if (controls.length === 0) return
         e.preventDefault()
+        const at = controls.indexOf(document.activeElement)
+        const step = e.shiftKey ? -1 : 1
+        const next = at === -1 ? 0 : (at + step + controls.length) % controls.length
+        controls[next].focus()
       }
     }
     window.addEventListener('keydown', onKey, true)
@@ -49,6 +57,7 @@ export default function Lightbox({ photos, index, onClose, onStep }) {
 
   return (
     <div
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
       aria-label={`Photo ${index + 1} of ${photos.length}`}
@@ -64,7 +73,7 @@ export default function Lightbox({ photos, index, onClose, onStep }) {
           ref={closeRef}
           type="button"
           onClick={onClose}
-          className="font-mono text-[10px] uppercase tracking-[0.16em] text-text-muted transition-colors duration-200 hover:text-accent"
+          className="font-mono text-[11px] uppercase tracking-[0.16em] text-text-muted transition-colors duration-200 hover:text-accent"
         >
           Close ✕
         </button>
@@ -91,14 +100,14 @@ export default function Lightbox({ photos, index, onClose, onStep }) {
         <button
           type="button"
           onClick={() => onStep(-1)}
-          className="border border-transparent px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted transition-colors duration-200 hover:border-text hover:text-text"
+          className="border border-transparent px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-text-muted transition-colors duration-200 hover:border-text hover:text-text"
         >
           ← Prev
         </button>
         <button
           type="button"
           onClick={() => onStep(1)}
-          className="border border-transparent px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-text-muted transition-colors duration-200 hover:border-text hover:text-text"
+          className="border border-transparent px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-text-muted transition-colors duration-200 hover:border-text hover:text-text"
         >
           Next →
         </button>

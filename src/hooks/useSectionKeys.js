@@ -1,7 +1,13 @@
 import { useEffect } from 'react'
 import { sections } from '../data'
+import { scrollBehavior } from '../lib/scroll'
 
 const TYPING = new Set(['INPUT', 'TEXTAREA', 'SELECT'])
+
+// Controls where the arrow keys already mean something, or where taking them
+// would surprise someone tabbing through: buttons, links, disclosure summaries
+// and the sideways-scrolling chart boxes.
+const KEEPS_ARROWS = 'button, a[href], summary, [role="group"]'
 
 /**
  * Arrow Down / Arrow Up step between sections.
@@ -20,6 +26,7 @@ export default function useSectionKeys(active, enabled = true) {
 
       const el = document.activeElement
       if (el && (TYPING.has(el.tagName) || el.isContentEditable)) return
+      if (el && el !== document.body && el.closest?.(KEEPS_ARROWS)) return
 
       const i = sections.findIndex((s) => s.to === active)
       if (i === -1) return
@@ -30,7 +37,7 @@ export default function useSectionKeys(active, enabled = true) {
       e.preventDefault()
       document
         .getElementById(sections[next].id)
-        ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        ?.scrollIntoView({ behavior: scrollBehavior(), block: 'start' })
     }
 
     window.addEventListener('keydown', onKey)

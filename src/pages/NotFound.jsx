@@ -40,7 +40,7 @@ export default function NotFound() {
 
         <Link
           to="/"
-          className="mt-8 inline-block font-mono text-[10px] uppercase tracking-[0.14em] text-accent transition-colors duration-200 hover:text-accent-hover"
+          className="mt-8 inline-block font-mono text-[11px] uppercase tracking-[0.14em] text-accent transition-colors duration-200 hover:text-accent-hover"
         >
           ← Home
         </Link>

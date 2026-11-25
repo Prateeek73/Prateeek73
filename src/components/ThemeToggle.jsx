@@ -31,7 +31,7 @@ export default function ThemeToggle({ withLabel = false }) {
       title={`Switch to ${next} theme`}
       className={
         withLabel
-          ? 'flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-text-faint transition-colors duration-200 hover:text-accent'
+          ? 'flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-text-faint transition-colors duration-200 hover:text-accent'
           : 'grid h-8 w-8 place-items-center rounded-full border border-rule text-text-faint transition-colors duration-200 hover:border-accent hover:text-accent'
       }
     >
